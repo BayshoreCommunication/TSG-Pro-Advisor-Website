@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 
-import { Quattrocento, Asap, Manrope } from "next/font/google";
+import { Quattrocento, Arya, Manrope } from "next/font/google";
 
 const quattrocento = Quattrocento({
   subsets: ["latin"],
@@ -15,11 +15,11 @@ const quattrocento = Quattrocento({
   variable: "--font-quattrocento",
 });
 
-const asap = Asap({
+const arya = Arya({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-asap",
+  weight: ["400", "700"],
+  variable: "--font-arya",
 });
 
 const manrope = Manrope({
@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={` ${quattrocento.variable} ${asap.variable} ${manrope.variable}`}
+      className={` ${quattrocento.variable} ${arya.variable} ${manrope.variable}`}
     >
       <body className="bg-white text-[#0B0C0E]">
         <Providers>

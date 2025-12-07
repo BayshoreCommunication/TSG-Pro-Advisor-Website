@@ -1,0 +1,38 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import Reveal from "@/components/motion/Reveal";
+import { memo } from "react";
+
+const BreadcrumbBlogsPage = () => {
+  return (
+    <section className="relative w-full flex items-center justify-center min-h-[480px]">
+      {/* Background Image */}
+      <Image
+        src="/images/breadcrumb/breadcrumb-blogs.jpg"
+        alt="Hero Background"
+        width={1920}
+        height={480}
+        className="absolute inset-0 w-full h-full object-cover object-bottom"
+        priority
+      />
+
+      {/* Content Container */}
+      <div className="relative max-w-[1640px] mx-auto px-8 w-full py-10 lg:py-24">
+        <div className="flex flex-col items-center text-center gap-6">
+          {/* Headline */}
+          <Reveal y={80} opacityFrom={0} duration={1.6}>
+            <div className="bg-[#414141]/60 p-6 lg:p-10 rounded-2xl">
+              <h1 className="text-3xl lg:text-5xl font-semibold text-white leading-snug md:leading-tight max-w-3xl arya-font">
+                Tips, Training, and Updates for Tax & Accounting Professionals
+              </h1>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default memo(BreadcrumbBlogsPage);
