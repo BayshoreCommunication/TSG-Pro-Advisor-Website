@@ -63,7 +63,7 @@ const config = {
       themes: {
         light: {
           colors: {
-            primary: "#BA8E2D", // primary-one
+            primary: "#F26422", // primary-one
             secondary: "#BBD8DB", // primary-two
             background: "#FFFFFF", // secondary-one
             foreground: "#FFF4ED", // secondary-two

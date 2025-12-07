@@ -5,25 +5,40 @@ import { Providers } from "./providers";
 
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
-import { Merriweather } from "next/font/google";
 
-const merriweather = Merriweather({
+import { Quattrocento, Asap, Manrope } from "next/font/google";
+
+const quattrocento = Quattrocento({
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "700", "900"], // Merriweather available weights
+  weight: ["400", "700"],
+  variable: "--font-quattrocento",
+});
+
+const asap = Asap({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-asap",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-manrope",
 });
 
 export const metadata: Metadata = {
-  title: "McCulloch Law P.A",
-  description: "McCulloch Law P.A website",
-  metadataBase: new URL("https://mccullochlawpa-website.vercel.app"),
+  title: "TSG Pro Advisor",
+  description: "TSG Pro Advisor Website",
+  metadataBase: new URL("https://tsg-pro-advisor-website.vercel.app"),
   alternates: {
     canonical: "/",
     languages: {
       "en-US": "/en-US",
     },
   },
-
   openGraph: {
     images: "/opengraph-image.png",
   },
@@ -31,11 +46,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" className={merriweather.className}>
+    <html
+      lang="en"
+      className={` ${quattrocento.variable} ${asap.variable} ${manrope.variable}`}
+    >
       <body className="bg-white text-[#0B0C0E]">
         <Providers>
           <Navbar />

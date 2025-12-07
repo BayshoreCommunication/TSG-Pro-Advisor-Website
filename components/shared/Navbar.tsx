@@ -24,12 +24,12 @@ const Navbar: React.FC = () => {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About The Attorney" },
-    { href: "/practice", label: "Practice Areas" },
-    // { href: "/videos", label: "Videos" },
-    { href: "/testimonials", label: "Testimonials" },
+    { href: "/about", label: "About Us" },
+    { href: "/services", label: "Services" },
+    { href: "/join-us", label: "Join Us" },
     { href: "/blogs", label: "Blogs" },
     { href: "/contact", label: "Contact Us" },
+    { href: "/events", label: "Events" },
   ];
 
   return (
@@ -38,11 +38,11 @@ const Navbar: React.FC = () => {
       <header
         className={`transition-all duration-700 ${
           isSticky
-            ? "fixed top-0 left-0 right-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50"
-            : "relative bg-white"
+            ? "fixed top-0 left-0 right-0 w-full bg-black backdrop-blur-md shadow-sm z-50"
+            : "relative bg-black"
         }`}
       >
-        <div className="max-w-[1640px] mx-auto px-8 py-4 flex justify-between items-center relative">
+        <div className="max-w-[1640px] mx-auto px-8 py-6 flex justify-start gap-12 items-center relative">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
@@ -50,18 +50,18 @@ const Navbar: React.FC = () => {
               alt="Logo"
               width={1000}
               height={500}
-              className="w-[180px] h-auto"
+              className="w-[100px] h-auto"
             />
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden md:flex gap-8 text-gray-800 font-medium items-center">
+          <nav className="hidden md:flex gap-12 text-white  font-medium items-center">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`hover:text-yellow-700 transition ${
-                  pathname === item.href ? "text-yellow-700 underline" : ""
+                className={`hover:text-primary transition manrope-font text-lg font-bold   ${
+                  pathname === item.href ? "text-primary " : ""
                 }`}
               >
                 {item.label}
