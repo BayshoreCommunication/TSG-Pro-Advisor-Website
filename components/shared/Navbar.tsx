@@ -34,33 +34,6 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="w-full relative">
-      {/* ================= TOP BAR ================= */}
-      <div className="w-full bg-white text-gray-700 border-b">
-        <div className="max-w-[1640px] mx-auto px-8 flex justify-between items-center text-sm">
-          {/* Left Phone Section */}
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <IoIosCall className="text-[#BA8E2D]" />
-              <span className="font-medium">(813) 444-2817</span>
-            </div>
-
-            {/* Center Text */}
-            <p className="hidden md:block text-gray-600">
-              Call a law firm that cares, available 24/7 for a free
-              consultation.
-            </p>
-          </div>
-
-          {/* Right Button */}
-          <Link
-            href="/contact"
-            className="bg-[#BA8E2D] text-white px-4 py-4 rounded-sm hover:bg-yellow-700 transition"
-          >
-            Book an Appointment
-          </Link>
-        </div>
-      </div>
-
       {/* ================= MAIN NAVBAR ================= */}
       <header
         className={`transition-all duration-700 ${
