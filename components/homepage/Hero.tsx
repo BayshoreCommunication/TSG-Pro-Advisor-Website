@@ -13,7 +13,7 @@ const HeroSection = () => {
         src="/images/hero/hero-bg.png"
         alt="Hero Background"
         fill
-        className="absolute inset-0 w-full h-full object-cover object-bottom"
+        className="absolute inset-0 w-full h-full object-cover object-top"
         priority
       />
 
