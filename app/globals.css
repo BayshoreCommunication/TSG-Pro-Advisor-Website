@@ -111,3 +111,25 @@
 .manrope-font {
   font-family: var(--font-manrope);
 }
+/* Fix global button styling using Tailwind
+@layer components {
+  button {
+    @apply
+      cursor-pointer
+      relative
+      px-10
+      py-4
+      bg-primary
+      text-white
+      hover:text-primary
+      font-bold
+      text-lg
+      rounded-xl
+      inline-flex
+      items-center
+      overflow-hidden
+      transition-colors
+      duration-300;
+  }
+} */
+
