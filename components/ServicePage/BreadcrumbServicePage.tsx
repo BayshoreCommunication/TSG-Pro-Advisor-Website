@@ -25,7 +25,7 @@ const BreadcrumbServicePage = () => {
           <Reveal y={80} opacityFrom={0} duration={1.6}>
             <div className="">
               <h1
-                className="text-5xl lg:text-[90px] font-semibold text-transparent stroke-white leading-snug md:leading-none arya-font"
+                className="text-5xl lg:text-[80px] font-semibold text-transparent stroke-white leading-snug md:leading-none arya-font"
                 style={{ WebkitTextStroke: "2px white" }}
               >
                 We Help Tax Professionals <br /> Grow & Scale with Confidence

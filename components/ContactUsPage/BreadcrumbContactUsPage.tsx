@@ -24,7 +24,10 @@ const BreadcrumbContactUsPage = () => {
           {/* Headline */}
           <Reveal y={80} opacityFrom={0} duration={1.6}>
             <div className="bg-[#414141]/60 p-6 lg:p-10 rounded-2xl">
-              <h1 className="text-3xl lg:text-5xl font-semibold text-white leading-snug md:leading-tight max-w-3xl arya-font">
+              <h1
+                className="text-5xl lg:text-[80px] font-semibold text-transparent stroke-white leading-snug md:leading-none arya-font"
+                style={{ WebkitTextStroke: "2px white" }}
+              >
                 Get in Touch With TSG ProAdvisor
               </h1>
             </div>

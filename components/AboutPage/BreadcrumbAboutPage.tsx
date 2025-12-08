@@ -23,8 +23,8 @@ const BreadcrumbAboutPage = () => {
             <Reveal y={80} opacityFrom={0} duration={1.6}>
               <div className="">
                 <h1
-                  className="text-5xl lg:text-[140px] font-semibold text-transparent stroke-white leading-snug md:leading-tight arya-font"
-                  style={{ WebkitTextStroke: "3px white" }}
+                  className="text-5xl lg:text-[80px] font-semibold text-transparent stroke-white leading-snug md:leading-none arya-font"
+                  style={{ WebkitTextStroke: "2px white" }}
                 >
                   About <br /> TSG PROADVISOR
                 </h1>
