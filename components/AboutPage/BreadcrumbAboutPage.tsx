@@ -12,7 +12,7 @@ const BreadcrumbAboutPage = () => {
           alt="Hero Background"
           width={1920}
           height={480}
-          className="absolute inset-0 w-full h-full object-cover object-bottom"
+          className="absolute inset-0 w-full h-full object-cover object-top"
           priority
         />
 
