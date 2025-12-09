@@ -11,7 +11,7 @@ export default function ServicesSection() {
           {/* Button */}
           <Reveal y={80} opacityFrom={0} duration={2.2}>
             <Link
-              href="/contact"
+              href="/services"
               className="
                 relative px-10 py-4 bg-primary text-white hover:text-primary font-bold text-lg rounded-xl
                 inline-flex items-center overflow-hidden group
