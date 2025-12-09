@@ -7,7 +7,7 @@ export default function MissionSection() {
 
         {/* Heading */}
         <div className="text-center relative mb-10">
-          <h2 className="text-3xl md:text-4xl font-semibold">Our Mission</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold arya-font">Our Mission</h2>
         </div>
 
         {/* --- Image Block 1 --- */}
