@@ -49,12 +49,12 @@ export default function LatestInsights() {
         </div>
 
         {/* Blog Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {blogs.map((blog) => (
             <Link
               key={blog.id}
               href={`/blogs/${blog.slug}`}
-              className="group block rounded-lg overflow-hidden shadow hover:shadow-lg transition"
+              className="group block rounded-lg overflow-hidden shadow hover:shadow-lg transition group"
             >
               <div className="relative ">
                 <Image
@@ -62,10 +62,10 @@ export default function LatestInsights() {
                   alt={blog.title}
                   width={1000}
                   height={800}
-                  className="w-full h-auto object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-auto object-cover object-top group-hover:scale-110 duration-500"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                  <h3 className="text-white font-semibold text-lg">{blog.title}</h3>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 group">
+                  <h3 className="text-white font-semibold text-lg group-hover:text-orange-600">{blog.title}</h3>
                 </div>
               </div>
               <div className="p-4 bg-white">
