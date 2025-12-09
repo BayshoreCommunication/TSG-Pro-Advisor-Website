@@ -3,7 +3,7 @@ import Hero from "@/components/homepage/Hero";
 import StatsSection from "@/components/homepage/StatsSection";
 import ServicesSection from "@/components/homepage/ServicesSection";
 import Testimonials from "@/components/homepage/Testimonials";
-// import MissionSection from "@/components/homepage/MissionSection";
+import MissionSection from "@/components/homepage/MissionSection";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <StatsSection/>
       <ServicesSection/>
       <Testimonials />  
-      {/* <MissionSection/> */}
+      <MissionSection/>
     </>
   );
 }
