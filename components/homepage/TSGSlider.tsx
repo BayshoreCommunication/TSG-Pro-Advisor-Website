@@ -43,7 +43,7 @@ export default function BlogSliderSection() {
         <p className="text-sm uppercase tracking-wide text-gray-300 arya-font">
           Join The TSG ProAdvisor Community
         </p>
-        <h2 className="text-3xl md:text-4xl font-bold arya-font">
+        <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold arya-font">
           Start. Scale. Succeed.
         </h2>
         {/* ORANGE UNDERLINE */}
