@@ -100,7 +100,7 @@ export default function TestimonialsSlider() {
                   </div>
 
                   {/* Review Text */}
-                  <p className="text-gray-700 text-sm mt-3 leading-relaxed flex-grow">
+                  <p className="text-gray-700 text-sm mt-3  leading-relaxed flex-grow">
                     {review.text}
                   </p>
                 </div>
