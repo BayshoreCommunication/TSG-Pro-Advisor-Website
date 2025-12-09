@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/motion/Reveal";
 import { memo } from "react";
-import Stagger from "../motion/Stagger";
+import { PiStarFourLight } from "react-icons/pi";
 
 const OurServices = () => {
   return (
@@ -37,11 +37,11 @@ const OurServices = () => {
               <Link
                 href="/contact"
                 className="
-                relative px-10 py-4 bg-primary text-white hover:text-primary font-semibold text-base rounded-xl 
+                relative px-8 py-4 bg-primary text-white hover:text-primary font-semibold text-base rounded-xl 
                 inline-flex items-center overflow-hidden group
                 transition-colors duration-300 mt-4"
               >
-                <span className="relative z-10">
+                <span className="relative z-10 inline-block">
                   Connect with TSG Pro Advisor
                 </span>
 
@@ -58,7 +58,7 @@ const OurServices = () => {
           </div>
           {/* Services */}
           <div>
-            <div className="relative rounded-xl overflow-hidden bg-black/50">
+            <div className="relative rounded-xl overflow-hidden bg-black/50 group">
               {/* Image */}
               <div className=" w-full">
                 <Image
@@ -75,7 +75,7 @@ const OurServices = () => {
 
               {/* Content */}
               <div className="absolute bottom-6 left-6 right-6">
-                <h4 className="text-white text-2xl font-semibold">
+                <h4 className="text-white text-2xl font-semibold group-hover:text-primary duration-300">
                   Tax & Accounting <br /> Education
                 </h4>
               </div>
@@ -89,11 +89,11 @@ const OurServices = () => {
             </p>
           </div>
           <div>
-            <div className="relative rounded-xl overflow-hidden bg-black/50">
+            <div className="relative rounded-xl overflow-hidden bg-black/50 group">
               {/* Image */}
               <div className=" w-full">
                 <Image
-                  src="/images/servicesPage/AccountingEducation.jpg" // replace with your image path
+                  src="/images/servicesPage/BusinessMentorship.jpg" // replace with your image path
                   alt="Tax & Accounting Education"
                   width={1000}
                   height={1000}
@@ -106,25 +106,30 @@ const OurServices = () => {
 
               {/* Content */}
               <div className="absolute bottom-6 left-6 right-6">
-                <h4 className="text-white text-2xl font-semibold">
-                  Business <br /> Mentorship
+                <h4 className="text-white text-2xl font-semibold group-hover:text-primary duration-300">
+                  Professional <br /> TaxSoftware
                 </h4>
               </div>
             </div>
 
             {/* Paragraph Section */}
-            <p className="mt-4 text-base text-gray-700 leading-relaxed">
-              Build your skills with training that strengthens your knowledge,
-              improves accuracy, and helps you serve your clients more
-              effectively.
-            </p>
+            <div className=" flex flex-col gap-2 mt-4">
+              <p className="text-base text-gray-700 leading-relaxed flex items-center gap-2">
+                <PiStarFourLight size={24} color="#F26422" /> Business Growth &
+                Strategy
+              </p>
+              <p className="text-base text-gray-700 leading-relaxed flex items-center gap-2">
+                <PiStarFourLight size={24} color="#F26422" /> Business Growth &
+                Strategy
+              </p>
+            </div>
           </div>
           <div>
-            <div className="relative rounded-xl overflow-hidden bg-black/50">
+            <div className="relative rounded-xl overflow-hidden bg-black/50 group">
               {/* Image */}
               <div className=" w-full">
                 <Image
-                  src="/images/servicesPage/AccountingEducation.jpg" // replace with your image path
+                  src="/images/servicesPage/ProfessionalTaxSoftware.jpg" // replace with your image path
                   alt="Tax & Accounting Education"
                   width={1000}
                   height={1000}
@@ -137,7 +142,7 @@ const OurServices = () => {
 
               {/* Content */}
               <div className="absolute bottom-6 left-6 right-6">
-                <h4 className="text-white text-2xl font-semibold">
+                <h4 className="text-white text-2xl font-semibold group-hover:text-primary duration-300">
                   Tax & Accounting <br /> Education
                 </h4>
               </div>
@@ -145,9 +150,8 @@ const OurServices = () => {
 
             {/* Paragraph Section */}
             <p className="mt-4 text-base text-gray-700 leading-relaxed">
-              Build your skills with training that strengthens your knowledge,
-              improves accuracy, and helps you serve your clients more
-              effectively.
+              Access reliable, professional-grade tax software designed to help
+              you work smoothly, accurately, and efficiently.
             </p>
           </div>
         </div>
