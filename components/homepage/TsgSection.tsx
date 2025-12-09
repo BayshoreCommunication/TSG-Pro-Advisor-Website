@@ -39,7 +39,7 @@ export default function TsgSection() {
           </div>
 
           <div className="flex items-start gap-4">
-            <Image src="/images/homepage/tsg/icon4.png" alt="community" width={48} height={48} />
+            <Image src="/images/homepage/tsg/icon3.png" alt="community" width={48} height={48} />
             <p>Building a community focused on integrity and lasting results</p>
           </div>
         </div>

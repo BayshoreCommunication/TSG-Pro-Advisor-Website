@@ -5,6 +5,7 @@ import ServicesSection from "@/components/homepage/ServicesSection";
 import Testimonials from "@/components/homepage/Testimonials";
 import MissionSection from "@/components/homepage/MissionSection";
 import TsgSection from "@/components/homepage/TsgSection";
+import TSGSlider from "@/components/homepage/TSGSlider";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Testimonials />  
       <MissionSection/>
       <TsgSection/>
+      <TSGSlider/>
     </>
   );
 }
