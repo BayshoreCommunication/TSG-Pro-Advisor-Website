@@ -22,7 +22,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center text-center gap-6">
           {/* Headline */}
           <Reveal y={80} opacityFrom={0} duration={1.6}>
-            <div className="bg-[#414141]/60 p-6 lg:p-10 rounded-2xl">
+            <div className="  p-6 lg:p-10 rounded-2xl">
               <h1
                 className="text-5xl lg:text-[80px] font-semibold text-transparent stroke-primary leading-snug md:leading-none arya-font"
                 style={{ WebkitTextStroke: "2px white" }}

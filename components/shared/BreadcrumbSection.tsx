@@ -23,7 +23,7 @@ const BreadcrumbSection = () => {
         <div className="flex flex-col items-center text-center gap-6">
           {/* Headline */}
           <Reveal y={80} opacityFrom={0} duration={1.6}>
-            <div className="bg-[#414141]/60 p-6 lg:p-10 rounded-2xl">
+            <div className="  p-6 lg:p-10 rounded-2xl">
               <h1 className="text-3xl lg:text-5xl font-semibold text-white leading-snug md:leading-tight max-w-3xl">
                 We Help Tax Professionals Grow & Scale with Confidence
               </h1>

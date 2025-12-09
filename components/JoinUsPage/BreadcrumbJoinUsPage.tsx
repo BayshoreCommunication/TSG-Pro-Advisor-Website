@@ -31,10 +31,10 @@ const BreadcrumbJoinUsPage = () => {
               className="w-40"
             ></Image>
             <Reveal y={80} opacityFrom={0} duration={1.6}>
-              <div className="bg-[#414141]/60 p-6 lg:p-10 rounded-2xl">
+              <div className="  p-6 lg:p-10 rounded-2xl">
                 <h1
-                  className="text-5xl lg:text-[80px] font-semibold text-transparent stroke-[#F26422] leading-snug md:leading-none arya-font"
-                  style={{ WebkitTextStroke: "2px #F26422" }}
+                  className="text-5xl lg:text-[80px] font-semibold text-transparent stroke-white leading-snug md:leading-none arya-font"
+                  style={{ WebkitTextStroke: "2px #fff" }}
                 >
                   Join TSG ProAdvisor and Grow Your Tax Business
                 </h1>
