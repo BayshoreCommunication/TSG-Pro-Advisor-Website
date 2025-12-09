@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function MissionSection() {
   return (
-    <section className="w-full flex justify-center px-6 md:px-10 py-16 md:py-24">
+    <section className="w-full flex justify-center px-8 py-8 md:py-16 ">
       <div className="max-w-[1640px] w-full">
 
         {/* Heading */}

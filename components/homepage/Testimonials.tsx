@@ -43,19 +43,19 @@ export default function TestimonialsSlider() {
     <section className="w-full flex justify-center px-8 py-8 md:py-16">
       <div className="max-w-[1640px] mx-auto w-full">
         <Swiper
-          modules={[Pagination,Autoplay]}
+          modules={[Pagination, Autoplay]}
           spaceBetween={32}
-          slidesPerView={1.1}
+          slidesPerView={1}                 // 👈 MOBILE = 1 COLUMN
           centeredSlides={false}
           grabCursor={true}
           pagination={{ clickable: true }}
           loop={true}
           direction="horizontal"
           breakpoints={{
-            640: { slidesPerView: 1.3 },
-            768: { slidesPerView: 1.8 },
-            1024: { slidesPerView: 2.3 },
-            1440: { slidesPerView: 3 },
+            640: { slidesPerView: 1.2 },    // small tablets
+            768: { slidesPerView: 1.7 },    // tablets
+            1024: { slidesPerView: 2.3 },   // laptop
+            1440: { slidesPerView: 3 },     // desktop
           }}
           className="h-full"
         >
@@ -99,8 +99,8 @@ export default function TestimonialsSlider() {
                       ))}
                   </div>
 
-                  {/* Text */}
-                  <p className="text-gray-700 text-sm mt-3 leading-relaxed flex-grow">
+                  {/* Review Text */}
+                  <p className="text-gray-700 text-sm mt-3  leading-relaxed flex-grow">
                     {review.text}
                   </p>
                 </div>
