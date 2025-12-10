@@ -28,7 +28,7 @@ export default function TestimonialsSlider() {
       date: "1 year ago",
       rating: 5,
       text: "Amazing service and great communication. Will definitely work with them again!",
-      image: "/images/homepage/testimonial/img2.png",
+      image: "/images/homepage/testimonial/img3.png",
     },
     {
       name: "Benjamin Collins",
