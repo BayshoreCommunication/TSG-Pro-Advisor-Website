@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
@@ -31,7 +32,6 @@ export default function BlogSliderSection() {
 
         console.log("API raw response:", data);
 
-        // Try to detect blog array: could be data.data, data.blogs, or root
         const blogArray = data?.data ?? data?.blogs ?? data ?? [];
         console.log("Interpreted blogArray:", blogArray);
 
@@ -40,7 +40,7 @@ export default function BlogSliderSection() {
             (b: Blog) =>
               b.published === true ||
               b.published === "true" ||
-              b.published === undefined // fallback if no field
+              b.published === undefined
           )
           .map((b: Blog) => ({
             ...b,
@@ -101,23 +101,25 @@ export default function BlogSliderSection() {
       >
         {blogs.map((blog) => (
           <SwiperSlide key={blog.id}>
-            <div className="bg-white text-black rounded-2xl shadow-lg overflow-hidden h-full flex flex-col">
-              <div className="relative w-full h-[180px] md:h-[200px]">
-                <Image
-                  src={blog.image || "/images/placeholder.png"}
-                  alt={blog.title}
-                  fill
-                  className="object-cover object-top"
-                />
+            <Link href={`/blogs/${blog.slug}`} className="block h-full">
+              <div className="bg-white text-black rounded-2xl shadow-lg overflow-hidden h-full flex flex-col hover:shadow-xl transition">
+                <div className="relative w-full h-[180px] md:h-[200px]">
+                  <Image
+                    src={blog.image || "/images/placeholder.png"}
+                    alt={blog.title}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-lg md:text-xl font-semibold mb-3">{blog.title}</h3>
+                  <p className="text-gray-600 mb-6 flex-grow">{blog.desc}</p>
+                  <span className="bg-[#F16128] text-white text-sm font-semibold px-6 py-2 rounded-full self-start hover:bg-[#d7541f] transition cursor-pointer inline-block">
+                    Learn More
+                  </span>
+                </div>
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-lg md:text-xl font-semibold mb-3">{blog.title}</h3>
-                <p className="text-gray-600 mb-6 flex-grow">{blog.desc}</p>
-                <button className="bg-[#F16128] text-white text-sm font-semibold px-6 py-2 rounded-full self-start hover:bg-[#d7541f] transition">
-                  Learn More
-                </button>
-              </div>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
