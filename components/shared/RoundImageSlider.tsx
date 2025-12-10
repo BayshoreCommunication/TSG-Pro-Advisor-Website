@@ -1,9 +1,22 @@
 import Image from "next/image";
 import React from "react";
 
+const IMAGES = [
+  "/images/homepage/service/round-1.png",
+  "/images/homepage/service/round-2.png",
+  "/images/homepage/service/round-3.png",
+  "/images/homepage/service/round-1.png",
+  "/images/homepage/service/round-2.png",
+  "/images/homepage/service/round-3.png",
+  "/images/homepage/service/round-1.png",
+  "/images/homepage/service/round-2.png",
+  "/images/homepage/service/round-3.png",
+  
+];
+
 const RoundImageSlider = () => {
   return (
-    <div className="relative w-full mt-10">
+    <div className="relative w-full mt-10 overflow-hidden">
       {/* Background Shape */}
       <Image
         src="/images/homepage/service/service-shape.png"
@@ -13,39 +26,32 @@ const RoundImageSlider = () => {
         className="w-full h-auto pointer-events-none"
       />
 
-      {/* Circles Wrapper */}
-      <div className="grid grid-cols-3 gap-0 md:gap-20 absolute top-0 left-0 right-0 bottom-0">
-        {/* Circle 1 */}
-        <div className="animate-move1">
-          <Image
-            src="/images/homepage/service/round-1.png"
-            alt="Round Icon 1"
-            width={220}
-            height={220}
-            className="w-[80px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
-          />
-        </div>
+      {/* Smooth Marquee */}
+      <div className="absolute inset-0 flex items-center overflow-hidden">
+        <div className="flex items-center space-x-60 animate-marquee mt-[-300px] z-10">
+          {/* Original Images */}
+          {IMAGES.map((img, i) => (
+            <Image
+              key={i}
+              src={img}
+              alt={`icon-${i}`}
+              width={220}
+              height={220}
+              className="w-[80px] sm:w-[160px] lg:w-[220px] h-auto"
+            />
+          ))}
 
-        {/* Circle 2 */}
-        <div className=" -mt-16 animate-move2">
-          <Image
-            src="/images/homepage/service/round-2.png"
-            alt="Round Icon 2"
-            width={220}
-            height={220}
-            className="w-[80px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
-          />
-        </div>
-
-        {/* Circle 3 */}
-        <div className=" -mt-8 animate-move1">
-          <Image
-            src="/images/homepage/service/round-3.png"
-            alt="Round Icon 3"
-            width={220}
-            height={220}
-            className="w-[80px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
-          />
+          {/* Duplicate Images for Seamless Loop */}
+          {IMAGES.map((img, i) => (
+            <Image
+              key={`dup-${i}`}
+              src={img}
+              alt={`icon-dup-${i}`}
+              width={220}
+              height={220}
+              className="w-[80px] sm:w-[160px] lg:w-[220px] h-auto"
+            />
+          ))}
         </div>
       </div>
     </div>

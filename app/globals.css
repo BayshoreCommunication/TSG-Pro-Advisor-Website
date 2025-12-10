@@ -159,3 +159,37 @@
 .animate-move3 {
   animation: move3 7s ease-in-out infinite;
 }
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 18s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+
+/* Curve Path Motion */
+@keyframes curveMove {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.curve-item {
+  offset-path: path("M 0 200 C 300 -100, 600 500, 1000 200");
+  animation: curveMove 6s linear infinite;
+  position: relative;
+}
+
