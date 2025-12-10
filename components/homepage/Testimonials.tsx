@@ -37,6 +37,20 @@ export default function TestimonialsSlider() {
       text: "Very professional and skilled team. The only issue was that we had to request a couple of revisions, but they handled them well. The final result was worth the wait!",
       image: "/images/homepage/testimonial/img1.png",
     },
+    {
+      name: "Brian Jones",
+      date: "February 18, 2025",
+      rating: 5,
+      text: "All of the mentors and teachers, personally care about you being knowledgeable and successful. The courses are very engaging. If there are any challenges in your learning you may occur a mentor is always available to assist. Everyone has been fun and enthusiastic",
+      image: "/images/homepage/testimonial/img1.png",
+    },
+    {
+      name: "Rosa Grimaldo",
+      date: "December 8, 2025",
+      rating: 5,
+      text: "I highly recommend the Academy of Mentors to anyone looking to improve their leadership skills and gain insights from experienced mentors. It's an investment in yourself that pays off in many ways!",
+      image: "/images/homepage/testimonial/img2.png",
+    },
   ];
 
   return (
@@ -45,23 +59,30 @@ export default function TestimonialsSlider() {
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={32}
-          slidesPerView={1}                 // 👈 MOBILE = 1 COLUMN
+          slidesPerView={1}
           centeredSlides={false}
           grabCursor={true}
           pagination={{ clickable: true }}
           loop={true}
           direction="horizontal"
           breakpoints={{
-            640: { slidesPerView: 1.2 },    // small tablets
-            768: { slidesPerView: 1.7 },    // tablets
-            1024: { slidesPerView: 2.3 },   // laptop
-            1440: { slidesPerView: 3 },     // desktop
+            640: { slidesPerView: 1.2 },
+            768: { slidesPerView: 1.7 },
+            1024: { slidesPerView: 2.3 },
+            1440: { slidesPerView: 3 },
           }}
           className="h-full"
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index} className="flex h-full">
-              <div className="bg-white shadow-md rounded-2xl p-5 flex gap-5 items-start border border-gray-200 h-full w-full min-h-[260px] md:min-h-[280px]">
+              
+              {/* Card */}
+              <div
+                className="bg-white shadow-md rounded-2xl p-5 flex gap-5 items-start 
+                border border-gray-200 h-full w-full min-h-[260px] md:min-h-[280px]
+                transition-all duration-300 
+                hover:shadow-xl hover:-translate-y-2 hover:border-gray-300 hover:scale-[1.02]"
+              >
                 
                 {/* Profile Image */}
                 <div className="min-w-[90px] h-[90px] rounded-xl overflow-hidden">
@@ -100,7 +121,7 @@ export default function TestimonialsSlider() {
                   </div>
 
                   {/* Review Text */}
-                  <p className="text-gray-700 text-sm mt-3  leading-relaxed flex-grow">
+                  <p className="text-gray-700 text-sm mt-3 leading-relaxed flex-grow">
                     {review.text}
                   </p>
                 </div>

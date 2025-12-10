@@ -117,14 +117,14 @@ const ContactPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <input
                   type="text"
-                  name="user_name"
+                  name="name"
                   placeholder="Your name"
                   required
                   className="border border-gray-300 rounded-xl px-4 py-3 focus:outline-none"
                 />
                 <input
                   type="text"
-                  name="user_phone"
+                  name="phone"
                   placeholder="Phone number"
                   className="border border-gray-300 rounded-xl px-4 py-3 focus:outline-none"
                 />
@@ -132,7 +132,7 @@ const ContactPage = () => {
 
               <input
                 type="email"
-                name="user_email"
+                name="email"
                 placeholder="Your email"
                 required
                 className="border border-gray-300 rounded-xl px-4 py-3 focus:outline-none"

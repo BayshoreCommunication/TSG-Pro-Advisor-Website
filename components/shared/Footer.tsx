@@ -87,20 +87,16 @@ export default function Footer() {
             </ul>
 
             <div className="flex gap-5 text-xl mt-5">
-              <Link href="#" aria-label="Instagram">
+              <Link href="https://www.instagram.com/tsg_proadvisor/" aria-label="Instagram">
                 <FaInstagram className="hover:text-primary transition" />
               </Link>
 
-              <Link href="#" aria-label="YouTube">
+              <Link href="https://www.youtube.com/@TSG_ProAdvisor" aria-label="YouTube">
                 <FaYoutube className="hover:text-primary transition" />
               </Link>
 
-              <Link href="#" aria-label="Facebook">
+              <Link href="https://www.facebook.com/tsgproadvisor" aria-label="Facebook">
                 <FaFacebookF className="hover:text-primary transition" />
-              </Link>
-
-              <Link href="#" aria-label="Twitter">
-                <FaTwitter className="hover:text-primary transition" />
               </Link>
             </div>
           </div>

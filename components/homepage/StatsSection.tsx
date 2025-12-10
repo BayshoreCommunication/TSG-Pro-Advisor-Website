@@ -37,10 +37,12 @@ export default function StatsSection() {
       <div className="relative max-w-[1640px] mx-auto px-8 w-full py-10 lg:py-24">
         <div className="max-w-[1640px] mx-auto text-center">
           {/* Intro Text */}
+          <Reveal y={100} opacityFrom={0} duration={3}>
           <p className="text-lg text-gray-700">
             Get the support, education, and resources you need to build a
             successful tax and accounting business.
           </p>
+          </Reveal>
 
           {/* 🔥 Animated Counter */}
           <h2 className="text-6xl md:text-8xl font-extrabold text-black my-6">
@@ -71,18 +73,22 @@ export default function StatsSection() {
           </Reveal>
 
           {/* Section Title */}
+
+          <Reveal y={100} opacityFrom={0} duration={3}>
           <h3 className="text-2xl md:text-3xl font-bold mt-16">
             Education and support designed to help you grow at every stage.
           </h3>
-
+          </Reveal>
+           <Reveal y={100} opacityFrom={0} duration={3}>
           <p className="max-w-3xl mx-auto mt-4 text-gray-600">
             Whether you are starting a tax business or improving an existing
             one, TSG ProAdvisor gives you the training and guidance to help you
             move forward with confidence.
           </p>
-
+          </Reveal>
           {/* Laptop Image */}
           <div className="mt-12 flex justify-center">
+             <Reveal y={100} opacityFrom={0} duration={3}>
             <Image
               src="/images/homepage/stats/image.png" // change path
               alt="Laptop Display"
@@ -90,15 +96,18 @@ export default function StatsSection() {
               height={800}
               className="w-full max-w-[650px]"
             />
+            </Reveal>
           </div>
 
           {/* Bottom Highlight Box */}
           <div className="mt-12 border border-orange-400 bg-white/80 backdrop-blur-md rounded-xl py-6 px-4 max-w-3xl mx-auto">
+
+           <Reveal y={100} opacityFrom={0} duration={3}>
             <p className="text-gray-700">
               Join the growing network of tax professionals who are learning,
               building, and transforming their businesses with TSG ProAdvisor.
             </p>
-
+            </Reveal>
             <h4 className="font-semibold mt-3 text-lg md:text-xl border-t pt-3 border-orange-600">
               We’ve helped thousands build, grow, and succeed.
             </h4>
