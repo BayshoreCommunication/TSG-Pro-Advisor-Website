@@ -24,7 +24,7 @@ export default function ServicesSection() {
               {/* Creative Hover Animation */}
               <span
                 className="
-                  absolute inset-0 bg-black
+                  absolute inset-0 bg-white
                   translate-y-full group-hover:translate-y-0
                   transition-transform duration-300
                 "
@@ -33,7 +33,7 @@ export default function ServicesSection() {
           </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 text-center md:text-left">
+        <div className="grid md:grid-cols-3 gap-10 text-center md:text-left md:ml-[150px] ml-0">
           <div>
             <h3 className="text-xl font-semibold mb-3">
               Tax & Accounting Education
