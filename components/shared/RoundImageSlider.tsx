@@ -22,7 +22,7 @@ const RoundImageSlider = () => {
             alt="Round Icon 1"
             width={220}
             height={220}
-            className="w-[150px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
+            className="w-[80px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
           />
         </div>
 
@@ -33,7 +33,7 @@ const RoundImageSlider = () => {
             alt="Round Icon 2"
             width={220}
             height={220}
-            className="w-[150px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
+            className="w-[80px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
           />
         </div>
 
@@ -44,7 +44,7 @@ const RoundImageSlider = () => {
             alt="Round Icon 3"
             width={220}
             height={220}
-            className="w-[150px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
+            className="w-[80px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
           />
         </div>
       </div>

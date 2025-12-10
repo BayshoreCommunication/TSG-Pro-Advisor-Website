@@ -1,13 +1,17 @@
-import BreadcrumbBlogsPage from "@/components/BlogsPage/BreadcrumbBlogsPage";
 import React from "react";
 import LatestInsights from "@/components/blogs/LatestInsights";
 import GetAllPostData from "@/lib/GetPostData";
+import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
 const page = async () => {
-   const blogPostData = await GetAllPostData();
+  const blogPostData = await GetAllPostData();
   return (
     <div>
-      <BreadcrumbBlogsPage />
-      <LatestInsights blogPost={blogPostData}/>
+      <BreadcrumbSection
+        title="Tips, Training, and Updates for 
+Tax & Accounting Professionals"
+        bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+      />
+      <LatestInsights blogPost={blogPostData} />
     </div>
   );
 };

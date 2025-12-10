@@ -1,12 +1,15 @@
-import BreadcrumbContactUsPage from "@/components/ContactUsPage/BreadcrumbContactUsPage";
 import ContactForm from "@/components/ContactUsPage/ContactForm";
 import Map from "@/components/ContactUsPage/Map";
+import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <BreadcrumbContactUsPage />
+      <BreadcrumbSection
+        title="  Get in Touch With TSG ProAdvisor"
+        bgImage="/images/breadcrumb/breadcrumb-contact.jpg"
+      />
       <ContactForm />
       <Map />
     </div>

@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import parse from "html-react-parser";
 import GetAllPostData from "@/lib/GetPostData";
-import BreadcrumbBlogsPage from "@/components/BlogsPage/BreadcrumbBlogsPage";
 
 // ---------- Styling ----------
 const css = `
@@ -100,7 +99,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <>
       <style>{css}</style>
 
-        <BreadcrumbBlogsPage/>
+      <BreadcrumbSection
+        title="Tips, Training, and Updates for 
+      Tax & Accounting Professionals"
+        bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+      />
       <div>
         <div className="max-w-[1640px] mx-auto px-8  w-full  py-10  ">
           {" "}
