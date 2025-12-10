@@ -16,6 +16,7 @@ interface Blog {
   featuredImage?: { image?: { url: string } };
   slug: string;
   published?: boolean | string;
+  image?: string; // ← add this
 }
 
 export default function BlogSliderSection() {
@@ -26,7 +27,9 @@ export default function BlogSliderSection() {
   useEffect(() => {
     async function fetchBlogs() {
       try {
-        const res = await fetch("https://backend-mccullochlawpa.vercel.app/site/blog");
+        const res = await fetch(
+          "https://backend-mccullochlawpa.vercel.app/site/blog"
+        );
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const data = await res.json();
 
@@ -45,7 +48,6 @@ export default function BlogSliderSection() {
           .map((b: Blog) => ({
             ...b,
             image: b.featuredImage?.image?.url || "/images/placeholder.png",
-            desc: b.desc || b.excerpt || "No description available",
           }));
 
         console.log("Filtered blogs:", filteredBlogs);
@@ -61,7 +63,8 @@ export default function BlogSliderSection() {
     fetchBlogs();
   }, []);
 
-  if (loading) return <p className="text-center py-10 text-white">Loading blogs...</p>;
+  if (loading)
+    return <p className="text-center py-10 text-white">Loading blogs...</p>;
   if (error) return <p className="text-center py-10 text-red-500">{error}</p>;
   if (blogs.length === 0)
     return <p className="text-center py-10 text-white">No blogs found.</p>;
@@ -112,7 +115,9 @@ export default function BlogSliderSection() {
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <h3 className="text-lg md:text-xl font-semibold mb-3">{blog.title}</h3>
+                  <h3 className="text-lg md:text-xl font-semibold mb-3">
+                    {blog.title}
+                  </h3>
                   <p className="text-gray-600 mb-6 flex-grow">{blog.desc}</p>
                   <span className="bg-[#F16128] text-white text-sm font-semibold px-6 py-2 rounded-full self-start hover:bg-[#d7541f] transition cursor-pointer inline-block">
                     Learn More
