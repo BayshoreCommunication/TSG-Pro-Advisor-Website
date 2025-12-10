@@ -33,7 +33,7 @@ export default function ServicesSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-10 text-center md:text-left md:ml-[150px] ml-0">
-          <div>
+          <div className="mt-16">
             <h3 className="text-xl font-semibold mb-3">
               Tax & Accounting Education
             </h3>
@@ -59,7 +59,7 @@ export default function ServicesSection() {
             </button>
           </div>
 
-          <div>
+          <div  className="mt-16">
             <h3 className="text-xl font-semibold mb-3">Business Mentorship</h3>
             <p className="text-gray-600 text-sm mb-4">
               Get guidance to streamline your process and grow your business.
