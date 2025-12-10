@@ -1,3 +1,4 @@
+import MissionSection from "@/components/homepage/MissionSection";
 import BreadcrumbJoinUsPage from "@/components/JoinUsPage/BreadcrumbJoinUsPage";
 import ContactPage from "@/components/JoinUsPage/ContactForm";
 import WhatYouAchieve from "@/components/JoinUsPage/WhatYouAchieve";
@@ -9,8 +10,7 @@ const page = () => {
       <BreadcrumbJoinUsPage />
       <ContactPage />
       <WhatYouAchieve />
-      {/* Our Mission Have to Make*/}
-      {/* <OurMission /> */}
+      <MissionSection />
     </div>
   );
 };

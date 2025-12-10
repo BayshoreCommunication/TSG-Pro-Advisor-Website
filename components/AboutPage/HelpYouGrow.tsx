@@ -2,44 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/motion/Reveal";
 
-export default function ServicesSection() {
+export default function HelpYouGrow() {
   return (
     <section className="relative w-full bg-white overflow-hidden">
       {/* TOP CONTENT */}
       <div className="max-w-[1640px] mx-auto px-8 py-8 md:py-16">
-        <div className="w-full flex justify-center mb-10">
-          {/* Button */}
-          <Reveal y={80} opacityFrom={0} duration={2.2}>
-            <Link
-              href="/services"
-              className="
-                relative px-10 py-4 bg-primary text-white hover:text-primary font-bold text-lg rounded-xl
-                inline-flex items-center overflow-hidden group
-                transition-colors duration-300
-              "
-            >
-              <span className="relative z-10">Explore Our Services</span>
-
-              {/* Creative Hover Animation */}
-              <span
-                className="
-                  absolute inset-0 bg-black
-                  translate-y-full group-hover:translate-y-0
-                  transition-transform duration-300
-                "
-              />
-            </Link>
-          </Reveal>
+        <div className="max-w-4xl mx-auto mb-6 lg:mb-10 xl:mb-20">
+          <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-5 text-black arya-font">
+            How We Help You Grow
+          </h1>
+          <p className="text-center">
+            TSG ProAdvisor gives you the support, tools, and education you need
+            to build and grow a successful tax and accounting business. Whether
+            you are starting out or improving an existing business, you can
+            learn at your own pace, access software that supports your workflow,
+            and get guidance from experienced mentors.
+          </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-10 text-center md:text-left">
           <div>
             <h3 className="text-xl font-semibold mb-3">
-              Tax & Accounting Education
+              Education That Builds Confidence
             </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Improve your skills, build confidence, and learn how to deliver
-              better results.
+              Learn the skills you need to handle tax and accounting work with
+              more accuracy and confidence. Our training helps you strengthen
+              your knowledge and improve the way you serve your clients.
             </p>
             <button className="text-[#F16128] font-semibold text-sm">
               LEARN MORE
@@ -51,8 +39,9 @@ export default function ServicesSection() {
               Professional Tax Software
             </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Use fast, accurate, and reliable tax software that supports your
-              workflow.
+              Use reliable, easy-to-navigate tax software designed to help you
+              work accurately and efficiently. Our platform supports smoother
+              workflows and better results.
             </p>
             <button className="text-[#F16128] font-semibold text-sm">
               LEARN MORE
@@ -60,9 +49,13 @@ export default function ServicesSection() {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-3">Business Mentorship</h3>
+            <h3 className="text-xl font-semibold mb-3">
+              Mentorship and Community Support
+            </h3>
             <p className="text-gray-600 text-sm mb-4">
-              Get guidance to streamline your process and grow your business.
+              Get support from a community of professionals and access
+              mentorship that helps you stay motivated, build your skills, and
+              grow your business step by step.
             </p>
             <button className="text-[#F16128] font-semibold text-sm">
               LEARN MORE

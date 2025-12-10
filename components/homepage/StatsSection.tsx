@@ -62,7 +62,7 @@ export default function StatsSection() {
               {/* Creative Hover Animation */}
               <span
                 className="
-                  absolute inset-0 bg-white
+                  absolute inset-0 bg-black
                   translate-y-full group-hover:translate-y-0
                   transition-transform duration-300
                 "

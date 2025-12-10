@@ -7,17 +7,16 @@ import MissionSection from "@/components/homepage/MissionSection";
 import TsgSection from "@/components/homepage/TsgSection";
 import TSGSlider from "@/components/homepage/TSGSlider";
 
-
 export default function Home() {
   return (
     <>
       <Hero />
-      <StatsSection/>
-      <ServicesSection/>
-      <Testimonials />  
-      <MissionSection/>
-      <TsgSection/>
-      <TSGSlider/>
+      <StatsSection />
+      <ServicesSection />
+      <Testimonials />
+      <MissionSection />
+      <TsgSection />
+      <TSGSlider />
     </>
   );
 }
