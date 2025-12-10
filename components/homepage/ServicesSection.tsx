@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/motion/Reveal";
+import RoundImageSlider from "../shared/RoundImageSlider";
 
 export default function ServicesSection() {
   return (
@@ -70,15 +71,8 @@ export default function ServicesSection() {
           </div>
         </div>
       </div>
-      <div className=" flex justify-center">
-        <Image
-          src="/images/homepage/service/image.png" // change path
-          alt="Laptop Display"
-          width={1000}
-          height={800}
-          className="w-full h-auto"
-        />
-      </div>
+      {/* Slider */}
+      <RoundImageSlider />
     </section>
   );
 }
