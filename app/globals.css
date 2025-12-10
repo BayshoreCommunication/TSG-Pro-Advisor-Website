@@ -133,3 +133,29 @@
   }
 } */
 
+@keyframes move1 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes move2 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(15px); }
+}
+
+@keyframes move3 {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-move1 {
+  animation: move1 5s ease-in-out infinite;
+}
+
+.animate-move2 {
+  animation: move2 6s ease-in-out infinite;
+}
+
+.animate-move3 {
+  animation: move3 7s ease-in-out infinite;
+}

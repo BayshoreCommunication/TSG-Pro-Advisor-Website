@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import React from "react";
 
 const RoundImageSlider = () => {
@@ -17,7 +16,7 @@ const RoundImageSlider = () => {
       {/* Circles Wrapper */}
       <div className="grid grid-cols-3 gap-0 md:gap-20 absolute top-0 left-0 right-0 bottom-0">
         {/* Circle 1 */}
-        <div className="">
+        <div className="animate-move1">
           <Image
             src="/images/homepage/service/round-1.png"
             alt="Round Icon 1"
@@ -28,18 +27,18 @@ const RoundImageSlider = () => {
         </div>
 
         {/* Circle 2 */}
-        <div className=" -mt-16">
+        <div className=" -mt-16 animate-move2">
           <Image
             src="/images/homepage/service/round-2.png"
             alt="Round Icon 2"
             width={220}
             height={220}
-            className="w-[150px] sm:w-[180px] lg:w-[220px] h-auto mx-auto "
+            className="w-[150px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
           />
         </div>
 
         {/* Circle 3 */}
-        <div className=" -mt-8">
+        <div className=" -mt-8 animate-move1">
           <Image
             src="/images/homepage/service/round-3.png"
             alt="Round Icon 3"
