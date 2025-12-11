@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/motion/Reveal";
+import RoundImageSlider from "../shared/RoundImageSlider";
 
 export default function HelpYouGrow() {
   return (
@@ -19,8 +20,10 @@ export default function HelpYouGrow() {
             and get guidance from experienced mentors.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-10 text-center md:text-left">
-          <div>
+
+        <div className="grid md:grid-cols-3 gap-10 text-center md:text-left ">
+          <Reveal x={1000} opacityFrom={0} duration={3}>
+          <div className="mt-16">
             <h3 className="text-xl font-semibold mb-3">
               Education That Builds Confidence
             </h3>
@@ -33,6 +36,8 @@ export default function HelpYouGrow() {
               LEARN MORE
             </button>
           </div>
+          </Reveal>
+          <Reveal x={500} opacityFrom={0} duration={3}>   
 
           <div>
             <h3 className="text-xl font-semibold mb-3">
@@ -47,8 +52,9 @@ export default function HelpYouGrow() {
               LEARN MORE
             </button>
           </div>
-
-          <div>
+          </Reveal>
+          <Reveal x={300} opacityFrom={0} duration={3}>
+          <div className="mt-16">
             <h3 className="text-xl font-semibold mb-3">
               Mentorship and Community Support
             </h3>
@@ -61,17 +67,12 @@ export default function HelpYouGrow() {
               LEARN MORE
             </button>
           </div>
+          </Reveal>
         </div>
       </div>
-      <div className=" flex justify-center">
-        <Image
-          src="/images/homepage/service/image.png" // change path
-          alt="Laptop Display"
-          width={1000}
-          height={800}
-          className="w-full h-auto"
-        />
-      </div>
+
+      {/* Slider */}
+      <RoundImageSlider />
     </section>
   );
 }
