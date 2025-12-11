@@ -100,18 +100,21 @@ export default function StatsSection() {
           </div>
 
           {/* Bottom Highlight Box */}
+
+          <Reveal y={100} opacityFrom={0} duration={3}>
           <div className="mt-12 border border-orange-400 bg-white/80 backdrop-blur-md rounded-xl py-6 px-4 max-w-3xl mx-auto">
 
-           <Reveal y={100} opacityFrom={0} duration={3}>
+           
             <p className="text-gray-700">
               Join the growing network of tax professionals who are learning,
               building, and transforming their businesses with TSG ProAdvisor.
             </p>
-            </Reveal>
+            
             <h4 className="font-semibold mt-3 text-lg md:text-xl border-t pt-3 border-orange-600">
               We’ve helped thousands build, grow, and succeed.
             </h4>
           </div>
+          </Reveal>
         </div>
       </div>
     </section>
