@@ -16,7 +16,7 @@ export default function MissionSection() {
         <div>
           <div className="relative mb-20">
             <div className="grid md:grid-cols-2 gap-6">
-              <Reveal x={-300} opacityFrom={0} duration={3}>
+              <Reveal x={-100} opacityFrom={0} duration={3}>
                 {" "}
                 <Image
                   src="/images/homepage/mission/Mission-1.png"
@@ -26,7 +26,7 @@ export default function MissionSection() {
                   className="w-full rounded-xl object-cover"
                 />
               </Reveal>
-              <Reveal x={300} opacityFrom={0} duration={3}>
+              <Reveal x={100} opacityFrom={0} duration={3}>
                 <Image
                   src="/images/homepage/mission/Mission-2.png"
                   alt="Mission Image 1"
