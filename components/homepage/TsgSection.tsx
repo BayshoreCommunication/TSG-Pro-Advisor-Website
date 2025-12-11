@@ -35,7 +35,7 @@ export default function TsgSection() {
 
            <Reveal y={100} opacityFrom={0} duration={3}>
           <div className="flex items-start gap-4">
-            <Image src="/images/homepage/tsg/icon2.png"alt="event" width={48} height={48} />
+            <Image src="/images/homepage/tsg/icon4.png"alt="event" width={48} height={48} />
             <p>Hosting training and growth events across the U.S.</p>
           </div>
           </Reveal>
@@ -49,7 +49,7 @@ export default function TsgSection() {
 
           <Reveal y={100} opacityFrom={0} duration={3}>
           <div className="flex items-start gap-4">
-            <Image src="/images/homepage/tsg/icon3.png" alt="community" width={48} height={48} />
+            <Image src="/images/homepage/tsg/icon2.png" alt="community" width={48} height={48} />
             <p>Building a community focused on integrity and lasting results</p>
           </div>
           </Reveal>
