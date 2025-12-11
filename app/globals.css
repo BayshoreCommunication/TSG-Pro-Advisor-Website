@@ -161,35 +161,30 @@
 }
 
 
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
+  /* Perfect seamless marquee */
+  @keyframes marqueeSmooth {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
-  100% {
-    transform: translateX(-50%);
+
+  /* slight downward curve */
+  @keyframes curveDown {
+    0%   { transform: translateY(0px); }
+    100% { transform: translateY(40px); }
   }
-}
 
-.animate-marquee {
-  animation: marquee 18s linear infinite;
-  display: flex;
-  width: max-content;
-}
-
-
-/* Curve Path Motion */
-@keyframes curveMove {
-  0% {
-    offset-distance: 0%;
+  .down-curve img {
+    animation: curveDown 4s ease-in-out infinite alternate;
   }
-  100% {
-    offset-distance: 100%;
-  }
-}
 
-.curve-item {
-  offset-path: path("M 0 200 C 300 -100, 600 500, 1000 200");
-  animation: curveMove 6s linear infinite;
-  position: relative;
-}
+  .animate-marquee-smooth {
+    animation: marqueeSmooth 20s linear infinite; 
+    /* linear is IMPORTANT (no dhakka!) */
+  }
+
+
 
