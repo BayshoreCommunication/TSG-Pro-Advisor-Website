@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function RoundImageSlider() {
   return (
-    <div className="relative w-full mt-10 overflow-hidden">
+    <div className="relative w-full mt-10 overflow-hidden ">
       {/* Background Shape */}
       <Image
         src="/images/homepage/service/service-shape.png"

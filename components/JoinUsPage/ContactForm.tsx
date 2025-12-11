@@ -1,16 +1,18 @@
 "use client";
 
 import React, { useRef } from "react";
-
+import Reveal from "../motion/Reveal";
 const ContactPage = () => {
   const formRef = useRef(null);
 
   return (
     <div className="w-full  ">
       <div className=" max-w-[1640px] mx-auto px-8 w-full py-10 lg:py-16">
-        <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-10 text-black arya-font">
-          Your success starts with a conversation.
-        </h1>
+        <Reveal y={100} opacityFrom={0} duration={3}>
+          <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-10 text-black arya-font">
+            Your success starts with a conversation.
+          </h1>
+        </Reveal>
         <div className="w-full bg-[#F5F6F4] rounded-3xl shadow-sm p-10 mx-auto">
           <form ref={formRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* First Name */}

@@ -3,7 +3,7 @@ import Reveal from "../motion/Reveal";
 
 export default function MissionSection() {
   return (
-    <section className="w-full flex justify-center px-8 py-8 md:py-16 ">
+    <section className="w-full flex justify-center px-8 py-8 md:py-16 overflow-hidden">
       <div className="max-w-[1640px] w-full">
         {/* Heading */}
         <div className="text-center relative mb-10">

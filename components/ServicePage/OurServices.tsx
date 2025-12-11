@@ -11,16 +11,22 @@ const OurServices = () => {
     <section>
       <div className="relative max-w-[1640px] mx-auto px-8 w-full py-10 lg:py-16">
         <div className="max-w-4xl mx-auto mb-6">
-          <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-5 text-black arya-font">
-            Our Services
-          </h1>
-          <p className="text-center">
-            The tools and support you need to build and grow your tax and
-            accounting business. TSG ProAdvisor provides education, mentorship,
-            and professional tax software to help you work with more confidence
-            and improve your results at every stage.
-          </p>
+          <Reveal y={100} opacityFrom={0} duration={2}>
+            <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-5 text-black arya-font">
+              Our Services
+            </h1>
+          </Reveal>
+          <Reveal y={100} opacityFrom={0} duration={2}>
+            <p className="text-center">
+              The tools and support you need to build and grow your tax and
+              accounting business. TSG ProAdvisor provides education,
+              mentorship, and professional tax software to help you work with
+              more confidence and improve your results at every stage.
+            </p>
+          </Reveal>
         </div>
+                  <Reveal y={100} opacityFrom={0} duration={3}>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
           <div className=" rounded-2xl text-white">
             <div className="p-5 lg:p-8 bg-[#4E4E4E] bg-[linear-gradient(180deg,rgba(217,217,217,0.3)_0%,rgba(242,100,34,0.3)_100%)] flex flex-col gap-3 rounded-2xl">
@@ -155,6 +161,7 @@ const OurServices = () => {
             </p>
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   );

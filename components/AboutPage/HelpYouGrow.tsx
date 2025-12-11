@@ -9,9 +9,13 @@ export default function HelpYouGrow() {
       {/* TOP CONTENT */}
       <div className="max-w-[1640px] mx-auto px-8 py-8 md:py-16">
         <div className="max-w-4xl mx-auto mb-6 lg:mb-10 xl:mb-20">
+
+          <Reveal y={100} opacityFrom={0} duration={3}>
           <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-5 text-black arya-font">
             How We Help You Grow
           </h1>
+          </Reveal>
+          <Reveal y={100} opacityFrom={0} duration={3}>
           <p className="text-center">
             TSG ProAdvisor gives you the support, tools, and education you need
             to build and grow a successful tax and accounting business. Whether
@@ -19,6 +23,7 @@ export default function HelpYouGrow() {
             learn at your own pace, access software that supports your workflow,
             and get guidance from experienced mentors.
           </p>
+          </Reveal>
         </div>
 
         <div className="grid md:grid-cols-3 gap-10 text-center md:text-left ">

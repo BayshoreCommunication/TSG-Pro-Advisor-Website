@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
+import Reveal from "../motion/Reveal";
 import { memo } from "react";
 
 const VideoSection = () => {
@@ -19,14 +19,19 @@ const VideoSection = () => {
       {/* Content Container */}
       <div className="relative max-w-[1640px] mx-auto px-8 w-full py-10 lg:py-16">
         <div className="max-w-4xl mx-auto mb-6">
+         <Reveal y={100} opacityFrom={0} duration={3}>
+
           <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-5 text-black arya-font">
             Turning Expertise into Impact, and Ambition into Results
           </h1>
+          </Reveal>
+          <Reveal y={100} opacityFrom={0} duration={3}> 
           <p className="text-center">
             Whether you’re starting a tax business or improving an existing one,
             we provide the training and guidance to help you move forward with
             confidence.
           </p>
+          </Reveal>
         </div>
         {/* Youtube Video framework  */}
         <div className="relative w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.1)]">

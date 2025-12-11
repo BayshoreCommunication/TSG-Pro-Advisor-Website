@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
+import Reveal from "../motion/Reveal";
 import { memo } from "react";
 import { PiStarFourLight } from "react-icons/pi";
 
@@ -11,15 +11,19 @@ const WhyChoose = () => {
     <section className="bg-[#F8F8F8]">
       <div className="relative max-w-[1640px] mx-auto px-8 w-full py-10 lg:py-16">
         <div className="max-w-4xl mx-auto mb-6">
-          <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-5 text-black arya-font">
-            Our Services
-          </h1>
-          <p className="text-center">
-            The tools and support you need to build and grow your tax and
-            accounting business. TSG ProAdvisor provides education, mentorship,
-            and professional tax software to help you work with more confidence
-            and improve your results at every stage.
-          </p>
+          <Reveal y={100} opacityFrom={0} duration={3}>
+            <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-5 text-black arya-font">
+              Our Services
+            </h1>
+          </Reveal>
+          <Reveal y={100} opacityFrom={0} duration={3}>
+            <p className="text-center">
+              The tools and support you need to build and grow your tax and
+              accounting business. TSG ProAdvisor provides education,
+              mentorship, and professional tax software to help you work with
+              more confidence and improve your results at every stage.
+            </p>
+          </Reveal>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
           <div>
@@ -46,6 +50,7 @@ const WhyChoose = () => {
                   width={150}
                   height={100}
                 ></Image>
+
                 {/* Paragraph Section */}
                 <p className="mt-4 mb-6 text-base text-white leading-relaxed">
                   Industry-Leading Training Stay ahead with training that covers
