@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
+import Reveal from "../motion/Reveal";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const ContactPage = () => {
@@ -43,10 +44,11 @@ const ContactPage = () => {
   return (
     <div className="w-full  bg-[#F5F6F4]">
       <div className=" max-w-[1640px] mx-auto px-8 w-full py-10 lg:py-16">
+        <Reveal y={100} opacityFrom={0} duration={3}>
         <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-10 text-black arya-font">
           Your success starts with a conversation.
         </h1>
-
+        </Reveal>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* LEFT SIDE */}
           <div className="bg-white rounded-2xl overflow-hidden  relative">

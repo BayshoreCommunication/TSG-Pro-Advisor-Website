@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
+import Reveal from "../motion/Reveal";
 export default function LatestInsights({ blogPost }: { blogPost: any }) {
   // API posts → fallback static
   const posts =
@@ -26,12 +26,17 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
           <div>
+
+            <Reveal y={100} opacityFrom={0} duration={3}>
             <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold mb-2 arya-font ">
               Latest Insights
             </h2>
+            </Reveal>
+             <Reveal y={100} opacityFrom={0} duration={3}>
             <p className="text-gray-600 max-w-3xl">
               Explore insights, tips, and guidance to help you grow your tax and accounting business.
             </p>
+            </Reveal>
           </div>
           <div className="mt-4 md:mt-0">
             <button className="border border-gray-300 px-4 py-2 rounded-md text-sm hover:bg-gray-100">

@@ -35,7 +35,7 @@ export default function ServicesSection() {
 
         <div className="grid md:grid-cols-3 gap-10 text-center md:text-left md:ml-[150px] ml-0">
 
-           <Reveal x={1000} opacityFrom={0} duration={3}>
+           <Reveal x={100} opacityFrom={0} duration={3}>
           <div className="mt-16">
             <h3 className="text-xl font-semibold mb-3">
               Tax & Accounting Education
@@ -49,7 +49,7 @@ export default function ServicesSection() {
             </button>
           </div>
           </Reveal>
-           <Reveal x={500} opacityFrom={0} duration={3}>
+           <Reveal x={100} opacityFrom={0} duration={3}>
           <div>
             <h3 className="text-xl font-semibold mb-3">
               Professional Tax Software
@@ -63,7 +63,7 @@ export default function ServicesSection() {
             </button>
           </div>
           </Reveal>
-           <Reveal x={300} opacityFrom={0} duration={3}>         
+           <Reveal x={100} opacityFrom={0} duration={3}>         
           <div  className="mt-16">
             <h3 className="text-xl font-semibold mb-3">Business Mentorship</h3>
             <p className="text-gray-600 text-sm mb-4">

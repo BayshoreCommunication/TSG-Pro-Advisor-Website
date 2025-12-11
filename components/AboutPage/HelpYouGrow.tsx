@@ -27,7 +27,7 @@ export default function HelpYouGrow() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-10 text-center md:text-left ">
-          <Reveal x={1000} opacityFrom={0} duration={3}>
+          <Reveal x={100} opacityFrom={0} duration={3}>
           <div className="mt-16">
             <h3 className="text-xl font-semibold mb-3">
               Education That Builds Confidence
@@ -42,7 +42,7 @@ export default function HelpYouGrow() {
             </button>
           </div>
           </Reveal>
-          <Reveal x={500} opacityFrom={0} duration={3}>   
+          <Reveal x={100} opacityFrom={0} duration={3}>   
 
           <div>
             <h3 className="text-xl font-semibold mb-3">
@@ -58,7 +58,7 @@ export default function HelpYouGrow() {
             </button>
           </div>
           </Reveal>
-          <Reveal x={300} opacityFrom={0} duration={3}>
+          <Reveal x={100} opacityFrom={0} duration={3}>
           <div className="mt-16">
             <h3 className="text-xl font-semibold mb-3">
               Mentorship and Community Support

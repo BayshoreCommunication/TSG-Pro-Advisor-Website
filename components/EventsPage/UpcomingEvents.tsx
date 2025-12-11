@@ -5,7 +5,7 @@ import Link from "next/link";
 import { memo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-
+import Reveal from "../motion/Reveal";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -29,9 +29,11 @@ const UpcomingEvents = () => {
         {/* Top */}
         <div className="w-full ">
           <div className="flex items-center justify-between mb-8">
+            <Reveal y={100} opacityFrom={0} duration={3}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black arya-font">
               Upcoming Events
             </h1>
+            </Reveal>
 
             <select className="border border-gray-300 rounded-lg px-3 py-2 text-gray-700 cursor-pointer">
               <option>Date</option>
