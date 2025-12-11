@@ -1,71 +1,55 @@
-"use client";
-
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
 
-export default function RoundImageSlider() {
+const RoundImageSlider = () => {
   return (
-    <div className="relative w-full mt-10 overflow-hidden ">
+    <div className="relative w-full mt-10">
       {/* Background Shape */}
       <Image
         src="/images/homepage/service/service-shape.png"
-        alt="bg-shape"
+        alt="Shape Background"
         width={1920}
         height={600}
         className="w-full h-auto pointer-events-none"
       />
 
-      {/* Images container */}
-      <div className="absolute inset-0 flex justify-center items-end pb-10 gap-20">
-        {/* Image 1 */}
-        <motion.div
-          initial={{ x: -200, y: -60, opacity: 0 }}
-          animate={{ x: 0, y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="absolute md:top-0 top-0 left-16 md:left-30 "
-        >
+      {/* Circles Wrapper */}
+      <div className="grid grid-cols-3 gap-0 md:gap-20 absolute top-0 left-0 right-0 bottom-0">
+        {/* Circle 1 */}
+        <div className="animate-move1">
           <Image
             src="/images/homepage/service/round-1.png"
-            alt="round-1"
-            width={200}
-            height={200}
-            className="w-[80px] sm:w-[140px] lg:w-[200px]"
+            alt="Round Icon 1"
+            width={220}
+            height={220}
+            className="w-[80px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
           />
-        </motion.div>
+        </div>
 
-        {/* Image 2 (lower for curve) */}
-        <motion.div
-          initial={{ x: -200, y: 0, opacity: 0 }}
-          animate={{ x: 0, y: 20, opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="absolute md:top-0 "
-        >
+        {/* Circle 2 */}
+        <div className=" -mt-16 animate-move2">
           <Image
             src="/images/homepage/service/round-2.png"
-            alt="round-2"
-            width={200}
-            height={200}
-            className="w-[80px] sm:w-[140px]  lg:w-[200px]"
+            alt="Round Icon 2"
+            width={220}
+            height={220}
+            className="w-[80px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
           />
-        </motion.div>
+        </div>
 
-        {/* Image 3 */}
-        <motion.div
-          initial={{ x: -200, y: -60, opacity: 0 }}
-          animate={{ x: 0, y: 0, opacity: 1 }}
-          transition={{ duration: 1.4, ease: "easeOut" }}
-          className="absolute md:top-0 top-0 right-16 md:right-[200px] "
-        >
+        {/* Circle 3 */}
+        <div className=" -mt-8 animate-move1">
           <Image
             src="/images/homepage/service/round-3.png"
-            alt="round-3"
-            width={200}
-            height={200}
-            className="w-[80px] sm:w-[140px]  lg:w-[200px]"
+            alt="Round Icon 3"
+            width={220}
+            height={220}
+            className="w-[80px] sm:w-[180px] lg:w-[220px] h-auto mx-auto"
           />
-        </motion.div>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default RoundImageSlider;
