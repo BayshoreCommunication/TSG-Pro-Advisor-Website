@@ -71,8 +71,16 @@ export default function BlogSliderSection() {
 
   return (
     <section className="relative w-full bg-[#0F0F0F] text-white px-8 py-12 md:py-20">
+      {/* Background Image */}
+      <Image
+        src="/images/homepage/tsgslider/black-white-bg.png"
+        alt="Hero Background"
+        fill
+        className="absolute inset-0 w-full h-full object-cover object-top"
+        priority
+      />
       {/* SECTION TITLE */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-12 text-white">
         <p className="text-sm uppercase tracking-wide text-gray-300 arya-font">
           Join The TSG ProAdvisor Community
         </p>
@@ -118,7 +126,7 @@ export default function BlogSliderSection() {
                   <h3 className="text-lg md:text-xl font-semibold mb-3">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-600 mb-6 flex-grow">{blog.desc}</p> 
+                  <p className="text-gray-600 mb-6 flex-grow">{blog.desc}</p>
                   <span className="bg-[#F16128] text-white text-sm font-semibold px-6 py-2 rounded-full self-start hover:bg-[#d7541f] transition cursor-pointer inline-block">
                     Learn More
                   </span>
