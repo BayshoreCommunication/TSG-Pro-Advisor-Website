@@ -49,7 +49,6 @@ export default function TestimonialsSlider() {
   return (
     <section className="w-full px-8 py-8 md:py-16 flex justify-center">
       <div className="max-w-[1640px] w-full relative">
-
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={32}
@@ -68,6 +67,7 @@ export default function TestimonialsSlider() {
           }}
         >
           {reviews.map((review, index) => (
+<<<<<<< HEAD
             <SwiperSlide key={index} className="h-auto flex">
   {/* CARD */}
   <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex gap-6 p-6 w-full h-full">
@@ -82,6 +82,21 @@ export default function TestimonialsSlider() {
         className="w-full h-full object-cover"
       />
     </div>
+=======
+            <SwiperSlide key={index} className="h-auto flex py-8">
+              {/* CARD */}
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex gap-6 p-6 h-full w-full ">
+                {/* LEFT IMAGE */}
+                <div className="w-[140px] h-[160px] rounded-xl overflow-hidden shrink-0">
+                  <Image
+                    src={review.image}
+                    alt={review.name}
+                    width={200}
+                    height={200}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+>>>>>>> b7e34e2e658ecd3eb66d1da9dc7c32f6b056745a
 
     {/* RIGHT CONTENT */}
     <div className="flex flex-col flex-1 h-full">
