@@ -118,7 +118,7 @@ export default function BlogSliderSection() {
                   <h3 className="text-lg md:text-xl font-semibold mb-3">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-600 mb-6 flex-grow">{blog.desc}</p>
+                  <p className="text-gray-600 mb-6 flex-grow">{blog.desc}</p> 
                   <span className="bg-[#F16128] text-white text-sm font-semibold px-6 py-2 rounded-full self-start hover:bg-[#d7541f] transition cursor-pointer inline-block">
                     Learn More
                   </span>

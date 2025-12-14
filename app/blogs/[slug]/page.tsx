@@ -60,7 +60,7 @@ export async function generateMetadata({
       images: blog?.featuredImage?.image?.url,
       url: `https://www.medicalweightlosstampa.com/blog/${blog.slug}`,
       type: "article",
-      site_name: "medicalweightlosstampa.com",
+      site_name: "",
     },
   };
 }
