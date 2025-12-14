@@ -69,53 +69,54 @@ export default function TestimonialsSlider() {
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index} className="h-auto flex">
-              {/* CARD */}
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex gap-6 p-6 h-full w-full ">
-                
-                {/* LEFT IMAGE */}
-                <div className="w-[140px] h-[160px] rounded-xl overflow-hidden shrink-0">
-                  <Image
-                    src={review.image}
-                    alt={review.name}
-                    width={200}
-                    height={200}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+  {/* CARD */}
+  <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex gap-6 p-6 w-full h-full">
+    
+    {/* LEFT IMAGE */}
+    <div className="w-[140px] h-[160px] rounded-xl overflow-hidden shrink-0">
+      <Image
+        src={review.image}
+        alt={review.name}
+        width={200}
+        height={200}
+        className="w-full h-full object-cover"
+      />
+    </div>
 
-                {/* RIGHT CONTENT */}
-                <div className="flex flex-col flex-1">
-                  {/* Header */}
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900">
-                        {review.name}
-                      </h3>
-                      <p className="text-sm text-gray-500">{review.date}</p>
-                    </div>
+    {/* RIGHT CONTENT */}
+    <div className="flex flex-col flex-1 h-full">
+      {/* Header */}
+      <div className="flex justify-between items-start">
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900">
+            {review.name}
+          </h3>
+          <p className="text-sm text-gray-500">{review.date}</p>
+        </div>
 
-                    <Image
-                      src="/images/homepage/testimonial/google.png"
-                      alt="Google"
-                      width={32}
-                      height={32}
-                    />
-                  </div>
+        <Image
+          src="/images/homepage/testimonial/google.png"
+          alt="Google"
+          width={32}
+          height={32}
+        />
+      </div>
 
-                  {/* Stars */}
-                  <div className="flex gap-1 mt-2 text-yellow-400 text-sm">
-                    {Array.from({ length: review.rating }).map((_, i) => (
-                      <span key={i}>★</span>
-                    ))}
-                  </div>
+      {/* Stars */}
+      <div className="flex gap-1 mt-2 text-yellow-400 text-sm">
+        {Array.from({ length: review.rating }).map((_, i) => (
+          <span key={i}>★</span>
+        ))}
+      </div>
 
-                  {/* Text */}
-                  <p className="mt-4 text-gray-700 text-sm leading-relaxed flex-grow">
-                    {review.text}
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
+      {/* Text */}
+      <p className="mt-4 text-gray-700 text-sm leading-relaxed flex-grow">
+        {review.text}
+      </p>
+    </div>
+  </div>
+</SwiperSlide>
+
           ))}
         </Swiper>
 
