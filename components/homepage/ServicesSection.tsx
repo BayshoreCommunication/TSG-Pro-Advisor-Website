@@ -33,7 +33,7 @@ export default function ServicesSection() {
           </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 text-center md:text-left md:ml-[150px] ml-0">
+        <div className="grid md:grid-cols-3 gap-64 text-center md:text-left ">
 
            <Reveal x={100} opacityFrom={0} duration={3}>
           <div className="md:mt-16 mt-0 max-w-[300px]">
