@@ -3,51 +3,110 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import emailjs from "emailjs-com";
+import { sendForm } from "emailjs-com";
 import Swal from "sweetalert2";
 import Reveal from "../motion/Reveal";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { useState,useEffect } from "react";
+import { send } from "emailjs-com";
 
+type ContactFormState = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
+type ContactFormErrors = {
+  name?: string;
+  email?: string;
+  phone?: string;
+  message?: string;
+};
 const ContactPage = () => {
-  const formRef = useRef();
+  const [showTitleOne, setShowTitleOne] = useState(true);
 
-  //   const sendEmail = (e) => {
-  //     e.preventDefault();
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowTitleOne((prev) => !prev);
+    }, 3000);
 
-  //     emailjs
-  //       .sendForm(
-  //         "YOUR_SERVICE_ID", // <-- replace
-  //         "YOUR_TEMPLATE_ID", // <-- replace
-  //         formRef.current,
-  //         "YOUR_PUBLIC_KEY" // <-- replace
-  //       )
-  //       .then(
-  //         () => {
-  //           Swal.fire({
-  //             icon: "success",
-  //             title: "Message Sent!",
-  //             text: "We have received your message.",
-  //             confirmButtonColor: "#F97316",
-  //           });
-  //           formRef.current.reset();
-  //         },
-  //         () => {
-  //           Swal.fire({
-  //             icon: "error",
-  //             title: "Oops...",
-  //             text: "Something went wrong. Try again!",
-  //             confirmButtonColor: "#F97316",
-  //           });
-  //         }
-  //       );
-  //   };
+    return () => clearInterval(interval);
+  }, []);
+
+  const [emailForm, setEmailForm] = useState<ContactFormState>({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
+
+  const validate = (values: ContactFormState): ContactFormErrors => {
+    const errors: ContactFormErrors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!values.name) errors.name = "Name is required!";
+    if (!values.email) errors.email = "Email is required!";
+    else if (!regex.test(values.email)) errors.email = "Invalid email format!";
+    if (!values.phone) errors.phone = "Phone number is required!";
+    // if (!values.date) errors.date = "Date is required!";
+    if (!values.message) errors.message = "Message is required!";
+
+    return errors;
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const errors = validate(emailForm);
+    setFormErrors(errors);
+
+    if (Object.keys(errors).length === 0) {
+      send(
+        "service_6x5cpjm",
+        "template_g8p45zg",
+        emailForm,
+        "hs3WVDN7AYB4zTkhu"
+      )
+        .then(() => {
+          setLoading(false);
+          Swal.fire({
+            icon: "success",
+            text: "Thank you for reaching out. We will respond shortly.",
+            confirmButtonColor: "#131b2a",
+          }).then(() => {
+            setEmailForm({
+              name: "",
+              email: "",
+              phone: "",
+              message: "",
+            });
+          });
+        })
+        .catch((err) => {
+          console.error("Email error:", err);
+          setLoading(false);
+          Swal.fire({
+            icon: "error",
+            text: "Something went wrong! Please try again.",
+          });
+        });
+    } else {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="w-full  bg-[#F5F6F4]">
       <div className=" max-w-[1640px] mx-auto px-8 w-full py-10 lg:py-16">
         <Reveal y={100} opacityFrom={0} duration={3}>
-        <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-10 text-black arya-font">
-          Your success starts with a conversation.
-        </h1>
+          <h1 className="text-center text-4xl md:text-5xl lg:text-[52px] font-semibold mb-10 text-black arya-font">
+            Your success starts with a conversation.
+          </h1>
         </Reveal>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* LEFT SIDE */}
@@ -115,44 +174,94 @@ const ContactPage = () => {
             onSubmit={sendEmail}
             className="flex flex-col gap-5"
           > */}
-            <form className="flex flex-col gap-5">
+            <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <input
                   type="text"
                   name="name"
+                  onChange={(e) =>
+                    setEmailForm({
+                      ...emailForm,
+                      name: e.target.value,
+                    })
+                  }
                   placeholder="Your name"
-                  required
                   className="border border-gray-300 rounded-xl px-4 py-3 focus:outline-none"
                 />
+                {formErrors.name && (
+                  <span className="text-red-500 text-sm mt-1">
+                    {formErrors.name}
+                  </span>
+                )}
                 <input
                   type="text"
                   name="phone"
+
+                  onChange={(e) =>
+                    setEmailForm({
+                      ...emailForm,
+                      phone: e.target.value,
+                    })
+                  }
                   placeholder="Phone number"
                   className="border border-gray-300 rounded-xl px-4 py-3 focus:outline-none"
                 />
+                {formErrors.phone && (
+                  <span className="text-red-500 text-sm mt-1">
+                    {formErrors.phone}
+                  </span>
+                )}
               </div>
 
               <input
                 type="email"
                 name="email"
+                onChange={(e) =>
+                    setEmailForm({
+                      ...emailForm,
+                      email: e.target.value,
+                    })
+                  }
                 placeholder="Your email"
-                required
                 className="border border-gray-300 rounded-xl px-4 py-3 focus:outline-none"
               />
-
+              {formErrors.email && (
+                <span className="text-red-500 text-sm mt-1">
+                  {formErrors.email}
+                </span>
+              )}
               <textarea
                 name="message"
                 placeholder="Message"
-                required
+                onChange={(e) =>
+                    setEmailForm({
+                      ...emailForm,
+                      message: e.target.value,
+                    })
+                  }
+
                 className="border border-gray-300 rounded-xl px-4 py-3 h-40 focus:outline-none resize-none"
               ></textarea>
+              {formErrors.message && (
+                <span className="text-red-500 text-sm mt-1">
+                  {formErrors.message}
+                </span>
+              )}
+              
 
-              <button
-                type="submit"
-                className="bg-[#F97316] text-white font-semibold py-3 rounded-xl hover:bg-[#EA580C] transition"
-              >
-                Submit
-              </button>
+              {/* Submit Button */}
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className={`bg-[#F97316] text-white font-semibold py-3 rounded-xl hover:bg-[#EA580C] transition"
+ ${
+                        loading
+                          ? "opacity-50 cursor-not-allowed"
+                          : "hover:bg-orange-400"
+                      }`}
+                    >
+                      {loading ? "Sending..." : "Send Message"}
+                    </button>
             </form>
           </div>
         </div>

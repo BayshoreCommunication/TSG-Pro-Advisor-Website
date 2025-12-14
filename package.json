@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@nextui-org/react": "^2.2.9",
     "@tailwindcss/typography": "^0.5.16",
     "emailjs": "^4.0.3",
@@ -26,6 +27,7 @@
     "react-sticky-box": "^2.0.5",
     "sharp": "^0.34.3",
     "slick-carousel": "^1.8.1",
+    "sweetalert": "^2.1.2",
     "sweetalert2": "^11.26.3",
     "swiper": "^12.0.3"
   },
