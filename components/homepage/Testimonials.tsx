@@ -51,13 +51,13 @@ export default function TestimonialsSlider() {
       text: "Eddia, I don’t have enough words to say thank you. Even though I’m not in the business for a long time but she is a great person, professional and helpful in anything you ask for.",
       image: "/images/homepage/testimonial/img6.png",
     },
-    {
-      name: "Mayra Herrera",
-      date: "1 year ago",
-      rating: 5,
-      text: "Exceptional service from start to finish. The team at TSG provided thorough guidance, ensured accuracy, and maximized my returns. Their expertise and professionalism made the process seamless. Highly recommend for anyone seeking really able tax assistance.",
-      image: "/images/homepage/testimonial/img7.png",
-    },
+    // {
+    //   name: "Mayra Herrera",
+    //   date: "1 year ago",
+    //   rating: 5,
+    //   text: "Exceptional service from start to finish. The team at TSG provided thorough guidance, ensured accuracy, and maximized my returns. Their expertise and professionalism made the process seamless. Highly recommend for anyone seeking really able tax assistance.",
+    //   image: "/images/homepage/testimonial/img7.png",
+    // },
     {
       name: "Sanchez Familia",
       date: "1 year ago",
@@ -139,7 +139,7 @@ export default function TestimonialsSlider() {
         </Swiper>
 
         {/* PAGINATION — MORE BOTTOM SPACE */}
-        <div className="custom-pagination z-10 flex justify-center mt-12" />
+        <div className="custom-pagination z-10 flex justify-center" />
       </div>
     </section>
   );
