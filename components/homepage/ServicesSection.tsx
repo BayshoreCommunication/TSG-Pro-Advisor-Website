@@ -33,48 +33,54 @@ export default function ServicesSection() {
           </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-3 md:gap-64 gap-10 text-center md:text-left ">
+        <div className="grid md:grid-cols-3 gap-10 md:gap-64 text-center place-items-center">
 
-           <Reveal x={100} opacityFrom={0} duration={3}>
-          <div className="md:mt-16 mt-0 max-w-[300px]">
-            <h3 className="text-xl font-semibold mb-3">
-              Tax & Accounting Education
-            </h3>
-            <p className="text-gray-600 text-sm mb-4">
-              Improve your skills, build confidence, and learn how to deliver
-              better results.
-            </p>
-            <button className="text-[#F16128] font-semibold text-sm">
-              LEARN MORE
-            </button>
-          </div>
-          </Reveal>
-           <Reveal x={100} opacityFrom={0} duration={3}>
-          <div className="max-w-[300px]">
-            <h3 className="text-xl font-semibold mb-3">
-              Professional Tax Software
-            </h3>
-            <p className="text-gray-600 text-sm mb-4">
-              Use fast, accurate, and reliable tax software that supports your
-              workflow.
-            </p>
-            <button className="text-[#F16128] font-semibold text-sm">
-              LEARN MORE
-            </button>
-          </div>
-          </Reveal>
-           <Reveal x={100} opacityFrom={0} duration={3}>         
-          <div  className="md:mt-16 mt-0 max-w-[300px]">
-            <h3 className="text-xl font-semibold mb-3">Business Mentorship</h3>
-            <p className="text-gray-600 text-sm mb-4">
-              Get guidance to streamline your process and grow your business.
-            </p>
-            <button className="text-[#F16128] font-semibold text-sm">
-              LEARN MORE
-            </button>
-          </div>
-          </Reveal>
-        </div>
+  <Reveal x={100} opacityFrom={0} duration={3}>
+    <div className="max-w-[300px] flex flex-col justify-center items-center md:mt-16">
+      <h3 className="text-xl font-semibold mb-3">
+        Tax & Accounting Education
+      </h3>
+      <p className="text-gray-600 text-sm mb-4">
+        Improve your skills, build confidence, and learn how to deliver
+        better results.
+      </p>
+      <button className="text-[#F16128] font-semibold text-sm">
+        LEARN MORE
+      </button>
+    </div>
+  </Reveal>
+
+  <Reveal x={100} opacityFrom={0} duration={3}>
+    <div className="max-w-[300px] flex flex-col justify-center items-center">
+      <h3 className="text-xl font-semibold mb-3">
+        Professional Tax Software
+      </h3>
+      <p className="text-gray-600 text-sm mb-4">
+        Use fast, accurate, and reliable tax software that supports your
+        workflow.
+      </p>
+      <button className="text-[#F16128] font-semibold text-sm">
+        LEARN MORE
+      </button>
+    </div>
+  </Reveal>
+
+  <Reveal x={100} opacityFrom={0} duration={3}>
+    <div className="max-w-[300px] flex flex-col justify-center items-center md:mt-16">
+      <h3 className="text-xl font-semibold mb-3">
+        Business Mentorship
+      </h3>
+      <p className="text-gray-600 text-sm mb-4">
+        Get guidance to streamline your process and grow your business.
+      </p>
+      <button className="text-[#F16128] font-semibold text-sm">
+        LEARN MORE
+      </button>
+    </div>
+  </Reveal>
+
+</div>
+
       </div>
       {/* Slider */}
       <RoundImageSlider />
