@@ -89,13 +89,20 @@ export default function TsgSection() {
         src="/images/homepage/tsg/bg.png"
         alt="Hero Background"
         fill
-        className="absolute inset-0 w-full h-full object-cover object-top"
+        className="hidden lg:block absolute inset-0 w-full h-full object-cover object-top"
+        priority
+      />
+      <Image
+        src="/images/homepage/tsg/bg-2.png"
+        alt="Hero Background"
+        fill
+        className="absolute block lg:hidden inset-0 w-full h-full object-cover object-top"
         priority
       />
 
       {/* Content Container */}
       <div className="  px-8 w-full py-10 ">
-        <div className="flex flex-col items-center text-center lg:mt-[550px] mt-[500px]">
+        <div className="flex flex-col items-center text-center lg:mt-[550px] mt-[250px]">
           {/* Headline */}
           <div className="relative w-full">
             <div className="absolute inset-0 z-40  w-full -top-28">

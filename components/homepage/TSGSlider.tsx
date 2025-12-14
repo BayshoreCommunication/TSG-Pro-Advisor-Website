@@ -80,7 +80,7 @@ export default function BlogSliderSection() {
         priority
       />
       {/* SECTION TITLE */}
-      <div className="text-center mb-12 text-white">
+      <div className="text-center mb-12 text-white relative z-40">
         <p className="text-sm uppercase tracking-wide text-gray-300 arya-font">
           Join The TSG ProAdvisor Community
         </p>
