@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,7 +16,7 @@ interface Blog {
   featuredImage?: { image?: { url: string } };
   slug: string;
   published?: boolean | string;
-  image?: string; // ← add this
+  image?: string;
 }
 
 export default function BlogSliderSection() {
@@ -31,12 +31,9 @@ export default function BlogSliderSection() {
           "https://backend-mccullochlawpa.vercel.app/site/blog"
         );
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+
         const data = await res.json();
-
-        console.log("API raw response:", data);
-
         const blogArray = data?.data ?? data?.blogs ?? data ?? [];
-        console.log("Interpreted blogArray:", blogArray);
 
         const filteredBlogs = blogArray
           .filter(
@@ -50,10 +47,8 @@ export default function BlogSliderSection() {
             image: b.featuredImage?.image?.url || "/images/placeholder.png",
           }));
 
-        console.log("Filtered blogs:", filteredBlogs);
         setBlogs(filteredBlogs);
       } catch (err: any) {
-        console.error(err);
         setError(err.message || "Something went wrong");
       } finally {
         setLoading(false);
@@ -65,22 +60,24 @@ export default function BlogSliderSection() {
 
   if (loading)
     return <p className="text-center py-10 text-white">Loading blogs...</p>;
-  if (error) return <p className="text-center py-10 text-red-500">{error}</p>;
+  if (error)
+    return <p className="text-center py-10 text-red-500">{error}</p>;
   if (blogs.length === 0)
     return <p className="text-center py-10 text-white">No blogs found.</p>;
 
   return (
-    <section className="relative w-full bg-[#0F0F0F] text-white px-8 py-12 md:py-20">
+    <section className="relative w-full bg-[#0F0F0F] text-white px-8 py-12 md:py-20 overflow-hidden">
       {/* Background Image */}
       <Image
         src="/images/homepage/tsgslider/black-white-bg.png"
-        alt="Hero Background"
+        alt="Background"
         fill
         className="absolute inset-0 w-full h-full object-cover object-top"
         priority
       />
-      {/* SECTION TITLE */}
-      <div className="text-center mb-12 text-white relative z-40">
+
+      {/* Section Title */}
+      <div className="text-center mb-12 relative z-40">
         <p className="text-sm uppercase tracking-wide text-gray-300 arya-font">
           Join The TSG ProAdvisor Community
         </p>
@@ -92,14 +89,16 @@ export default function BlogSliderSection() {
         </div>
       </div>
 
-      {/* SWIPER */}
+      {/* Swiper */}
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         pagination={{
           clickable: true,
           el: ".custom-pagination",
-          renderBullet: (index, className) =>
-            `<span class="${className} custom-bullet"></span>`,
+        }}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
         }}
         spaceBetween={26}
         slidesPerView={1}
@@ -108,7 +107,7 @@ export default function BlogSliderSection() {
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}
-        className="!pb-14"
+        className="relative z-30 !pb-6"
       >
         {blogs.map((blog) => (
           <SwiperSlide key={blog.id}>
@@ -116,7 +115,7 @@ export default function BlogSliderSection() {
               <div className="bg-white text-black rounded-2xl shadow-lg overflow-hidden h-full flex flex-col hover:shadow-xl transition">
                 <div className="relative w-full h-[180px] md:h-[200px]">
                   <Image
-                    src={blog.image || "/images/placeholder.png"}
+                    src={blog.image!}
                     alt={blog.title}
                     fill
                     className="object-cover object-top"
@@ -126,8 +125,10 @@ export default function BlogSliderSection() {
                   <h3 className="text-lg md:text-xl font-semibold mb-3">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-600 mb-6 flex-grow">{blog.desc}</p>
-                  <span className="bg-[#F16128] text-white text-sm font-semibold px-6 py-2 rounded-full self-start hover:bg-[#d7541f] transition cursor-pointer inline-block">
+                  <p className="text-gray-600 mb-6 flex-grow">
+                    {blog.desc}
+                  </p>
+                  <span className="bg-[#F16128] text-white text-sm font-semibold px-6 py-2 rounded-full self-start">
                     Learn More
                   </span>
                 </div>
@@ -135,23 +136,26 @@ export default function BlogSliderSection() {
             </Link>
           </SwiperSlide>
         ))}
+
+        {/* Pagination */}
+        <div className="custom-pagination flex justify-center gap-3 mt-4"></div>
       </Swiper>
 
-      <div className="custom-pagination flex justify-center items-center gap-3 mt-6"></div>
-
+      {/* Pagination Styles */}
       <style jsx global>{`
         .custom-pagination .swiper-pagination-bullet {
           width: 10px;
           height: 10px;
-          background: #d6d6d6;
+          background: #d1d5db;
           opacity: 1;
           border-radius: 50%;
           transition: all 0.3s ease;
         }
+
         .custom-pagination .swiper-pagination-bullet-active {
-          width: 28px !important;
-          border-radius: 10px !important;
-          background: #f16128 !important;
+          width: 28px;
+          border-radius: 10px;
+          background: #f16128;
         }
       `}</style>
     </section>
