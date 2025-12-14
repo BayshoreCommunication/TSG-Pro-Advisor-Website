@@ -104,6 +104,14 @@ export default function TsgSection() {
                 alt="TSG background"
                 width={1920}
                 height={400}
+                className="hidden lg:block"
+              />
+              <Image
+                src="/images/homepage/tsg/angle-image-2.png"
+                alt="TSG background"
+                width={1920}
+                height={400}
+                className="block lg:hidden"
               />
             </div>
             <div className="max-w-3xl mx-auto bg-[#F16128] rounded-[26px] p-10 pt-20 text-white shadow-xl relative  ">
