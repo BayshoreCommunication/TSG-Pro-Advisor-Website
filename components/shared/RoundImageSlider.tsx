@@ -27,7 +27,7 @@ const RoundImageSlider = () => {
         </div>
 
         {/* Circle 2 */}
-        <div className=" -mt-16">
+        <div className=" -mt-8">
           <Image
             src="/images/homepage/service/round-2.png"
             alt="Round Icon 2"
