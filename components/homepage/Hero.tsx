@@ -10,20 +10,22 @@ const HeroSection = () => {
   const [isDone, setIsDone] = useState(false);
 
   useEffect(() => {
-    const title = "We Help Tax Professionals Grow & Scale with Confidence";
-    let index = 0;
+  const fullText = "We Help Tax Professionals\nGrow & Scale with Confidence";
+  let index = 0;
 
-    const interval = setInterval(() => {
-      setDisplayedText(title.slice(0, index));
-      index++;
-      if (index > title.length) {
-        clearInterval(interval);
-        setIsDone(true); // typing finished → hide cursor
-      }
-    }, 70);
+  const interval = setInterval(() => {
+    setDisplayedText(fullText.slice(0, index));
+    index++;
 
-    return () => clearInterval(interval);
-  }, []);
+    if (index > fullText.length) {
+      clearInterval(interval);
+      setIsDone(true);
+    }
+  }, 70);
+
+  return () => clearInterval(interval);
+}, []);
+
 
   return (
     <section className="relative w-full flex items-center justify-center min-h-[480px] lg:min-h-[480]">
@@ -43,7 +45,7 @@ const HeroSection = () => {
           <Reveal y={80} opacityFrom={0} duration={1.6}>
             <div className="px-6 lg:px-10 rounded-2xl">
               <h1
-                className="text-5xl lg:text-[80px] font-semibold text-transparent leading-snug md:leading-none arya-font"
+                className="text-5xl lg:text-[80px] font-semibold text-transparent leading-snug md:leading-none arya-font max-w-5xl"
                 style={{ WebkitTextStroke: "2px white" }}
               >
                 {displayedText}

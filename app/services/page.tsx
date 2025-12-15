@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <BreadcrumbSection
-        title="We Help Tax Professionals  Grow & Scale with Confidence"
+        title="We Help Tax Professionals Grow & Scale with Confidence"
         bgImage="/images/breadcrumb/breadcrumb-services.jpg"
         buttonText="Connect with TSG Pro Advisor"
         buttonLink="/contact"

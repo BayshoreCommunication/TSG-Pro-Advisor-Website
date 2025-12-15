@@ -23,7 +23,7 @@ export default function MissionSection() {
                   alt="Mission Image 1"
                   width={1600}
                   height={900}
-                  className="w-full rounded-xl object-cover"
+                  className="w-full rounded-xl object-cover transform transition-transform duration-500 hover:scale-110"
                 />
               </Reveal>
               <Reveal x={100} opacityFrom={0} duration={3}>
@@ -32,13 +32,13 @@ export default function MissionSection() {
                   alt="Mission Image 1"
                   width={1600}
                   height={900}
-                  className="w-full rounded-xl object-cover"
+                  className="w-full rounded-xl object-cover transform transition-transform duration-500 hover:scale-110"
                 />
               </Reveal>
             </div>
             <div className="max-w-6xl mx-auto mt-6 md:mt-8 lg:-mt-14">
               <Reveal y={80} opacityFrom={0} duration={1.6}>
-                <div className=" flex flex-col items-center justify-center  relative w-full px-4 py-3 lg:px-16 lg:py-10 bg-white/50 backdrop-blur-md shadow-lg rounded-2xl text-center">
+                <div className=" flex flex-col items-center justify-center  relative w-full px-4 py-3 lg:px-16 lg:py-10 bg-white/50 backdrop-blur-md shadow-lg rounded-2xl text-center transform transition-transform duration-500 hover:scale-110">
                   <p className="  text-base lg:text-xl text-gray-700 leading-relaxed inline-block">
                     We built TSG ProAdvisor to help tax professionals grow with
                     structure, knowledge, and ongoing support.
@@ -55,13 +55,13 @@ export default function MissionSection() {
                   alt="Mission Image 1"
                   width={1600}
                   height={900}
-                  className="w-full rounded-xl object-cover"
+                  className="w-full rounded-xl object-cover transform transition-transform duration-500 hover:scale-110"
                 />
               </Reveal>
             </div>
             <div className="max-w-6xl mx-auto mt-6 md:mt-8 lg:-mt-14">
               <Reveal y={80} opacityFrom={0} duration={1.6}>
-                <div className=" flex  gap-4  md:flex-row items-center justify-center  relative w-full px-4 py-3 lg:px-16 lg:py-10 bg-white/50 backdrop-blur-md shadow-lg rounded-2xl text-center">
+                <div className=" flex  gap-4  md:flex-row items-center justify-center  relative w-full px-4 py-3 lg:px-16 lg:py-10 bg-white/50 backdrop-blur-md shadow-lg rounded-2xl text-center transform transition-transform duration-500 hover:scale-110">
                   <Image
                     src="/images/logo.png"
                     alt="Mission Text"
@@ -69,7 +69,7 @@ export default function MissionSection() {
                     height={200}
                     className="w-full max-w-20 md:max-w-32 "
                   />
-                  <p className="text-start  text-base lg:text-xl text-gray-700 leading-relaxed inline-block">
+                  <p className="text-start  text-base lg:text-xl text-gray-700 leading-relaxed inline-block ">
                     We built TSG ProAdvisor to help tax professionals grow with
                     structure, knowledge, and ongoing support.
                   </p>
