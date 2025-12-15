@@ -8,13 +8,13 @@ import Stagger from "../motion/Stagger";
 
 const WhatYouAchieve = () => {
   return (
-    <section className="relative w-full flex items-center justify-center min-h-[480px] lg:min-h-[480]">
+    <section className="relative w-full flex items-center justify-center min-h-[300px] lg:min-h-[480px]">
       {/* Background Image */}
       <Image
         src="/images/join-us/WhatYouAchieveBg.png"
         alt="Hero Background"
         fill
-        className="absolute inset-0 w-full h-full object-cover object-top"
+        className="absolute inset-0 w-full h-full object-cover object-top min-h-[100px]"
         priority
       />
 
@@ -25,7 +25,7 @@ const WhatYouAchieve = () => {
           <div className="flex flex-col">
             <Reveal y={100} opacityFrom={0} duration={3}>
               <div className="grid grid-cols-2 gap-4 mt-4 mb-8 ">
-                <div className="flex items-start gap-4 flex-col py-4 ">
+                <div className="flex items-start gap-4 flex-col">
                   <h3 className="text-4xl lg:text-5xl font-bold arya-font">
                     1.
                   </h3>

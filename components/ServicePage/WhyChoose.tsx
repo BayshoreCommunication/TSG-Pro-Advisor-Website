@@ -29,7 +29,7 @@ const WhyChoose = () => {
           <div>
             <div className="relative overflow-hidden bg-black/50 group">
               {/* Image */}
-              <div className=" w-full">
+              <div className=" w-full ">
                 <Image
                   src="/images/servicesPage/WhyChoose-1.png" // replace with your image path
                   alt="Tax & Accounting Education"
@@ -43,16 +43,17 @@ const WhyChoose = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80" />
 
               {/* Content */}
-              <div className="absolute bottom-6 left-6 right-6 p-6">
+              <div className="absolute bottom-0 left-4  right-6 p-6 ">
                 <Image
                   src="/images/logo.png"
                   alt=""
                   width={150}
                   height={100}
+                  className="w-[80px] md:w-[90px]"
                 ></Image>
 
                 {/* Paragraph Section */}
-                <p className="mt-4 mb-6 text-base text-white leading-relaxed">
+                <p className="mt-4 mb-6 text-base text-white leading-tight lg:leading-relaxed">
                   Industry-Leading Training Stay ahead with training that covers
                   tax, accounting, bookkeeping, leadership, marketing, and
                   business growth. Learn at your own pace and gain the skills
@@ -107,9 +108,10 @@ const WhyChoose = () => {
                   alt=""
                   width={150}
                   height={100}
+                  className="w-[80px] md:w-[90px]"
                 ></Image>
                 {/* Paragraph Section */}
-                <p className="mt-4 mb-6 text-base text-white leading-relaxed">
+                <p className="mt-4 mb-6 text-base text-white leading-tight lg:leading-relaxed">
                   Community & Support Be part of a supportive community of
                   professionals across the United States. Connect, learn, and
                   grow with people who share your goals and are committed to
