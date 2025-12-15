@@ -67,10 +67,10 @@ const ContactPage = () => {
 
     if (Object.keys(errors).length === 0) {
       send(
-        "service_6x5cpjm",
-        "template_g8p45zg",
+        "service_d3buqx8",
+        "template_dc4qdns",
         emailForm,
-        "hs3WVDN7AYB4zTkhu"
+        "3eLi7b-f8Niw8kjHI"
       )
         .then(() => {
           setLoading(false);

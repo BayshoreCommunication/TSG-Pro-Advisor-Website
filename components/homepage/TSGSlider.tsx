@@ -28,7 +28,7 @@ export default function BlogSliderSection() {
     async function fetchBlogs() {
       try {
         const res = await fetch(
-          "https://backend-mccullochlawpa.vercel.app/site/blog"
+          "https://backend-tsg-pro.vercel.app/site/blog"
         );
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
 
