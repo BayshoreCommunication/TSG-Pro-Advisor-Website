@@ -26,13 +26,13 @@ export default function HelpYouGrow() {
           </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 text-center md:text-left ">
+        <div className="grid md:grid-cols-3 md:gap-64 gap-10 text-center md:text-left ">
           <Reveal x={100} opacityFrom={0} duration={3}>
           <div className="mt-16">
             <h3 className="text-xl font-semibold mb-3">
               Education That Builds Confidence
             </h3>
-            <p className="text-gray-600 text-sm mb-4">
+            <p className="text-gray-600 text-sm mb-4 max-w-[300px] ">
               Learn the skills you need to handle tax and accounting work with
               more accuracy and confidence. Our training helps you strengthen
               your knowledge and improve the way you serve your clients.
@@ -48,7 +48,7 @@ export default function HelpYouGrow() {
             <h3 className="text-xl font-semibold mb-3">
               Professional Tax Software
             </h3>
-            <p className="text-gray-600 text-sm mb-4">
+            <p className="text-gray-600 text-sm mb-4 max-w-[300px]">
               Use reliable, easy-to-navigate tax software designed to help you
               work accurately and efficiently. Our platform supports smoother
               workflows and better results.
@@ -63,7 +63,7 @@ export default function HelpYouGrow() {
             <h3 className="text-xl font-semibold mb-3">
               Mentorship and Community Support
             </h3>
-            <p className="text-gray-600 text-sm mb-4">
+            <p className="text-gray-600 text-sm mb-4 max-w-[300px]">
               Get support from a community of professionals and access
               mentorship that helps you stay motivated, build your skills, and
               grow your business step by step.
