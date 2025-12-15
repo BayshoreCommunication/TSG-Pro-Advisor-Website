@@ -16,7 +16,7 @@ const RoundImageSlider = () => {
       {/* Circles Wrapper */}
       <div className="grid grid-cols-3 gap-0 md:gap-20 absolute top-0 left-0 right-0 bottom-0">
         {/* Circle 1 */}
-        <div className="transform transition-transform duration-500 hover:scale-110">
+        <div className=" -mt-24 transform transition-transform duration-500 hover:scale-110">
           <Image
             src="/images/homepage/service/round-1.png"
             alt="Round Icon 1"
@@ -27,7 +27,7 @@ const RoundImageSlider = () => {
         </div>
 
         {/* Circle 2 */}
-        <div className=" -mt-8 transform transition-transform duration-500 hover:scale-110">
+        <div className=" -mt-32 transform transition-transform duration-500 hover:scale-110">
           <Image
             src="/images/homepage/service/round-2.png"
             alt="Round Icon 2"
@@ -38,7 +38,7 @@ const RoundImageSlider = () => {
         </div>
 
         {/* Circle 3 */}
-        <div className=" -mt-8 transform transition-transform duration-500 hover:scale-110">
+        <div className=" -mt-24 transform transition-transform duration-500 hover:scale-110">
           <Image
             src="/images/homepage/service/round-3.png"
             alt="Round Icon 3"
