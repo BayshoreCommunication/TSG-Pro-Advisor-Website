@@ -90,29 +90,39 @@ export default function TestimonialsSlider() {
           {reviews.map((review, index) => (
             <SwiperSlide key={index} className="h-auto flex py-8">
               {/* CARD */}
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex gap-6 p-6 h-full w-full ">
-                {/* LEFT IMAGE */}
-                <div className="w-[140px] h-[160px] rounded-xl overflow-hidden shrink-0">
-                  <Image
-                    src={review.image}
-                    alt={review.name}
-                    width={200}
-                    height={200}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-6 p-6 h-full w-full">
+                {/* TOP / LEFT SECTION */}
+                <div className="flex gap-4 md:gap-6">
+                  {/* IMAGE */}
+                  <div className="w-[120px] h-[140px] md:w-[140px] md:h-[160px] rounded-xl overflow-hidden shrink-0">
+                    <Image
+                      src={review.image}
+                      alt={review.name}
+                      width={200}
+                      height={200}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
-                {/* RIGHT CONTENT */}
-                <div className="flex flex-col flex-1 h-full">
-                  {/* Header */}
-                  <div className="flex justify-between items-start">
+                  {/* NAME + DATE + STARS */}
+                  <div className="flex flex-col justify-between flex-1">
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900">
                         {review.name}
                       </h3>
                       <p className="text-sm text-gray-500">{review.date}</p>
-                    </div>
 
+                      {/* Stars */}
+                      <div className="flex gap-1 mt-2 text-yellow-400 text-sm">
+                        {Array.from({ length: review.rating }).map((_, i) => (
+                          <span key={i}>★</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* GOOGLE ICON (DESKTOP ONLY) */}
+                  <div className="hidden md:block">
                     <Image
                       src="/images/homepage/testimonial/google.png"
                       alt="Google"
@@ -120,19 +130,12 @@ export default function TestimonialsSlider() {
                       height={32}
                     />
                   </div>
-
-                  {/* Stars */}
-                  <div className="flex gap-1 mt-2 text-yellow-400 text-sm">
-                    {Array.from({ length: review.rating }).map((_, i) => (
-                      <span key={i}>★</span>
-                    ))}
-                  </div>
-
-                  {/* Text */}
-                  <p className="mt-4 text-gray-700 text-sm leading-relaxed flex-grow">
-                    {review.text}
-                  </p>
                 </div>
+
+                {/* TEXT — ALWAYS BOTTOM ON MOBILE */}
+                <p className="text-gray-700 text-sm leading-relaxed mt-4 md:mt-0 flex-grow">
+                  {review.text}
+                </p>
               </div>
             </SwiperSlide>
           ))}
