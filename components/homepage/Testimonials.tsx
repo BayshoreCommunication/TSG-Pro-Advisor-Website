@@ -92,50 +92,41 @@ export default function TestimonialsSlider() {
               {/* CARD */}
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-6 p-6 h-full w-full">
                 {/* TOP / LEFT SECTION */}
-                <div className="flex gap-4 md:gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-5  w-full gap-3 md:gap-6">
                   {/* IMAGE */}
-                  <div className="w-[120px] h-[140px] md:w-[140px] md:h-[160px] rounded-xl overflow-hidden shrink-0">
-                    <Image
-                      src={review.image}
-                      alt={review.name}
-                      width={200}
-                      height={200}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  {/* 
+                <div className="w-[120px] h-[140px] md:w-[140px] md:h-[160px] rounded-xl overflow-hidden shrink-0">
+                  <Image
+                    src={review.image}
+                    alt={review.name}
+                    width={200}
+                    height={200}
+                    className="h-full w-full object-cover"
+                  />
+                </div> 
+                */}
 
-                  {/* NAME + DATE + STARS */}
-                  <div className="flex flex-col justify-between flex-1">
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900">
-                        {review.name}
-                      </h3>
-                      <p className="text-sm text-gray-500">{review.date}</p>
+                  {/* LEFT: NAME + DATE + STARS */}
+                  <div className="min-w-[180px]  col-span-2">
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {review.name}
+                    </h3>
 
-                      {/* Stars */}
-                      <div className="flex gap-1 mt-2 text-yellow-400 text-sm">
-                        {Array.from({ length: review.rating }).map((_, i) => (
-                          <span key={i}>★</span>
-                        ))}
-                      </div>
+                    <p className="text-sm text-gray-500">{review.date}</p>
+
+                    {/* Stars */}
+                    <div className="mt-2 flex gap-1 text-sm text-yellow-400">
+                      {Array.from({ length: review.rating }, (_, i) => (
+                        <span key={i}>★</span>
+                      ))}
                     </div>
                   </div>
 
-                  {/* GOOGLE ICON (DESKTOP ONLY) */}
-                  <div className="hidden md:block">
-                    <Image
-                      src="/images/homepage/testimonial/google.png"
-                      alt="Google"
-                      width={32}
-                      height={32}
-                    />
+                  {/* RIGHT: REVIEW TEXT */}
+                  <div className="col-span-3 text-gray-700 leading-relaxed">
+                    {review.text}
                   </div>
                 </div>
-
-                {/* TEXT — ALWAYS BOTTOM ON MOBILE */}
-                <p className="text-gray-700 text-sm leading-relaxed mt-4 md:mt-0 flex-grow">
-                  {review.text}
-                </p>
               </div>
             </SwiperSlide>
           ))}
