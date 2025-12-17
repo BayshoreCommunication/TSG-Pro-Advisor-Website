@@ -7,7 +7,7 @@ export default function ServicesSection() {
   return (
     <section className="relative w-full bg-white overflow-hidden">
       {/* TOP CONTENT */}
-      <div className="max-w-[1640px] mx-auto px-8 py-8 md:py-16">
+      <div className="max-w-[1640px] mx-auto px-8 py-8 md:py-16 mb-32">
         <div className="w-full flex justify-center mb-10">
           {/* Button */}
           <Reveal y={80} opacityFrom={0} duration={2.2}>
@@ -33,9 +33,8 @@ export default function ServicesSection() {
           </Reveal>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 md:gap-64 text-center place-items-center">
-
-  <Reveal x={100} opacityFrom={0} duration={3}>
+        <div className="grid md:grid-cols-2 gap-10 md:gap-64 text-center place-items-center">
+          {/* <Reveal x={100} opacityFrom={0} duration={3}>
     <div className="max-w-[300px] flex flex-col justify-center items-start  md:mt-16">
       <h3 className="text-xl font-semibold mb-3">
         Tax & Accounting Education
@@ -48,39 +47,37 @@ export default function ServicesSection() {
         LEARN MORE
       </button>
     </div>
-  </Reveal>
+  </Reveal> */}
 
-  <Reveal x={100} opacityFrom={0} duration={3}>
-    <div className="max-w-[300px] flex flex-col justify-center items-start">
-      <h3 className="text-xl font-semibold mb-3">
-        Professional Tax Software
-      </h3>
-      <p className="text-gray-600 text-sm mb-4 text-start">
-        Use fast, accurate, and reliable tax software that supports your
-        workflow.
-      </p>
-      <button className="text-[#F16128] font-semibold text-sm">
-        LEARN MORE
-      </button>
-    </div>
-  </Reveal>
+          <Reveal x={100} opacityFrom={0} duration={3}>
+            <div className="max-w-[300px] flex flex-col justify-center items-start">
+              <h3 className="text-xl font-semibold mb-3">
+                Professional Tax Software
+              </h3>
+              <p className="text-gray-600 text-sm mb-4 text-start">
+                Use fast, accurate, and reliable tax software that supports your
+                workflow.
+              </p>
+              <button className="text-[#F16128] font-semibold text-sm">
+                LEARN MORE
+              </button>
+            </div>
+          </Reveal>
 
-  <Reveal x={100} opacityFrom={0} duration={3}>
-    <div className="max-w-[300px] flex flex-col justify-center items-start md:mt-16">
-      <h3 className="text-xl font-semibold mb-3">
-        Business Mentorship
-      </h3>
-      <p className="text-gray-600 text-sm mb-4 text-start">
-        Get guidance to streamline your process and grow your business.
-      </p>
-      <button className="text-[#F16128] font-semibold text-sm">
-        LEARN MORE
-      </button>
-    </div>
-  </Reveal>
-
-</div>
-
+          <Reveal x={100} opacityFrom={0} duration={3}>
+            <div className="max-w-[300px] flex flex-col justify-center items-start ">
+              <h3 className="text-xl font-semibold mb-3">
+                Business Mentorship
+              </h3>
+              <p className="text-gray-600 text-sm mb-4 text-start">
+                Get guidance to streamline your process and grow your business.
+              </p>
+              <button className="text-[#F16128] font-semibold text-sm">
+                LEARN MORE
+              </button>
+            </div>
+          </Reveal>
+        </div>
       </div>
       {/* Slider */}
       <RoundImageSlider />
