@@ -50,7 +50,7 @@ const OurServices = () => {
                 transition-colors duration-300 mt-4 text-center"
                 >
                   <span className="relative z-10 inline-block">
-                    Connect with TSG Pro Advisor
+                    Connect with TSG ProAdvisor
                   </span>
 
                   {/* Creative Hover Animation */}
