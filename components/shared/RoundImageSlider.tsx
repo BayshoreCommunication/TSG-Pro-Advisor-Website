@@ -14,7 +14,8 @@ const RoundImageSlider = () => {
       />
 
       {/* Circles Wrapper */}
-      <div className="grid grid-cols-2 gap-0 md:gap-20 absolute top-0 left-0 right-0 bottom-0">
+
+      <div className="grid grid-cols-2 gap-0 md:gap-20 absolute top-0 left-32 right-32 bottom-0">
         {/* Circle 1 */}
         {/* <div className=" md:-mt-24 -mt-8 transform transition-transform duration-500 hover:scale-110">
           <Image

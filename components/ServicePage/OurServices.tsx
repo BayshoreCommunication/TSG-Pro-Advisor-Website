@@ -147,7 +147,7 @@ const OurServices = () => {
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
                   <h4 className="text-white text-2xl font-semibold group-hover:text-primary duration-300">
-                    Tax & Accounting <br /> Education
+                    Tax <br /> Education
                   </h4>
                 </div>
               </div>
