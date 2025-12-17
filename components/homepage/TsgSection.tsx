@@ -121,9 +121,9 @@ export default function TsgSection() {
                 className="block lg:hidden"
               />
             </div>
-            <div className="max-w-3xl mx-auto bg-[#F16128] rounded-[26px] p-10   text-white shadow-xl relative  ">
+            <div className="max-w-3xl mx-auto bg-[#F16128] rounded-[26px] p-10   text-white shadow-xl relative  md:mt-[80px] mt-0">
               <Reveal y={100} opacityFrom={0} duration={3}>
-                <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 md:mt-[80px] mt-0">
+                <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 md:mt-[90px] mt-0">
                   TSG ProAdvisor is leading the way.
                 </h2>
               </Reveal>
