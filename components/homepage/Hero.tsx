@@ -62,7 +62,7 @@ const HeroSection = () => {
                 inline-flex items-center overflow-hidden group transition-colors duration-300"
             >
               <span className="relative z-10">
-                Connect with TSG Pro Advisor
+                Connect with TSG ProAdvisor
               </span>
 
               {/* Creative Hover Animation */}
