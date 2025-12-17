@@ -64,22 +64,22 @@ export default function StatsSection() {
       />
 
       {/* Content Container */}
-      <div className="relative max-w-[1640px] mx-auto px-8 w-full py-10 lg:py-24">
+      <div className="relative max-w-[1640px] mx-auto px-8 w-full py-6">
         <div className="max-w-[1640px] mx-auto text-center">
-          {/* Intro Text */}
-          <Reveal y={100} opacityFrom={0} duration={3}>
+          
+          {/* <Reveal y={100} opacityFrom={0} duration={3}>
           <p className="text-lg text-gray-700">
             Get the support, education, and resources you need to build a
             successful tax and accounting business.
           </p>
           </Reveal>
 
-          {/* 🔥 Animated Counter */}
+          
           <h2 className="text-6xl md:text-8xl font-extrabold text-black my-6">
             <motion.span>{rounded}</motion.span>
           </h2>
 
-          {/* Button */}
+          
           <Reveal y={80} opacityFrom={0} duration={2.2}>
             <Link
               href="/services"
@@ -91,7 +91,7 @@ export default function StatsSection() {
             >
               <span className="relative z-10">Explore Our Services</span>
 
-              {/* Creative Hover Animation */}
+              
               <span
                 className="
                   absolute inset-0 bg-black
@@ -100,12 +100,12 @@ export default function StatsSection() {
                 "
               />
             </Link>
-          </Reveal>
+          </Reveal> */}
 
           <div className="w-full  py-16">
       <div className="max-w-[1640px] mx-auto px-4 text-center">
         {/* Subtitle */}
-        <p className="text-gray-600 mb-12">
+        <p className="text-gray-600 mb-12 font-bold text-lg md:text-xl">
           Get the support, education, and resources you need to build a successful
           tax and accounting business.
         </p>
