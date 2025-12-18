@@ -7,7 +7,7 @@ import { sendForm } from "emailjs-com";
 import Swal from "sweetalert2";
 import Reveal from "../motion/Reveal";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { send } from "emailjs-com";
 
 type ContactFormState = {
@@ -196,7 +196,6 @@ const ContactPage = () => {
                 <input
                   type="text"
                   name="phone"
-
                   onChange={(e) =>
                     setEmailForm({
                       ...emailForm,
@@ -217,11 +216,11 @@ const ContactPage = () => {
                 type="email"
                 name="email"
                 onChange={(e) =>
-                    setEmailForm({
-                      ...emailForm,
-                      email: e.target.value,
-                    })
-                  }
+                  setEmailForm({
+                    ...emailForm,
+                    email: e.target.value,
+                  })
+                }
                 placeholder="Your email"
                 className="border border-gray-300 rounded-xl px-4 py-3 focus:outline-none"
               />
@@ -234,12 +233,11 @@ const ContactPage = () => {
                 name="message"
                 placeholder="Message"
                 onChange={(e) =>
-                    setEmailForm({
-                      ...emailForm,
-                      message: e.target.value,
-                    })
-                  }
-
+                  setEmailForm({
+                    ...emailForm,
+                    message: e.target.value,
+                  })
+                }
                 className="border border-gray-300 rounded-xl px-4 py-3 h-40 focus:outline-none resize-none"
               ></textarea>
               {formErrors.message && (
@@ -247,21 +245,19 @@ const ContactPage = () => {
                   {formErrors.message}
                 </span>
               )}
-              
 
               {/* Submit Button */}
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className={`bg-[#F97316] text-white font-semibold py-3 rounded-xl hover:bg-[#EA580C] transition"
- ${
-                        loading
-                          ? "opacity-50 cursor-not-allowed"
-                          : "hover:bg-orange-400"
-                      }`}
-                    >
-                      {loading ? "Sending..." : "Send Message"}
-                    </button>
+              <button
+                type="submit"
+                disabled={loading}
+                className={`md:col-span-2 justify-self-center w-full max-w-md
+    bg-[#F97316] text-white font-semibold py-3 rounded-xl
+    transition
+    ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-[#EA580C]"}
+  `}
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
             </form>
           </div>
         </div>

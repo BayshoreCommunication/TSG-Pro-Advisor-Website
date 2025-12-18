@@ -163,10 +163,10 @@ const ContactPage = () => {
               className="border-b py-3 bg-transparent"
             />
             {formErrors.phone && (
-                  <span className="text-red-500 text-sm mt-1">
-                    {formErrors.phone}
-                  </span>
-                )}
+              <span className="text-red-500 text-sm mt-1">
+                {formErrors.phone}
+              </span>
+            )}
 
             <select
               name="revenue"
@@ -179,10 +179,10 @@ const ContactPage = () => {
               className="border-b py-3 bg-transparent"
             >
               {formErrors.revenue && (
-                  <span className="text-red-500 text-sm mt-1">
-                    {formErrors.revenue}
-                  </span>
-                )}
+                <span className="text-red-500 text-sm mt-1">
+                  {formErrors.revenue}
+                </span>
+              )}
               <option value="">Select revenue</option>
               <option value="$0 - $50,000">$0 - $50,000</option>
               <option value="$50,000 - $250,000">$50,000 - $250,000</option>
@@ -193,7 +193,15 @@ const ContactPage = () => {
             <button
               type="submit"
               disabled={loading}
-              className="md:col-span-2 px-10 py-4 bg-primary text-white rounded-xl"
+              className="
+    md:col-span-2
+    justify-self-start
+    w-full max-w-md
+    px-10 py-4
+    bg-primary text-white
+    rounded-xl
+    text-center
+  "
             >
               {loading ? "Submitting..." : "Submit"}
             </button>
