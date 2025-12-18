@@ -156,7 +156,7 @@ export default function StatsSection() {
 
         {/* Highlight Box */}
         <Reveal y={100} opacityFrom={0} duration={3}>
-          <div className="mt-6 backdrop-blur-md rounded-xl py-6 px-4 max-w-3xl mx-auto">
+          <div className="mt-6 backdrop-blur-md rounded-xl py-6 px-4 max-w-3xl mx-auto bg-white">
             <p className="text-gray-700">
               Join the growing network of tax professionals who are learning,
               building, and transforming their businesses with TSG ProAdvisor.
