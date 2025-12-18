@@ -88,7 +88,7 @@ const AboutTSG = () => {
               "
               >
                 <span className="relative z-10">
-                  Connect with TSG Pro Advisor
+                  Connect with TSG ProAdvisor
                 </span>
 
                 {/* Creative Hover Animation */}
