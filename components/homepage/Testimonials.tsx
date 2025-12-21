@@ -90,7 +90,7 @@ export default function TestimonialsSlider() {
           {reviews.map((review, index) => (
             <SwiperSlide key={index} className="h-auto flex py-8">
               {/* CARD */}
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-6 p-6 h-full w-full">
+              <div className="bg-white rounded-2xl shadow-lg  flex flex-col md:flex-row gap-6 p-6 h-full w-full hover:-translate-y-2 transition-transform duration-300">
                 {/* TOP / LEFT SECTION */}
                 <div className="grid grid-cols-1 md:grid-cols-5  w-full gap-3 md:gap-6">
                   {/* IMAGE */}
