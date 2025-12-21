@@ -54,6 +54,7 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
               className="group block rounded-lg overflow-hidden shadow hover:shadow-lg transition"
             >
               <div className="relative">
+                <div className="overflow-hidden ">
                 <Image
                   src={blog.image}
                   alt={blog.title}
@@ -61,6 +62,7 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
                   height={800}
                   className="w-full h-auto object-cover object-top group-hover:scale-110 duration-500"
                 />
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <h3 className="text-white font-semibold text-lg group-hover:text-orange-600">
                     {blog.title}

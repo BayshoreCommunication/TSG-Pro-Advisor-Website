@@ -111,13 +111,13 @@ const ContactPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* LEFT SIDE */}
           <div className="bg-white rounded-2xl overflow-hidden  relative">
-            <div className=" w-full ">
+            <div className=" w-full overflow-hidden group">
               <Image
                 src="/images/contactPage/contact-page.png" // your uploaded image
                 alt="Contact Preview"
                 width={1000}
                 height={1000}
-                className="object-cover"
+                className="object-cover transform transition-all duration-500 ease-in-out group-hover:scale-110"
               />
             </div>
 

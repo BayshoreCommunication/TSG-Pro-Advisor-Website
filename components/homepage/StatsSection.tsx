@@ -63,8 +63,8 @@ export default function StatsSection() {
       <div className="relative max-w-[1640px] mx-auto px-8 w-full py-16 text-center">
         {/* Subtitle */}
         <p className="text-gray-600 mb-12 font-bold text-lg md:text-xl">
-          Get the support, education, and resources you need to build a successful
-          tax and accounting business.
+          Get the support, education, and resources you need to build a
+          successful tax and accounting business.
         </p>
 
         {/* Stats Grid */}
@@ -91,9 +91,7 @@ export default function StatsSection() {
             <h2 className="text-6xl md:text-8xl font-bold text-black">
               <Counter end={200} suffix="+" />
             </h2>
-            <p className="mt-2 text-2xl font-semibold text-gray-700">
-              Courses
-            </p>
+            <p className="mt-2 text-2xl font-semibold text-gray-700">Courses</p>
           </div>
 
           <div>
@@ -142,15 +140,19 @@ export default function StatsSection() {
         </Reveal>
 
         {/* Image */}
-        <div className="mt-12 flex justify-center">
+        <div className="mt-12 flex justify-center ">
           <Reveal y={100} opacityFrom={0} duration={3}>
-            <Image
+            <div className="overflow-hidden rounded-xl mx-auto w-[850px] group">
+              <Image
               src="/images/homepage/stats/image.jpg"
               alt="Laptop Display"
               width={1000}
               height={800}
-              className="w-full max-w-[850px] rounded-xl"
+              className="w-full  rounded-xl object-cover
+      transition-transform duration-500 ease-in-out
+      group-hover:scale-110"
             />
+            </div>
           </Reveal>
         </div>
 

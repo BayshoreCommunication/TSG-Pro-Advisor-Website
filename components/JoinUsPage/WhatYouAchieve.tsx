@@ -68,43 +68,54 @@ const WhatYouAchieve = () => {
             <div className="lg:flex items-center gap-2 hidden ">
               <div className="flex flex-col items-center gap-2">
                 <Reveal y={-100} opacityFrom={0} duration={3}>
-                  <Image
+                  <div className="overflow-hidden group">
+                    <Image
                     src="/images/join-us/part-1.png"
                     alt="Our Team"
-                    className="w-auto h-auto "
-                    width={630}
-                    height={470}
-                  />{" "}
-                </Reveal>
-                <Reveal y={100} opacityFrom={0} duration={3}>
-                  <Image
-                    src="/images/join-us/part-2.png"
-                    alt="Our Team"
-                    className="w-auto h-auto "
+                    className="w-auto h-auto transform transition-all duration-500 ease-in-out group-hover:scale-110"
                     width={630}
                     height={470}
                   />
+                  </div>
+                  {" "}
+                </Reveal>
+                <Reveal y={100} opacityFrom={0} duration={3}>
+                  <div className="overflow-hidden group">
+                    <Image
+                    src="/images/join-us/part-2.png"
+                    alt="Our Team"
+                    className="w-auto h-auto transform transition-all duration-500 ease-in-out group-hover:scale-110"
+                    width={630}
+                    height={470}
+                  />
+                  </div>{" "}
                 </Reveal>
               </div>
               <div>
                 <div className="flex flex-col items-center gap-2">
                   <Reveal x={100} opacityFrom={0} duration={3}>
-                    <Image
+                    <div className="overflow-hidden group">
+
+                      <Image
                       src="/images/join-us/part-3.png"
                       alt="Our Team"
-                      className="w-auto h-auto "
+                      className="w-auto h-auto transform transition-all duration-500 ease-in-out group-hover:scale-110"
                       width={630}
                       height={470}
-                    />{" "}
+                    />
+                    </div>
+                    {" "}
                   </Reveal>
                   <Reveal y={-100} opacityFrom={0} duration={3}>
-                    <Image
+                    <div className="overflow-hidden group">
+                      <Image
                       src="/images/join-us/part-4.png"
                       alt="Our Team"
-                      className="w-auto h-auto "
+                      className="w-auto h-auto transform transition-all duration-500 ease-in-out group-hover:scale-110"
                       width={630}
                       height={470}
-                    />{" "}
+                    />
+                      </div>{" "}
                   </Reveal>
                 </div>
               </div>

@@ -29,13 +29,13 @@ const WhyChoose = () => {
           <div>
             <div className="relative overflow-hidden bg-black/50 group">
               {/* Image */}
-              <div className=" w-full ">
+              <div className=" w-full overflow-hidden group">
                 <Image
                   src="/images/servicesPage/WhyChoose-1.png" // replace with your image path
                   alt="Tax & Accounting Education"
                   width={1000}
                   height={1000}
-                  className="object-cover"
+                  className="object-cover transform transition-all duration-500 ease-in-out group-hover:scale-110"
                 />
               </div>
 
@@ -49,7 +49,7 @@ const WhyChoose = () => {
                   alt=""
                   width={150}
                   height={100}
-                  className="w-[80px] md:w-[90px]"
+                  className="w-[80px] md:w-[90px] "
                 ></Image>
 
                 {/* Paragraph Section */}
@@ -88,13 +88,13 @@ const WhyChoose = () => {
           <div>
             <div className="relative overflow-hidden bg-black/50 group">
               {/* Image */}
-              <div className=" w-full">
+              <div className=" w-full overflow-hidden group">
                 <Image
                   src="/images/servicesPage/WhyChoose-2.png" // replace with your image path
                   alt="Tax & Accounting Education"
                   width={1000}
                   height={1000}
-                  className="object-cover"
+                  className="object-cover transform transition-all duration-500 ease-in-out group-hover:scale-110"
                 />
               </div>
 
@@ -145,14 +145,16 @@ const WhyChoose = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 mt-6">
-          <div className="w-full h-full bg-[linear-gradient(110.71deg,#451A06_0%,#CF5720_49.46%)]">
-            <div className="p-6 lg:p-10 flex flex-col items-start text-start justify-between">
+          <div className="w-full h-full bg-[linear-gradient(110.71deg,#451A06_0%,#CF5720_49.46%)] overflow-hidden group">
+            <div className="transform transition-all duration-500 ease-in-out group-hover:scale-110">
+              <div className="p-6 lg:p-10 flex flex-col items-start text-start justify-between">
               <div>
                 <Image
                   src="/images/logo.png"
                   alt=""
                   width={150}
                   height={100}
+                  className=""
                 ></Image>
                 {/* Paragraph Section */}
                 <p className="mt-4 mb-6 text-base text-white leading-relaxed">
@@ -186,14 +188,15 @@ const WhyChoose = () => {
                 />
               </Link>
             </div>
+            </div>
           </div>
-          <div className=" w-full">
+          <div className=" w-full h-full overflow-hidden group">
             <Image
               src="/images/servicesPage/WhyChoose-3.png" // replace with your image path
               alt="Tax & Accounting Education"
               width={1000}
               height={1000}
-              className="object-cover"
+              className="object-cover transform transition-all duration-500 ease-in-out group-hover:scale-110"
             />
           </div>
         </div>

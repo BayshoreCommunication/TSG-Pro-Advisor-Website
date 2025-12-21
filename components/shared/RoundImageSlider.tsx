@@ -28,25 +28,31 @@ const RoundImageSlider = () => {
         </div> */}
 
         {/* Circle 2 */}
-        <div className=" md:-mt-32 -mt-16 transform transition-transform duration-500 hover:scale-110">
-          <Image
+        <div className=" md:-mt-32 -mt-16   ">
+          <div className="overflow-hidden rounded-full border-4 border-primary w-[120px]  lg:w-[280px] h-auto mx-auto group">
+
+            <Image
             src="/images/homepage/service/round-2.png"
             alt="Round Icon 2"
             width={280}
             height={280}
-            className="w-[120px]  lg:w-[280px] h-auto mx-auto"
+            className="w-full transform transition-all duration-300 ease-in-out group-hover:scale-110"
           />
+          </div>
         </div>
 
         {/* Circle 3 */}
-        <div className=" md:-mt-32 -mt-16 transform transition-transform duration-500 hover:scale-110">
-          <Image
+        <div className=" md:-mt-32 -mt-16   ">
+          <div className="overflow-hidden rounded-full border-4 border-primary w-[120px]  lg:w-[280px] h-auto mx-auto group">
+
+            <Image
             src="/images/homepage/service/round-3.png"
-            alt="Round Icon 3"
+            alt="Round Icon 2"
             width={280}
             height={280}
-            className="w-[120px]  lg:w-[280px] h-auto mx-auto"
+            className="w-full transform transition-all duration-300 ease-in-out group-hover:scale-110"
           />
+          </div>
         </div>
       </div>
     </div>

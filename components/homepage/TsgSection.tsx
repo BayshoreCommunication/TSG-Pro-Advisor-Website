@@ -106,13 +106,16 @@ export default function TsgSection() {
           {/* Headline */}
           <div className="relative w-full">
             <div className="absolute inset-0 z-40  w-full -top-28">
-              <Image
-                src="/images/homepage/tsg/angle-image.png"
-                alt="TSG background"
-                width={1920}
-                height={400}
-                className="hidden lg:block"
-              />
+              <Reveal y={200} opacityFrom={0} duration={3}>
+                <Image
+                  src="/images/homepage/tsg/angle-image.png"
+                  alt="TSG background"
+                  width={1920}
+                  height={400}
+                  className="hidden lg:block"
+                />
+              </Reveal>
+
               <Image
                 src="/images/homepage/tsg/angle-image-2.png"
                 alt="TSG background"
@@ -123,7 +126,7 @@ export default function TsgSection() {
             </div>
             <div className="max-w-3xl mx-auto bg-[#F16128] rounded-[26px] p-10   text-white shadow-xl relative  md:mt-[80px] mt-0">
               <Reveal y={100} opacityFrom={0} duration={3}>
-                <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 md:mt-[90px] mt-0">
+                <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 md:mt-[100px] mt-0">
                   TSG ProAdvisor is leading the way.
                 </h2>
               </Reveal>

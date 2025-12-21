@@ -113,13 +113,17 @@ export default function BlogSliderSection() {
           <SwiperSlide key={blog.id}>
             <Link href={`/blogs/${blog.slug}`} className="block h-full">
               <div className="bg-white text-black rounded-2xl shadow-lg overflow-hidden h-full flex flex-col hover:shadow-xl transition">
-                <div className="relative w-full h-[180px] md:h-[200px]">
-                  <Image
+                <div className="relative w-full ">
+                  <div className="overflow-hidden group">
+                    <Image
                     src={blog.image!}
                     alt={blog.title}
-                    fill
-                    className="object-cover object-top"
+                    width={1000}
+
+                    height={800}
+                    className="object-cover object-top transform transition-all duration-300 ease-in-out group-hover:scale-110"
                   />
+                  </div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-lg md:text-xl font-semibold mb-3">

@@ -18,15 +18,19 @@ export default function MissionSection() {
             <div className="grid md:grid-cols-2 gap-4">
               <Reveal x={-100} opacityFrom={0} duration={3}>
                 {" "}
-                <Image
+                <div className="overflow-hidden rounded-xl">
+                  <Image
                   src="/images/homepage/mission/Mission-1.png"
                   alt="Mission Image 1"
                   width={1600}
                   height={900}
                   className="w-full rounded-xl object-cover transform transition-transform duration-500 hover:scale-110"
                 />
+                </div>
               </Reveal>
               <Reveal x={100} opacityFrom={0} duration={3}>
+                  <div className="overflow-hidden rounded-xl">
+                  
                 <Image
                   src="/images/homepage/mission/Mission-2.png"
                   alt="Mission Image 1"
@@ -34,6 +38,7 @@ export default function MissionSection() {
                   height={900}
                   className="w-full rounded-xl object-cover transform transition-transform duration-500 hover:scale-110"
                 />
+                </div>
               </Reveal>
             </div>
             <div className="max-w-6xl mx-auto mt-6 md:mt-8 lg:-mt-14">

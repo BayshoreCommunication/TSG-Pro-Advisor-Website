@@ -96,13 +96,15 @@ const OurServices = () => {
               <div className="relative rounded-xl overflow-hidden bg-black/50 group">
                 {/* Image */}
                 <div className=" w-full">
-                  <Image
+                  <div className="overflow-hidden">
+                    <Image
                     src="/images/servicesPage/BusinessMentorship.jpg" // replace with your image path
                     alt="Tax & Accounting Education"
                     width={1000}
                     height={500}
-                    className="object-cover"
+                    className="object-cover transform transition-all duration-300 ease-in-out group-hover:scale-110"
                   />
+                  </div>
                 </div>
 
                 {/* Gradient Overlay */}
@@ -110,7 +112,7 @@ const OurServices = () => {
 
                 {/* Content */}
                 <div className="absolute bottom-6 left-6 right-6">
-                  <h4 className="text-white text-2xl font-semibold group-hover:text-primary duration-300">
+                  <h4 className="text-white text-2xl font-semibold group-hover:text-primary duration-500">
                     Professional <br /> TaxSoftware
                   </h4>
                 </div>
@@ -131,13 +133,13 @@ const OurServices = () => {
             <div>
               <div className="relative rounded-xl overflow-hidden bg-black/50 group">
                 {/* Image */}
-                <div className=" w-full">
+                <div className=" w-full overflow-hidden group">
                   <Image
                     src="/images/servicesPage/ProfessionalTaxSoftware.jpg" // replace with your image path
                     alt="Tax & Accounting Education"
                     width={1000}
                     height={500}
-                    className="object-cover"
+                    className="object-cover transform transition-all duration-500 ease-in-out group-hover:scale-110"
                   />
                 </div>
 
