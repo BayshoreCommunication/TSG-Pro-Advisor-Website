@@ -50,10 +50,7 @@ const BreadcrumbJoinUsPage = () => {
 
             <Reveal y={80} opacityFrom={0} duration={1.6}>
               <div className="p-6 lg:p-10 rounded-2xl w-full shrink-0">
-                <h1
-                  className="text-5xl lg:text-[80px] font-semibold text-transparent stroke-white leading-snug md:leading-none arya-font"
-                  style={{ WebkitTextStroke: "2px #fff" }}
-                >
+                <h1 className="text-5xl lg:text-[80px] font-semibold text-transparent text-white leading-snug md:leading-none arya-font">
                   {displayedText}
                   {!isDone && <span className="animate-pulse">|</span>}
                 </h1>
