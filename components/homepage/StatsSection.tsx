@@ -142,16 +142,16 @@ export default function StatsSection() {
         {/* Image */}
         <div className="mt-12 flex justify-center ">
           <Reveal y={100} opacityFrom={0} duration={3}>
-            <div className="overflow-hidden rounded-xl mx-auto w-[850px] group">
+            <div className="overflow-hidden rounded-xl mx-auto w-full lg:w-[850px] group">
               <Image
-              src="/images/homepage/stats/image.jpg"
-              alt="Laptop Display"
-              width={1000}
-              height={800}
-              className="w-full  rounded-xl object-cover
+                src="/images/homepage/stats/image.jpg"
+                alt="Laptop Display"
+                width={1000}
+                height={800}
+                className="w-full  rounded-xl object-cover
       transition-transform duration-500 ease-in-out
       group-hover:scale-110"
-            />
+              />
             </div>
           </Reveal>
         </div>
