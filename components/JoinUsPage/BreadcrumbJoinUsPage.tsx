@@ -45,7 +45,7 @@ const BreadcrumbJoinUsPage = () => {
               width={500}
               height={500}
               alt=""
-              className="w-40"
+              className="w-40 hidden lg:block"
             />
 
             <Reveal y={80} opacityFrom={0} duration={1.6}>
@@ -62,7 +62,7 @@ const BreadcrumbJoinUsPage = () => {
               width={500}
               height={500}
               alt=""
-              className="w-40"
+              className="w-40 hidden lg:block"
             />
           </div>
         </div>
