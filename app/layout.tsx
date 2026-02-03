@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 
-import { Quattrocento, Arya, Manrope } from "next/font/google";
+import { Arya, Manrope, Quattrocento } from "next/font/google";
 
 const quattrocento = Quattrocento({
   subsets: ["latin"],
@@ -32,7 +32,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "TSG Pro Advisor",
   description: "TSG Pro Advisor Website",
-  metadataBase: new URL("https://tsg-pro-advisor-website.vercel.app"),
+  metadataBase: new URL("https://www.tsgproadvisor.com"),
   alternates: {
     canonical: "/",
     languages: {
@@ -64,3 +64,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+
