@@ -29,12 +29,12 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'dashboard-sabbir-nasir.vercel.app',
+        hostname: 'dashboard-tsg-pro.vercel.app',
         port: '',
       },
       {
         protocol: 'https',
-        hostname: 'backend-sabbir-nasir.vercel.app',
+        hostname: 'backend-tsg-pro.vercel.app',
         port: '',
       },
     ],
