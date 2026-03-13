@@ -4,11 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   FaEnvelope,
-  FaPhone,
-  FaInstagram,
   FaFacebookF,
+  FaInstagram,
+  FaPhone,
   FaYoutube,
-  FaTwitter,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -60,6 +59,20 @@ export default function Footer() {
               <Link href="/join-us" className="hover:text-primary transition">
                 Join Us
               </Link>
+              <Link
+                href="https://join.tsgproadvisor.com/privacy-policy"
+                className="hover:text-primary transition"
+                target="_blank"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="https://join.tsgproadvisor.com/terms-and-conditions"
+                className="hover:text-primary transition"
+                target="_blank"
+              >
+                Terms and Conditions
+              </Link>
             </div>
           </div>
 
@@ -87,15 +100,27 @@ export default function Footer() {
             </ul>
 
             <div className="flex gap-5 text-xl mt-5">
-              <Link href="https://www.instagram.com/tsg_proadvisor/" aria-label="Instagram" target="_blank">
+              <Link
+                href="https://www.instagram.com/tsg_proadvisor/"
+                aria-label="Instagram"
+                target="_blank"
+              >
                 <FaInstagram className="hover:text-primary transition" />
               </Link>
 
-              <Link href="https://www.youtube.com/@TSG_ProAdvisor" aria-label="YouTube" target="_blank">
+              <Link
+                href="https://www.youtube.com/@TSG_ProAdvisor"
+                aria-label="YouTube"
+                target="_blank"
+              >
                 <FaYoutube className="hover:text-primary transition" />
               </Link>
 
-              <Link href="https://www.facebook.com/tsgproadvisor" aria-label="Facebook" target="_blank">
+              <Link
+                href="https://www.facebook.com/tsgproadvisor"
+                aria-label="Facebook"
+                target="_blank"
+              >
                 <FaFacebookF className="hover:text-primary transition" />
               </Link>
             </div>
