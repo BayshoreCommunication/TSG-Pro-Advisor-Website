@@ -1,14 +1,11 @@
 "use client";
 
-import React, { useRef } from "react";
+import { send } from "emailjs-com";
 import Image from "next/image";
-import emailjs from "emailjs-com";
-import { sendForm } from "emailjs-com";
+import React, { useEffect, useState } from "react";
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import Reveal from "../motion/Reveal";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import { useState, useEffect } from "react";
-import { send } from "emailjs-com";
 
 type ContactFormState = {
   name: string;
@@ -22,6 +19,8 @@ type ContactFormErrors = {
   email?: string;
   phone?: string;
   message?: string;
+  consentTaxIndustry?: string;
+  consentMarketing?: string;
 };
 const ContactPage = () => {
   const [showTitleOne, setShowTitleOne] = useState(true);
@@ -40,11 +39,17 @@ const ContactPage = () => {
     phone: "",
     message: "",
   });
+  const [consentTaxIndustry, setConsentTaxIndustry] = useState(false);
+  const [consentMarketing, setConsentMarketing] = useState(false);
 
   const [loading, setLoading] = useState(false);
   const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
 
-  const validate = (values: ContactFormState): ContactFormErrors => {
+  const validate = (
+    values: ContactFormState,
+    consentTax: boolean,
+    consentMarketing: boolean,
+  ): ContactFormErrors => {
     const errors: ContactFormErrors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
@@ -52,8 +57,12 @@ const ContactPage = () => {
     if (!values.email) errors.email = "Email is required!";
     else if (!regex.test(values.email)) errors.email = "Invalid email format!";
     if (!values.phone) errors.phone = "Phone number is required!";
-    // if (!values.date) errors.date = "Date is required!";
     if (!values.message) errors.message = "Message is required!";
+    if (!consentTax)
+      errors.consentTaxIndustry =
+        "Consent for tax industry updates is required.";
+    if (!consentMarketing)
+      errors.consentMarketing = "Consent for marketing updates is required.";
 
     return errors;
   };
@@ -62,7 +71,7 @@ const ContactPage = () => {
     e.preventDefault();
     setLoading(true);
 
-    const errors = validate(emailForm);
+    const errors = validate(emailForm, consentTaxIndustry, consentMarketing);
     setFormErrors(errors);
 
     if (Object.keys(errors).length === 0) {
@@ -70,7 +79,7 @@ const ContactPage = () => {
         "service_d3buqx8",
         "template_dc4qdns",
         emailForm,
-        "3eLi7b-f8Niw8kjHI"
+        "3eLi7b-f8Niw8kjHI",
       )
         .then(() => {
           setLoading(false);
@@ -90,10 +99,6 @@ const ContactPage = () => {
         .catch((err) => {
           console.error("Email error:", err);
           setLoading(false);
-          Swal.fire({
-            icon: "error",
-            text: "Something went wrong! Please try again.",
-          });
         });
     } else {
       setLoading(false);
@@ -108,20 +113,22 @@ const ContactPage = () => {
             Your success starts with a conversation.
           </h1>
         </Reveal>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
           {/* LEFT SIDE */}
-          <div className="bg-white rounded-2xl overflow-hidden  relative">
-            <div className=" w-full overflow-hidden group">
+          <div className="relative min-h-[420px] overflow-hidden rounded-2xl bg-white lg:h-full">
+            <div className="group absolute inset-0">
               <Image
-                src="/images/contactPage/contact-page.png" // your uploaded image
+                src="/images/contactPage/contact-page.png"
                 alt="Contact Preview"
-                width={1000}
-                height={1000}
-                className="object-cover transform transition-all duration-500 ease-in-out group-hover:scale-110"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="h-full w-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110"
               />
             </div>
 
-            <div className="absolute bottom-0 p-7 lg:p-10 flex flex-col gap-6">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+
+            <div className="absolute bottom-0 z-10 flex flex-col gap-6 p-7 lg:p-10">
               {/* ADDRESS */}
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full flex justify-center items-center bg-white shrink-0">
@@ -164,7 +171,7 @@ const ContactPage = () => {
           </div>
 
           {/* RIGHT SIDE – CONTACT FORM */}
-          <div className="bg-white rounded-2xl p-7 lg:p-10  border border-gray-200">
+          <div className="h-full rounded-2xl border border-gray-200 bg-white p-7 lg:p-10">
             <h2 className="text-4xl font-semibold mb-8 text-black">
               Connect With Us
             </h2>
@@ -246,14 +253,57 @@ const ContactPage = () => {
                 </span>
               )}
 
+              <div className="flex flex-col gap-3">
+                <label className="flex items-start gap-2">
+                  <input
+                    type="checkbox"
+                    checked={consentTaxIndustry}
+                    onChange={(e) => setConsentTaxIndustry(e.target.checked)}
+                    className="mt-1"
+                  />
+                  <span className="text-sm text-gray-700">
+                    By checking this box, I consent to receive updates and news
+                    text messages from 10XTAXPRO about THE TAX INDUSTRY. Message
+                    frequency varies, message & data rates may apply. Text HELP
+                    for assistance, reply STOP to opt out.
+                  </span>
+                </label>
+                {formErrors.consentTaxIndustry && (
+                  <span className="text-red-500 text-sm">
+                    {formErrors.consentTaxIndustry}
+                  </span>
+                )}
+
+                <label className="flex items-start gap-2">
+                  <input
+                    type="checkbox"
+                    checked={consentMarketing}
+                    onChange={(e) => setConsentMarketing(e.target.checked)}
+                    className="mt-1"
+                  />
+                  <span className="text-sm text-gray-700">
+                    By checking this box, I consent to receive marketing and
+                    promotional messages including special offers, discounts,
+                    new product updates among others from 10XTAXPRO at the phone
+                    number provided. Frequency may vary. Message & data rates
+                    may apply. Text HELP for assistance, reply STOP to opt out.
+                  </span>
+                </label>
+                {formErrors.consentMarketing && (
+                  <span className="text-red-500 text-sm">
+                    {formErrors.consentMarketing}
+                  </span>
+                )}
+              </div>
+
               {/* Submit Button */}
               <button
                 type="submit"
                 disabled={loading}
                 className={`md:col-span-2 justify-self-center w-full max-w-md
-    bg-[#F97316] text-white font-semibold py-3 rounded-xl
+    bg-black text-white font-semibold py-3 rounded-xl
     transition
-    ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-[#EA580C]"}
+    ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-800"}
   `}
               >
                 {loading ? "Sending..." : "Send Message"}
