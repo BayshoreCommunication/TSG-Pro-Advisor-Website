@@ -181,10 +181,20 @@
     animation: curveDown 4s ease-in-out infinite alternate;
   }
 
-  .animate-marquee-smooth {
-    animation: marqueeSmooth 20s linear infinite; 
-    /* linear is IMPORTANT (no dhakka!) */
-  }
+.animate-marquee-smooth {
+  animation: marqueeSmooth 20s linear infinite; 
+  /* linear is IMPORTANT (no dhakka!) */
+}
+
+/* Keep SweetAlert confirm button brand color on hover/focus */
+.swal2-confirm.swal-brand-confirm,
+.swal2-confirm.swal-brand-confirm:hover,
+.swal2-confirm.swal-brand-confirm:focus,
+.swal2-confirm.swal-brand-confirm:active {
+  background-color: #131b2a !important;
+  border-color: #131b2a !important;
+  box-shadow: none !important;
+}
 
 
 

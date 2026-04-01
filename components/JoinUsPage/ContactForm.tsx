@@ -67,6 +67,9 @@ const ContactPage = () => {
           icon: "success",
           text: "Thank you for reaching out. We will respond shortly.",
           confirmButtonColor: "#131b2a",
+          customClass: {
+            confirmButton: "swal-brand-confirm",
+          },
         });
         setEmailForm({
           firstName: "",

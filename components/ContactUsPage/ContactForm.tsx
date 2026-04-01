@@ -12,6 +12,8 @@ type ContactFormState = {
   email: string;
   phone: string;
   message: string;
+  consentTaxIndustry: string;
+  consentMarketing: string;
 };
 
 type ContactFormErrors = {
@@ -19,8 +21,6 @@ type ContactFormErrors = {
   email?: string;
   phone?: string;
   message?: string;
-  consentTaxIndustry?: string;
-  consentMarketing?: string;
 };
 const ContactPage = () => {
   const [showTitleOne, setShowTitleOne] = useState(true);
@@ -38,6 +38,8 @@ const ContactPage = () => {
     email: "",
     phone: "",
     message: "",
+    consentTaxIndustry: "No",
+    consentMarketing: "No",
   });
   const [consentTaxIndustry, setConsentTaxIndustry] = useState(false);
   const [consentMarketing, setConsentMarketing] = useState(false);
@@ -45,11 +47,7 @@ const ContactPage = () => {
   const [loading, setLoading] = useState(false);
   const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
 
-  const validate = (
-    values: ContactFormState,
-    consentTax: boolean,
-    consentMarketing: boolean,
-  ): ContactFormErrors => {
+  const validate = (values: ContactFormState): ContactFormErrors => {
     const errors: ContactFormErrors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
@@ -58,11 +56,6 @@ const ContactPage = () => {
     else if (!regex.test(values.email)) errors.email = "Invalid email format!";
     if (!values.phone) errors.phone = "Phone number is required!";
     if (!values.message) errors.message = "Message is required!";
-    if (!consentTax)
-      errors.consentTaxIndustry =
-        "Consent for tax industry updates is required.";
-    if (!consentMarketing)
-      errors.consentMarketing = "Consent for marketing updates is required.";
 
     return errors;
   };
@@ -71,29 +64,37 @@ const ContactPage = () => {
     e.preventDefault();
     setLoading(true);
 
-    const errors = validate(emailForm, consentTaxIndustry, consentMarketing);
+    const payload: ContactFormState = {
+      ...emailForm,
+      consentTaxIndustry: consentTaxIndustry ? "Yes" : "No",
+      consentMarketing: consentMarketing ? "Yes" : "No",
+    };
+
+    const errors = validate(payload);
     setFormErrors(errors);
 
     if (Object.keys(errors).length === 0) {
-      send(
-        "service_d3buqx8",
-        "template_dc4qdns",
-        emailForm,
-        "3eLi7b-f8Niw8kjHI",
-      )
+      send("service_d3buqx8", "template_dc4qdns", payload, "3eLi7b-f8Niw8kjHI")
         .then(() => {
           setLoading(false);
           Swal.fire({
             icon: "success",
             text: "Thank you for reaching out. We will respond shortly.",
             confirmButtonColor: "#131b2a",
+            customClass: {
+              confirmButton: "swal-brand-confirm",
+            },
           }).then(() => {
             setEmailForm({
               name: "",
               email: "",
               phone: "",
               message: "",
+              consentTaxIndustry: "No",
+              consentMarketing: "No",
             });
+            setConsentTaxIndustry(false);
+            setConsentMarketing(false);
           });
         })
         .catch((err) => {
@@ -262,17 +263,14 @@ const ContactPage = () => {
                     className="mt-1"
                   />
                   <span className="text-sm text-gray-700">
-                    By checking this box, I consent to receive updates and news
-                    text messages from 10XTAXPRO about THE TAX INDUSTRY. Message
-                    frequency varies, message & data rates may apply. Text HELP
-                    for assistance, reply STOP to opt out.
+                    By checking this box, I consent to receive non-marketing SMS
+                    messages from 10XTAXPRO dba TSG Pro Advisor regarding
+                    service-related notifications, account updates, appointment
+                    reminders, and support communications. Message frequency may
+                    vary. Message & data rates may apply. Reply STOP to opt out
+                    or HELP for assistance.
                   </span>
                 </label>
-                {formErrors.consentTaxIndustry && (
-                  <span className="text-red-500 text-sm">
-                    {formErrors.consentTaxIndustry}
-                  </span>
-                )}
 
                 <label className="flex items-start gap-2">
                   <input
@@ -284,23 +282,19 @@ const ContactPage = () => {
                   <span className="text-sm text-gray-700">
                     By checking this box, I consent to receive marketing and
                     promotional messages including special offers, discounts,
-                    new product updates among others from 10XTAXPRO at the phone
-                    number provided. Frequency may vary. Message & data rates
-                    may apply. Text HELP for assistance, reply STOP to opt out.
+                    new product updates among others from 10XTAXPRO DBA
+                    TSGProAdvisor at the phone number provided. Frequency may
+                    vary. Message & data rates may apply. Text HELP for
+                    assistance, reply STOP to opt out.
                   </span>
                 </label>
-                {formErrors.consentMarketing && (
-                  <span className="text-red-500 text-sm">
-                    {formErrors.consentMarketing}
-                  </span>
-                )}
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
                 disabled={loading}
-                className={`md:col-span-2 justify-self-center w-full max-w-md
+                className={`w-full
     bg-black text-white font-semibold py-3 rounded-xl
     transition
     ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-800"}
@@ -308,6 +302,27 @@ const ContactPage = () => {
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>
+
+              <p className="text-sm text-gray-600 text-center">
+                <a
+                  href="https://join.tsgproadvisor.com/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-black"
+                >
+                  Privacy Policy
+                </a>{" "}
+                |{" "}
+                <a
+                  href="https://join.tsgproadvisor.com/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-black"
+                >
+                  Terms of Service
+                </a>
+                .
+              </p>
             </form>
           </div>
         </div>
