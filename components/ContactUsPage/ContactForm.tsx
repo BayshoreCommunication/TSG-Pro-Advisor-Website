@@ -314,7 +314,7 @@ const ContactPage = () => {
                 </a>{" "}
                 |{" "}
                 <a
-                  href="https://join.tsgproadvisor.com/privacy-policy"
+                  href="https://join.tsgproadvisor.com/terms-and-conditions"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline hover:text-black"
