@@ -50,6 +50,8 @@ const revenueBars = [
   { label: "CFO-Level Advisor", value: 90 },
 ];
 
+const inlineLinkClass = "font-semibold text-[#F26422] underline underline-offset-4";
+
 const sections = [
   {
     title: "Why Does Specialization Help You Stand Out?",
@@ -68,7 +70,19 @@ const sections = [
     title: "Which Niche Fits Your Passion and Market Need?",
     body: [
       "Choosing a niche is the most important decision you will make for your firm. Do not pick a random industry only because it sounds profitable. Look for the intersection of what you enjoy, what you are good at, and where there is high demand for specialized tax services.",
-      "Start with your current client list. If you already serve several clients in the same industry or keep researching the same tax laws for a specific group, you may already have the beginning of a strong niche.",
+      <>
+        Start with your current client list. If you already serve several
+        clients in the same industry or keep researching the same tax laws for a
+        specific group, you may already have the beginning of a strong niche. As
+        the digital economy grows, many firms are finding success as a{" "}
+        <Link
+          href="https://www.tsgproadvisor.com/blogs/how-to-start-a-successful-career-as-a-tax-professional-in-2026"
+          className={inlineLinkClass}
+        >
+          tax professional
+        </Link>{" "}
+        for content creators or crypto investors.
+      </>,
     ],
     bullets: [
       "Assess your background: what industries did you work in before tax?",
@@ -81,7 +95,18 @@ const sections = [
     body: [
       "Not every client in a niche is a high-value client. To attract the best people, define exactly who they are. A high-value client views taxes as a strategic expense, not a painful bill.",
       "Your ideal client might be a business owner making over $500,000 a year who feels like they are overpaying the IRS. Or it could be a family with complex multi-state property holdings.",
-      "Once you define this person, every piece of content you write and every ad you run should be designed to catch their eye.",
+      <>
+        Once you define this person, every piece of content you write and every
+        ad you run should be designed to catch their eye. This level of focus is
+        what separates a struggling firm from a thriving{" "}
+        <Link
+          href="https://www.journalofaccountancy.com/"
+          className={inlineLinkClass}
+        >
+          accounting firm
+        </Link>
+        .
+      </>,
     ],
     quote:
       "High-value clients view your fees not as a cost, but as a strategic investment. The clearer your niche, the more confident they feel choosing you.",
@@ -90,7 +115,18 @@ const sections = [
     title: "What Marketing Strategies Reach Premium Clients?",
     body: [
       "You cannot wait for high-value clients to stumble upon your website. Since you are building a specialized firm, your marketing should be education-based.",
-      "LinkedIn is often one of the best places for this. Share case studies without names, explain recent law changes, and consistently show up as an authority for your niche.",
+      <>
+        LinkedIn is often one of the best places for this. Share case studies
+        without names, explain recent law changes, and consistently show up as
+        an authority for your niche. You can also learn more about how{" "}
+        <Link
+          href="https://www.tsgproadvisor.com/blogs/how-regular-training-can-improve-your-accounting-accuracy"
+          className={inlineLinkClass}
+        >
+          regular training can improve your accounting accuracy
+        </Link>{" "}
+        to ensure your advice is always top-tier.
+      </>,
     ],
     bullets: [
       "Host webinars around one specific tax problem your niche faces.",
@@ -110,7 +146,19 @@ const sections = [
     body: [
       "High-value clients do not just want a tax return. They want a strategic advisor. To attract these clients, move away from compliance-only work and toward advisory.",
       "That means reviewing their books throughout the year, helping with equipment purchases, hiring decisions, retirement planning, and tax strategy before deadlines arrive.",
-      "When you act as a CFO-level advisor, your fees become an investment. This mindset is what allows you to charge premium fees for tax planning.",
+      <>
+        When you act as a CFO-level advisor, your fees become an investment.
+        This mindset is what allows you to charge premium fees for tax planning.
+        This is where{" "}
+        <Link
+          href="https://www.tsgproadvisor.com/blogs/the-role-of-mentorship-in-leadership-development"
+          className={inlineLinkClass}
+        >
+          the role of mentorship in leadership development
+        </Link>{" "}
+        becomes vital, because you are learning how to lead your clients rather
+        than just follow their instructions.
+      </>,
     ],
     quote:
       "Acting as a CFO-level advisor transforms your fees from a line-item expense into a measurable return on investment for your clients.",
@@ -120,12 +168,35 @@ const sections = [
     body: [
       "To handle high-value clients efficiently, you need the right tools. A premium niche tax practice cannot run on old spreadsheets and paper files.",
       "Use automation for repetitive work so you can focus on high-level strategy. Secure portals, automated billing, CRM systems, and advanced tax planning software all support a better client experience.",
-      "TSG ProAdvisor provides professional tax software and mentorship to help tax professionals move from solo preparer to firm owner.",
+      <>
+        <Link href="https://tsgproadvisor.com/" className={inlineLinkClass}>
+          TSG ProAdvisor
+        </Link>{" "}
+        provides professional tax software and mentorship to help tax
+        professionals move from solo preparer to firm owner. Whether you are{" "}
+        <Link
+          href="https://www.tsgproadvisor.com/blogs/streamlining-audit-processes-with-tax-software"
+          className={inlineLinkClass}
+        >
+          streamlining audit processes with tax software
+        </Link>{" "}
+        or learning how to automate onboarding, the right tech stack is your
+        secret weapon.
+      </>,
     ],
     bullets: [
       "Cloud portals give clients a VIP document upload experience.",
       "CRM systems help you track leads and follow up with high-value prospects.",
-      "Education platforms help you stay ahead of technology and tax industry changes.",
+      <>
+        Education platforms help you stay ahead with{" "}
+        <Link
+          href="https://www.tsgproadvisor.com/blogs/how-technology-is-revolutionizing-tax-and-accounting-education"
+          className={inlineLinkClass}
+        >
+          how technology is revolutionizing tax and accounting education
+        </Link>
+        .
+      </>,
     ],
   },
   {
@@ -255,14 +326,19 @@ export default function HowCanYouBuildANicheTaxPractice({
                   {section.title}
                 </h2>
                 <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-                  {section.body.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                  {section.body.map((paragraph, index) => (
+                    <p key={`${section.title}-paragraph-${index}`}>
+                      {paragraph}
+                    </p>
                   ))}
                 </div>
                 {section.bullets ? (
                   <ul className="mt-5 space-y-3 rounded-2xl bg-gray-50 p-5 text-gray-700">
-                    {section.bullets.map((bullet) => (
-                      <li key={bullet} className="flex gap-3">
+                    {section.bullets.map((bullet, index) => (
+                      <li
+                        key={`${section.title}-bullet-${index}`}
+                        className="flex gap-3"
+                      >
                         <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#F26422]" />
                         <span>{bullet}</span>
                       </li>
@@ -290,6 +366,23 @@ export default function HowCanYouBuildANicheTaxPractice({
               the U.S. in building and growing their firms. Our community is
               built on integrity, expert training, and practical resources for
               the tax industry.
+            </p>
+            <p className="mt-4 max-w-3xl text-white/80 leading-8">
+              Check out our latest guides on{" "}
+              <Link
+                href="https://tsgproadvisor.com/"
+                className="font-semibold text-[#F26422] underline underline-offset-4"
+              >
+                how to create recurring revenue streams in a tax practice
+              </Link>
+              , and visit the{" "}
+              <Link
+                href="https://www.irs.gov/tax-professionals"
+                className="font-semibold text-[#F26422] underline underline-offset-4"
+              >
+                IRS Tax Professional Center
+              </Link>{" "}
+              for the latest regulatory updates.
             </p>
             <Link
               href="/contact"
