@@ -3,14 +3,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "../motion/Reveal";
+import { nicheTaxPracticePost } from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
+
 export default function LatestInsights({ blogPost }: { blogPost: any }) {
-  // API posts → fallback static
   const posts =
-    blogPost?.data
+    [
+      nicheTaxPracticePost,
+      ...(blogPost?.data || []).filter(
+        (p: any) => p.slug !== nicheTaxPracticePost.slug
+      ),
+    ]
       ?.filter((p: any) => p.published)
       ?.map((p: any) => ({
         title: p.title,
-        excerpt: p.excerpt || "",
+        excerpt: p.excerpt || p.desc || "",
         date: new Date(p.createdAt).toLocaleDateString("en-US", {
           year: "numeric",
           month: "short",
@@ -23,30 +29,28 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
   return (
     <section className="w-full px-8 py-8 md:py-16 bg-white">
       <div className="max-w-[1640px] mx-auto">
-        {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
           <div>
-
             <Reveal y={100} opacityFrom={0} duration={3}>
-            <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold mb-2 arya-font ">
-              Latest Insights
-            </h2>
+              <h2 className="text-4xl md:text-5xl lg:text-[52px] font-bold mb-2 arya-font">
+                Latest Insights
+              </h2>
             </Reveal>
-             <Reveal y={100} opacityFrom={0} duration={3}>
-            <p className="text-gray-600 max-w-3xl">
-              Explore insights, tips, and guidance to help you grow your tax and accounting business.
-            </p>
+            <Reveal y={100} opacityFrom={0} duration={3}>
+              <p className="text-gray-600 max-w-3xl">
+                Explore insights, tips, and guidance to help you grow your tax
+                and accounting business.
+              </p>
             </Reveal>
           </div>
           <div className="mt-4 md:mt-0">
             <button className="border border-gray-300 px-4 py-2 rounded-md text-sm hover:bg-gray-100">
-              Dates ▼
+              Dates
             </button>
           </div>
         </div>
 
-        {/* Blog Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((blog: any, i: number) => (
             <Link
               key={i}
@@ -54,14 +58,14 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
               className="group block rounded-lg overflow-hidden shadow hover:shadow-lg transition"
             >
               <div className="relative">
-                <div className="overflow-hidden ">
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  width={1000}
-                  height={800}
-                  className="w-full h-auto object-cover object-top group-hover:scale-110 duration-500"
-                />
+                <div className="overflow-hidden">
+                  <Image
+                    src={blog.image || "/images/blogPage/insight/img1.png"}
+                    alt={blog.title}
+                    width={1000}
+                    height={800}
+                    className="w-full h-auto object-cover object-top group-hover:scale-110 duration-500"
+                  />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <h3 className="text-white font-semibold text-lg group-hover:text-orange-600">
@@ -69,14 +73,10 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
                   </h3>
                 </div>
               </div>
-              <div className="p-4 bg-white">
-                <p className="text-gray-600 text-sm">{blog.excerpt}</p>
-              </div>
             </Link>
           ))}
         </div>
 
-        {/* Load More Button */}
         <div className="mt-8 text-center">
           <Link
             href="/blogs"

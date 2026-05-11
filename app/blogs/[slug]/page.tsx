@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import parse from "html-react-parser";
 import GetAllPostData from "@/lib/GetPostData";
+import HowCanYouBuildANicheTaxPractice, {
+  nicheTaxPracticePost,
+} from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
 
 // ---------- Styling ----------
 const css = `
@@ -35,6 +38,22 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
+  if (params.slug === nicheTaxPracticePost.slug) {
+    return {
+      title: "Build a Niche Tax Practice & Attract Premium Clients",
+      description:
+        "Want to stop competing on price? Learn how to build a niche tax practice that attracts high-value clients. Scale your firm with expert tips from TSG ProAdvisor.",
+      openGraph: {
+        title: nicheTaxPracticePost.title,
+        description: nicheTaxPracticePost.excerpt,
+        images: nicheTaxPracticePost.featuredImage.image.url,
+        url: `https://tsgproadvisor.com/blogs/${nicheTaxPracticePost.slug}`,
+        type: "article",
+        site_name: "TSG ProAdvisor",
+      },
+    };
+  }
+
   const blogPostData = await GetAllPostData();
 
   const blog = blogPostData?.data?.find(
@@ -68,6 +87,20 @@ export async function generateMetadata({
 // ---------- MAIN PAGE ----------
 export default async function Page({ params }: { params: { slug: string } }) {
   const blogPostData = await GetAllPostData();
+  const posts = [nicheTaxPracticePost, ...(blogPostData?.data || [])];
+
+  if (params.slug === nicheTaxPracticePost.slug) {
+    return (
+      <>
+        <BreadcrumbSection
+          title="Tips, Training, and Updates for 
+      Tax & Accounting Professionals"
+          bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+        />
+        <HowCanYouBuildANicheTaxPractice recentPosts={posts} />
+      </>
+    );
+  }
 
   // FIXED: Use .find(), not .filter()
   const blog = blogPostData?.data?.find(
@@ -137,7 +170,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                 Recent Blogs
               </h2>
 
-              {blogPostData?.data
+              {posts
                 ?.filter((b: any) => b.published)
                 .map((item: any, i: number) => (
                   <Link

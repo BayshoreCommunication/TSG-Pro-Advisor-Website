@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import { nicheTaxPracticePost } from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -47,9 +48,27 @@ export default function BlogSliderSection() {
             image: b.featuredImage?.image?.url || "/images/placeholder.png",
           }));
 
-        setBlogs(filteredBlogs);
+        const staticBlog = {
+          ...nicheTaxPracticePost,
+          id: nicheTaxPracticePost.id,
+          image: nicheTaxPracticePost.featuredImage.image.url,
+        };
+
+        setBlogs([
+          staticBlog,
+          ...filteredBlogs.filter(
+            (blog: Blog) => blog.slug !== nicheTaxPracticePost.slug
+          ),
+        ]);
       } catch (err: any) {
-        setError(err.message || "Something went wrong");
+        setBlogs([
+          {
+            ...nicheTaxPracticePost,
+            id: nicheTaxPracticePost.id,
+            image: nicheTaxPracticePost.featuredImage.image.url,
+          },
+        ]);
+        setError(null);
       } finally {
         setLoading(false);
       }
@@ -113,7 +132,7 @@ export default function BlogSliderSection() {
           <SwiperSlide key={blog.id}>
             <Link href={`/blogs/${blog.slug}`} className="block h-full">
               <div className="bg-white text-black rounded-2xl shadow-lg overflow-hidden h-full flex flex-col hover:shadow-xl transition">
-                <div className="relative w-full ">
+                <div className="relative w-full">
                   <div className="overflow-hidden group">
                     <Image
                     src={blog.image!}
@@ -121,7 +140,7 @@ export default function BlogSliderSection() {
                     width={1000}
 
                     height={800}
-                    className="object-cover object-top transform transition-all duration-300 ease-in-out group-hover:scale-110"
+                    className="w-full h-auto object-cover object-top transform transition-all duration-300 ease-in-out group-hover:scale-110"
                   />
                   </div>
                 </div>
@@ -129,9 +148,6 @@ export default function BlogSliderSection() {
                   <h3 className="text-lg md:text-xl font-semibold mb-3">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-600 mb-6 flex-grow">
-                    {blog.desc}
-                  </p>
                   <span className="bg-[#F16128] text-white text-sm font-semibold px-6 py-2 rounded-full self-start">
                     Learn More
                   </span>
