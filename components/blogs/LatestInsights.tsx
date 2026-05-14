@@ -4,13 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "../motion/Reveal";
 import { nicheTaxPracticePost } from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
+import { yearRoundClientEngagementPost } from "@/components/static-blogs/blogs/year-round-client-engagement-strategies-for-tax-professionals";
 
 export default function LatestInsights({ blogPost }: { blogPost: any }) {
   const posts =
     [
+      yearRoundClientEngagementPost,
       nicheTaxPracticePost,
       ...(blogPost?.data || []).filter(
-        (p: any) => p.slug !== nicheTaxPracticePost.slug
+        (p: any) =>
+          p.slug !== nicheTaxPracticePost.slug &&
+          p.slug !== yearRoundClientEngagementPost.slug,
       ),
     ]
       ?.filter((p: any) => p.published)
