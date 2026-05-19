@@ -15,7 +15,7 @@ export const nicheTaxPracticePost = {
   featuredImage: {
     altText: "Tax advisor reviewing growth dashboards for a niche tax practice",
     image: {
-      url: "/images/static-blogs/how-can-you-build-a-niche-tax-practice.jpg",
+      url: "/images/static-blogs/how-can-you-build-a-niche-tax-practice.webp",
     },
   },
 };
@@ -50,7 +50,8 @@ const revenueBars = [
   { label: "CFO-Level Advisor", value: 90 },
 ];
 
-const inlineLinkClass = "font-semibold text-[#F26422] underline underline-offset-4";
+const inlineLinkClass =
+  "font-semibold text-[#F26422] underline underline-offset-4";
 
 const sections = [
   {
