@@ -6,6 +6,9 @@ import GetAllPostData from "@/lib/GetPostData";
 import HowCanYouBuildANicheTaxPractice, {
   nicheTaxPracticePost,
 } from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
+import YearRoundClientEngagementStrategiesForTaxProfessionals, {
+  yearRoundClientEngagementPost,
+} from "@/components/static-blogs/blogs/year-round-client-engagement-strategies-for-tax-professionals";
 
 // ---------- Styling ----------
 const css = `
@@ -54,6 +57,22 @@ export async function generateMetadata({
     };
   }
 
+  if (params.slug === yearRoundClientEngagementPost.slug) {
+    return {
+      title: "Year-Round Client Engagement for Tax Pros",
+      description:
+        "Discover proven year-round client engagement strategies for tax professionals. Keep Florida clients loyal, boost revenue, and grow beyond tax season.",
+      openGraph: {
+        title: yearRoundClientEngagementPost.title,
+        description: yearRoundClientEngagementPost.excerpt,
+        images: yearRoundClientEngagementPost.featuredImage.image.url,
+        url: `https://tsgproadvisor.com/blogs/${yearRoundClientEngagementPost.slug}`,
+        type: "article",
+        site_name: "TSG ProAdvisor",
+      },
+    };
+  }
+
   const blogPostData = await GetAllPostData();
 
   const blog = blogPostData?.data?.find(
@@ -87,7 +106,8 @@ export async function generateMetadata({
 // ---------- MAIN PAGE ----------
 export default async function Page({ params }: { params: { slug: string } }) {
   const blogPostData = await GetAllPostData();
-  const posts = [nicheTaxPracticePost, ...(blogPostData?.data || [])];
+  const staticPosts = [yearRoundClientEngagementPost, nicheTaxPracticePost];
+  const posts = [...staticPosts, ...(blogPostData?.data || [])];
 
   if (params.slug === nicheTaxPracticePost.slug) {
     return (
@@ -98,6 +118,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
           bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
         />
         <HowCanYouBuildANicheTaxPractice recentPosts={posts} />
+      </>
+    );
+  }
+
+  if (params.slug === yearRoundClientEngagementPost.slug) {
+    return (
+      <>
+        <BreadcrumbSection
+          title="Tips, Training, and Updates for 
+      Tax & Accounting Professionals"
+          bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+        />
+        <YearRoundClientEngagementStrategiesForTaxProfessionals
+          recentPosts={posts}
+        />
       </>
     );
   }

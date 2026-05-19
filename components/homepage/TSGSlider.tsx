@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { nicheTaxPracticePost } from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
+import { yearRoundClientEngagementPost } from "@/components/static-blogs/blogs/year-round-client-engagement-strategies-for-tax-professionals";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -48,20 +49,34 @@ export default function BlogSliderSection() {
             image: b.featuredImage?.image?.url || "/images/placeholder.png",
           }));
 
-        const staticBlog = {
-          ...nicheTaxPracticePost,
-          id: nicheTaxPracticePost.id,
-          image: nicheTaxPracticePost.featuredImage.image.url,
-        };
+        const staticBlogs = [
+          {
+            ...yearRoundClientEngagementPost,
+            id: yearRoundClientEngagementPost.id,
+            image: yearRoundClientEngagementPost.featuredImage.image.url,
+          },
+          {
+            ...nicheTaxPracticePost,
+            id: nicheTaxPracticePost.id,
+            image: nicheTaxPracticePost.featuredImage.image.url,
+          },
+        ];
 
         setBlogs([
-          staticBlog,
+          ...staticBlogs,
           ...filteredBlogs.filter(
-            (blog: Blog) => blog.slug !== nicheTaxPracticePost.slug
+            (blog: Blog) =>
+              blog.slug !== nicheTaxPracticePost.slug &&
+              blog.slug !== yearRoundClientEngagementPost.slug
           ),
         ]);
       } catch (err: any) {
         setBlogs([
+          {
+            ...yearRoundClientEngagementPost,
+            id: yearRoundClientEngagementPost.id,
+            image: yearRoundClientEngagementPost.featuredImage.image.url,
+          },
           {
             ...nicheTaxPracticePost,
             id: nicheTaxPracticePost.id,
