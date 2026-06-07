@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { nicheTaxPracticePost } from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
+import { reduceBurnoutPost } from "@/components/static-blogs/blogs/how-to-reduce-burnout-during-peak-tax-season";
 import { yearRoundClientEngagementPost } from "@/components/static-blogs/blogs/year-round-client-engagement-strategies-for-tax-professionals";
 
 import "swiper/css";
@@ -51,6 +52,11 @@ export default function BlogSliderSection() {
 
         const staticBlogs = [
           {
+            ...reduceBurnoutPost,
+            id: reduceBurnoutPost.id,
+            image: reduceBurnoutPost.featuredImage.image.url,
+          },
+          {
             ...yearRoundClientEngagementPost,
             id: yearRoundClientEngagementPost.id,
             image: yearRoundClientEngagementPost.featuredImage.image.url,
@@ -66,12 +72,18 @@ export default function BlogSliderSection() {
           ...staticBlogs,
           ...filteredBlogs.filter(
             (blog: Blog) =>
+              blog.slug !== reduceBurnoutPost.slug &&
               blog.slug !== nicheTaxPracticePost.slug &&
               blog.slug !== yearRoundClientEngagementPost.slug
           ),
         ]);
       } catch (err: any) {
         setBlogs([
+          {
+            ...reduceBurnoutPost,
+            id: reduceBurnoutPost.id,
+            image: reduceBurnoutPost.featuredImage.image.url,
+          },
           {
             ...yearRoundClientEngagementPost,
             id: yearRoundClientEngagementPost.id,

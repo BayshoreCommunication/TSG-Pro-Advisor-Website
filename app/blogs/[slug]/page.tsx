@@ -6,6 +6,9 @@ import GetAllPostData from "@/lib/GetPostData";
 import HowCanYouBuildANicheTaxPractice, {
   nicheTaxPracticePost,
 } from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
+import HowToReduceBurnoutDuringPeakTaxSeason, {
+  reduceBurnoutPost,
+} from "@/components/static-blogs/blogs/how-to-reduce-burnout-during-peak-tax-season";
 import YearRoundClientEngagementStrategiesForTaxProfessionals, {
   yearRoundClientEngagementPost,
 } from "@/components/static-blogs/blogs/year-round-client-engagement-strategies-for-tax-professionals";
@@ -41,6 +44,40 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
+  if (params.slug === reduceBurnoutPost.slug) {
+    const canonical = `https://www.tsgproadvisor.com/blogs/${reduceBurnoutPost.slug}`;
+
+    return {
+      title: "Powerful Ways to Reduce Burnout in Tax Season Fast in 2026",
+      description:
+        "Struggling during tax season? Discover proven ways to reduce burnout, boost focus, and protect your energy without sacrificing productivity.",
+      alternates: {
+        canonical,
+      },
+      openGraph: {
+        title: reduceBurnoutPost.featuredImage.title,
+        description: reduceBurnoutPost.excerpt,
+        images: [
+          {
+            url: reduceBurnoutPost.featuredImage.image.url,
+            alt: reduceBurnoutPost.featuredImage.altText,
+            width: 1200,
+            height: 720,
+          },
+        ],
+        url: canonical,
+        type: "article",
+        siteName: "TSG ProAdvisor",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: reduceBurnoutPost.featuredImage.title,
+        description: reduceBurnoutPost.excerpt,
+        images: [reduceBurnoutPost.featuredImage.image.url],
+      },
+    };
+  }
+
   if (params.slug === nicheTaxPracticePost.slug) {
     return {
       title: "Build a Niche Tax Practice & Attract Premium Clients",
@@ -106,8 +143,25 @@ export async function generateMetadata({
 // ---------- MAIN PAGE ----------
 export default async function Page({ params }: { params: { slug: string } }) {
   const blogPostData = await GetAllPostData();
-  const staticPosts = [yearRoundClientEngagementPost, nicheTaxPracticePost];
+  const staticPosts = [
+    reduceBurnoutPost,
+    yearRoundClientEngagementPost,
+    nicheTaxPracticePost,
+  ];
   const posts = [...staticPosts, ...(blogPostData?.data || [])];
+
+  if (params.slug === reduceBurnoutPost.slug) {
+    return (
+      <>
+        <BreadcrumbSection
+          title="Tips, Training, and Updates for 
+      Tax & Accounting Professionals"
+          bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+        />
+        <HowToReduceBurnoutDuringPeakTaxSeason recentPosts={posts} />
+      </>
+    );
+  }
 
   if (params.slug === nicheTaxPracticePost.slug) {
     return (
