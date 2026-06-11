@@ -56,10 +56,10 @@ const BreadcrumbSection: React.FC<BreadcrumbSectionProps> = ({
           {/* Headline */}
           <Reveal y={80} opacityFrom={0} duration={1.6}>
             <div className="px-6 lg:px-10 rounded-2xl">
-              <h1 className="text-5xl lg:text-[80px] font-semibold text-transparent leading-snug md:leading-none arya-font text-white">
+              <p className="text-5xl lg:text-[80px] font-semibold text-transparent leading-snug md:leading-none arya-font text-white">
                 {displayedText}
                 {!isDone && <span className="animate-pulse">|</span>}
-              </h1>
+              </p>
             </div>
           </Reveal>
 
