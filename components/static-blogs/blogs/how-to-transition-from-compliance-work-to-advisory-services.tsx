@@ -338,7 +338,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
 
           <div className="mt-6 rounded-2xl border border-[#F26422]/20 bg-[#FFF4ED] p-5 md:p-7">
             <p className="text-gray-700 leading-relaxed">
-              Build strategic thinking, communication, and problem-solving skills to transition from compliance to consulting services. Move beyond preparing reports and filings to assisting clients in making educated business decisions. Find a specialty and become an expert. Understand your client's goals and become a trusted advisor who delivers results and not just accomplished chores.
+              Build strategic thinking, communication, and problem-solving skills to transition from compliance to consulting services. Move beyond preparing reports and filings to assisting clients in making educated business decisions. Find a specialty and become an expert. Understand your client&apos;s goals and become a trusted advisor who delivers results and not just accomplished chores.
             </p>
           </div>
 
@@ -404,7 +404,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
             </h2>
             <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
               <p>
-                Advisory services are proactive guidance based on your client's numbers. You recommend actions. You explain tradeoffs. You help clients plan. You help them stay on track.
+                Advisory services are proactive guidance based on your client&apos;s numbers. You recommend actions. You explain tradeoffs. You help clients plan. You help them stay on track.
               </p>
               <p>
                 Common advisory categories include tax planning, CFO-style services, and cash flow coaching. It can also include entity setup, pricing strategy, and KPI tracking. The key is proactive direction.
@@ -543,7 +543,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
 
           <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              The fastest path from compliance to advisory is adding a paid "planning layer"
+              The fastest path from compliance to advisory is adding a paid &quot;planning layer&quot;
             </h2>
             <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
               <p>
@@ -557,7 +557,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
 
           <section className="mt-10">
             <h2 className="text-xl md:text-2xl font-bold text-[#1B2639]">
-              Beginner path: Start advisory with one monthly "numbers and next steps" meeting
+              Beginner path: Start advisory with one monthly &quot;numbers and next steps&quot; meeting
             </h2>
             <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
               <p>
@@ -648,7 +648,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
           <section className="mt-10 rounded-2xl bg-gradient-to-r from-[#1B2639] to-[#131B2A] p-6 md:p-8 text-white text-center shadow-lg">
             <h3 className="text-xl md:text-2xl font-bold">Ready to Start Offering Advisory Services?</h3>
             <p className="mt-3 text-white/80 max-w-2xl mx-auto">
-              You don't need to rebuild your firm. You need one offer and five conversations. Start your advisory journey today.
+              You don&apos;t need to rebuild your firm. You need one offer and five conversations. Start your advisory journey today.
             </p>
             <p className="mt-4 font-semibold text-[#F26422] text-sm md:text-base">
               Take the Self-Assessment Above &nbsp;→&nbsp; Pick Your First Offer &nbsp;→&nbsp; Launch in 30 Days
@@ -707,14 +707,14 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
 
           <section className="mt-10">
             <h3 className="text-xl md:text-2xl font-bold text-[#1B2639]">
-              What to say when a client asks, "Why does advisory cost more?"
+              What to say when a client asks, &quot;Why does advisory cost more?&quot;
             </h3>
             <blockquote className="mt-4 border-l-4 border-[#F26422] bg-[#FFF4ED] p-5 text-lg font-semibold leading-8 text-[#1B2639]">
-              "Compliance records the past. Advisory protects your future."
+              &quot;Compliance records the past. Advisory protects your future.&quot;
             </blockquote>
             <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
               <p>
-                Then explain what changes. Mention proactive planning, decision support, and meeting cadence. Clients pay for access and clarity. Then ask a question: "Would you rather pay for forms, or avoid expensive surprises?"
+                Then explain what changes. Mention proactive planning, decision support, and meeting cadence. Clients pay for access and clarity. Then ask a question: &quot;Would you rather pay for forms, or avoid expensive surprises?&quot;
               </p>
             </div>
           </section>
@@ -761,18 +761,18 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
                 Start with your best clients. Do not start with your hardest. Find one risk. Then offer a paid solution.
               </p>
               <blockquote className="mt-4 border-l-4 border-[#F26422] bg-[#FFF4ED] p-5 text-lg font-semibold leading-8 text-[#1B2639]">
-                "Your revenue is up. Your cash is down. We should track cash weekly. I can set that up and review it with you monthly."
+                &quot;Your revenue is up. Your cash is down. We should track cash weekly. I can set that up and review it with you monthly.&quot;
               </blockquote>
             </div>
           </section>
 
           <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              How to run an "advisory audit" using data you already have
+              How to run an &quot;advisory audit&quot; using data you already have
             </h2>
             <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
               <p>
-                An advisory audit is a fast review. You look for gaps and opportunities. You do not fix everything yet. You identify what matters. Look at margins, tax exposure, and cash patterns. Look at owner pay. Look at debt and payroll. Then summarize in plain language. End with a simple plan: "Here are the three moves."
+                An advisory audit is a fast review. You look for gaps and opportunities. You do not fix everything yet. You identify what matters. Look at margins, tax exposure, and cash patterns. Look at owner pay. Look at debt and payroll. Then summarize in plain language. End with a simple plan: &quot;Here are the three moves.&quot;
               </p>
             </div>
           </section>
@@ -796,7 +796,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
               ]}
             />
             <p className="mt-4 text-[17px] leading-8 text-gray-700">
-              When they say "no," you offer a plan. That is not pushy. That is leadership.
+              When they say &quot;no,&quot; you offer a plan. That is not pushy. That is leadership.
             </p>
           </section>
 
@@ -809,7 +809,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
                 You can say this in under 20 seconds:
               </p>
               <blockquote className="mt-4 border-l-4 border-[#F26422] bg-[#FFF4ED] p-5 text-lg font-semibold leading-8 text-[#1B2639]">
-                "Based on your numbers, you need a plan, not just reports. We can meet monthly, track key metrics like your cash balance and runway, and plan taxes quarterly. That prevents surprises. Want to see what that looks like?"
+                &quot;Based on your numbers, you need a plan, not just reports. We can meet monthly, track key metrics like your cash balance and runway, and plan taxes quarterly. That prevents surprises. Want to see what that looks like?&quot;
               </blockquote>
               <p className="mt-4">
                 Then stop talking. Let them answer.
@@ -914,7 +914,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
 
           <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              How to protect scope and avoid becoming "on-call" for everything
+              How to protect scope and avoid becoming &quot;on-call&quot; for everything
             </h2>
             <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
               <p>
@@ -982,7 +982,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
               We do not just teach theory. We help you turn your skills into a real business model. We help you price offers, run better client meetings, and build a repeatable system.
             </p>
             <p className="mt-2 max-w-3xl text-white/80 leading-8">
-              If you are ready to stop trading hours for forms, and start getting paid for guidance, join us at TSG ProAdvisor and let's build your advisory practice the smart way.
+              If you are ready to stop trading hours for forms, and start getting paid for guidance, join us at TSG ProAdvisor and let&apos;s build your advisory practice the smart way.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
