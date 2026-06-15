@@ -5,9 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import { nicheTaxPracticePost } from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
-import { reduceBurnoutPost } from "@/components/static-blogs/blogs/how-to-reduce-burnout-during-peak-tax-season";
-import { yearRoundClientEngagementPost } from "@/components/static-blogs/blogs/year-round-client-engagement-strategies-for-tax-professionals";
+import {
+  nicheTaxPracticePost,
+  reduceBurnoutPost,
+  yearRoundClientEngagementPost,
+  transitionComplianceToAdvisoryPost,
+} from "@/components/static-blogs/blogs-metadata";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -66,19 +69,27 @@ export default function BlogSliderSection() {
             id: nicheTaxPracticePost.id,
             image: nicheTaxPracticePost.featuredImage.image.url,
           },
+          {
+            ...transitionComplianceToAdvisoryPost,
+            id: transitionComplianceToAdvisoryPost.id,
+            image: transitionComplianceToAdvisoryPost.featuredImage.image.url,
+          },
         ];
 
-        setBlogs([
+        const combined = [
           ...staticBlogs,
           ...filteredBlogs.filter(
             (blog: Blog) =>
               blog.slug !== reduceBurnoutPost.slug &&
               blog.slug !== nicheTaxPracticePost.slug &&
-              blog.slug !== yearRoundClientEngagementPost.slug
+              blog.slug !== yearRoundClientEngagementPost.slug &&
+              blog.slug !== transitionComplianceToAdvisoryPost.slug
           ),
-        ]);
+        ];
+        combined.sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+        setBlogs(combined);
       } catch (err: any) {
-        setBlogs([
+        const fallback = [
           {
             ...reduceBurnoutPost,
             id: reduceBurnoutPost.id,
@@ -94,7 +105,14 @@ export default function BlogSliderSection() {
             id: nicheTaxPracticePost.id,
             image: nicheTaxPracticePost.featuredImage.image.url,
           },
-        ]);
+          {
+            ...transitionComplianceToAdvisoryPost,
+            id: transitionComplianceToAdvisoryPost.id,
+            image: transitionComplianceToAdvisoryPost.featuredImage.image.url,
+          },
+        ];
+        fallback.sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+        setBlogs(fallback);
         setError(null);
       } finally {
         setLoading(false);

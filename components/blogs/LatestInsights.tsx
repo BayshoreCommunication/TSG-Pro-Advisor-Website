@@ -3,9 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "../motion/Reveal";
-import { nicheTaxPracticePost } from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
-import { reduceBurnoutPost } from "@/components/static-blogs/blogs/how-to-reduce-burnout-during-peak-tax-season";
-import { yearRoundClientEngagementPost } from "@/components/static-blogs/blogs/year-round-client-engagement-strategies-for-tax-professionals";
+import {
+  nicheTaxPracticePost,
+  reduceBurnoutPost,
+  yearRoundClientEngagementPost,
+  transitionComplianceToAdvisoryPost,
+} from "@/components/static-blogs/blogs-metadata";
 
 export default function LatestInsights({ blogPost }: { blogPost: any }) {
   const posts =
@@ -13,14 +16,17 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
       reduceBurnoutPost,
       yearRoundClientEngagementPost,
       nicheTaxPracticePost,
+      transitionComplianceToAdvisoryPost,
       ...(blogPost?.data || []).filter(
         (p: any) =>
           p.slug !== reduceBurnoutPost.slug &&
           p.slug !== nicheTaxPracticePost.slug &&
-          p.slug !== yearRoundClientEngagementPost.slug,
+          p.slug !== yearRoundClientEngagementPost.slug &&
+          p.slug !== transitionComplianceToAdvisoryPost.slug,
       ),
     ]
       ?.filter((p: any) => p.published)
+      ?.sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
       ?.map((p: any) => ({
         title: p.title,
         excerpt: p.excerpt || p.desc || "",

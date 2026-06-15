@@ -3,15 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import parse from "html-react-parser";
 import GetAllPostData from "@/lib/GetPostData";
-import HowCanYouBuildANicheTaxPractice, {
+import HowCanYouBuildANicheTaxPractice from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
+import HowToReduceBurnoutDuringPeakTaxSeason from "@/components/static-blogs/blogs/how-to-reduce-burnout-during-peak-tax-season";
+import YearRoundClientEngagementStrategiesForTaxProfessionals from "@/components/static-blogs/blogs/year-round-client-engagement-strategies-for-tax-professionals";
+import HowToTransitionFromComplianceWorkToAdvisoryServices from "@/components/static-blogs/blogs/how-to-transition-from-compliance-work-to-advisory-services";
+import {
   nicheTaxPracticePost,
-} from "@/components/static-blogs/blogs/how-can-you-build-a-niche-tax-practice";
-import HowToReduceBurnoutDuringPeakTaxSeason, {
   reduceBurnoutPost,
-} from "@/components/static-blogs/blogs/how-to-reduce-burnout-during-peak-tax-season";
-import YearRoundClientEngagementStrategiesForTaxProfessionals, {
   yearRoundClientEngagementPost,
-} from "@/components/static-blogs/blogs/year-round-client-engagement-strategies-for-tax-professionals";
+  transitionComplianceToAdvisoryPost,
+} from "@/components/static-blogs/blogs-metadata";
 
 // ---------- Styling ----------
 const css = `
@@ -110,6 +111,42 @@ export async function generateMetadata({
     };
   }
 
+  if (params.slug === transitionComplianceToAdvisoryPost.slug) {
+    const canonical = `https://www.tsgproadvisor.com/blogs/${transitionComplianceToAdvisoryPost.slug}`;
+
+    return {
+      title: "Transition From Compliance Work to Advisory in 2026",
+      description:
+        "Learn how to transition from compliance work to advisory services with proven strategies to grow clients, profits, and long-term value",
+      alternates: {
+        canonical,
+      },
+      openGraph: {
+        title: "Transition From Compliance Work to Advisory in 2026",
+        description:
+          "Learn how to transition from compliance work to advisory services with proven strategies to grow clients, profits, and long-term value",
+        images: [
+          {
+            url: transitionComplianceToAdvisoryPost.featuredImage.image.url,
+            alt: transitionComplianceToAdvisoryPost.featuredImage.altText,
+            width: 1200,
+            height: 720,
+          },
+        ],
+        url: canonical,
+        type: "article",
+        siteName: "TSG ProAdvisor",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Transition From Compliance Work to Advisory in 2026",
+        description:
+          "Learn how to transition from compliance work to advisory services with proven strategies to grow clients, profits, and long-term value",
+        images: [transitionComplianceToAdvisoryPost.featuredImage.image.url],
+      },
+    };
+  }
+
   const blogPostData = await GetAllPostData();
 
   const blog = blogPostData?.data?.find(
@@ -147,6 +184,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     reduceBurnoutPost,
     yearRoundClientEngagementPost,
     nicheTaxPracticePost,
+    transitionComplianceToAdvisoryPost,
   ];
   const posts = [...staticPosts, ...(blogPostData?.data || [])];
 
@@ -185,6 +223,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
           bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
         />
         <YearRoundClientEngagementStrategiesForTaxProfessionals
+          recentPosts={posts}
+        />
+      </>
+    );
+  }
+
+  if (params.slug === transitionComplianceToAdvisoryPost.slug) {
+    return (
+      <>
+        <BreadcrumbSection
+          title="Tips, Training, and Updates for 
+      Tax & Accounting Professionals"
+          bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+        />
+        <HowToTransitionFromComplianceWorkToAdvisoryServices
           recentPosts={posts}
         />
       </>
