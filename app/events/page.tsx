@@ -1,6 +1,13 @@
 import UpcomingEvents from "@/components/EventsPage/UpcomingEvents";
 import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/events",
+  },
+};
 
 const page = () => {
   return (

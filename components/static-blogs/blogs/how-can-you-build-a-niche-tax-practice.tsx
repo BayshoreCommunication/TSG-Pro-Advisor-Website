@@ -103,6 +103,8 @@ const sections = [
         <Link
           href="https://www.journalofaccountancy.com/"
           className={inlineLinkClass}
+          rel="nofollow noopener noreferrer"
+          target="_blank"
         >
           accounting firm
         </Link>
@@ -380,6 +382,8 @@ export default function HowCanYouBuildANicheTaxPractice({
               <Link
                 href="https://www.irs.gov/tax-professionals"
                 className="font-semibold text-[#F26422] underline underline-offset-4"
+                rel="nofollow noopener noreferrer"
+                target="_blank"
               >
                 IRS Tax Professional Center
               </Link>{" "}

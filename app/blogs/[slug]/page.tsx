@@ -80,33 +80,43 @@ export async function generateMetadata({
   }
 
   if (params.slug === nicheTaxPracticePost.slug) {
+    const canonical = `https://www.tsgproadvisor.com/blogs/${nicheTaxPracticePost.slug}`;
+
     return {
       title: "Build a Niche Tax Practice & Attract Premium Clients",
       description:
         "Want to stop competing on price? Learn how to build a niche tax practice that attracts high-value clients. Scale your firm with expert tips from TSG ProAdvisor.",
+      alternates: {
+        canonical,
+      },
       openGraph: {
         title: nicheTaxPracticePost.title,
         description: nicheTaxPracticePost.excerpt,
         images: nicheTaxPracticePost.featuredImage.image.url,
-        url: `https://tsgproadvisor.com/blogs/${nicheTaxPracticePost.slug}`,
+        url: canonical,
         type: "article",
-        site_name: "TSG ProAdvisor",
+        siteName: "TSG ProAdvisor",
       },
     };
   }
 
   if (params.slug === yearRoundClientEngagementPost.slug) {
+    const canonical = `https://www.tsgproadvisor.com/blogs/${yearRoundClientEngagementPost.slug}`;
+
     return {
       title: "Year-Round Client Engagement for Tax Pros",
       description:
         "Discover proven year-round client engagement strategies for tax professionals. Keep Florida clients loyal, boost revenue, and grow beyond tax season.",
+      alternates: {
+        canonical,
+      },
       openGraph: {
         title: yearRoundClientEngagementPost.title,
         description: yearRoundClientEngagementPost.excerpt,
         images: yearRoundClientEngagementPost.featuredImage.image.url,
-        url: `https://tsgproadvisor.com/blogs/${yearRoundClientEngagementPost.slug}`,
+        url: canonical,
         type: "article",
-        site_name: "TSG ProAdvisor",
+        siteName: "TSG ProAdvisor",
       },
     };
   }
@@ -162,17 +172,21 @@ export async function generateMetadata({
 
   const plain = extractTextFromHtml(blog.body || "");
   const shortDescription = truncateText(plain, 120);
+  const canonical = `https://www.tsgproadvisor.com/blogs/${blog.slug}`;
 
   return {
     title: blog.title,
     description: shortDescription,
+    alternates: {
+      canonical,
+    },
     openGraph: {
       title: blog.title,
       description: shortDescription,
       images: blog?.featuredImage?.image?.url,
-      url: `https://www.medicalweightlosstampa.com/blog/${blog.slug}`,
+      url: canonical,
       type: "article",
-      site_name: "",
+      siteName: "TSG ProAdvisor",
     },
   };
 }

@@ -668,9 +668,9 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
 
           {/* Three Tier Pricing Structure Table */}
           <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 md:p-7 shadow">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
               Simple Three-Tier Advisory Pricing Structure
-            </h2>
+            </h3>
             <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200">
               <div className="grid grid-cols-4 bg-[#131B2A] text-white font-semibold">
                 <div className="p-4 text-xs md:text-sm">Tier</div>
@@ -706,9 +706,9 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
           </section>
 
           <section className="mt-10">
-            <h3 className="text-xl md:text-2xl font-bold text-[#1B2639]">
+            <h2 className="text-xl md:text-2xl font-bold text-[#1B2639]">
               What to say when a client asks, &quot;Why does advisory cost more?&quot;
-            </h3>
+            </h2>
             <blockquote className="mt-4 border-l-4 border-[#F26422] bg-[#FFF4ED] p-5 text-lg font-semibold leading-8 text-[#1B2639]">
               &quot;Compliance records the past. Advisory protects your future.&quot;
             </blockquote>
