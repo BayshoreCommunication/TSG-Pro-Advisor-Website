@@ -1,24 +1,28 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export const transitionComplianceToAdvisoryPost = {
   id: "how-to-transition-from-compliance-work-to-advisory-services",
   title: "How to Transition from Compliance Work to Advisory Services",
   slug: "how-to-transition-from-compliance-work-to-advisory-services",
   category: "Business Advisory",
-  createdAt: "2026-06-15T00:00:00.000Z",
+  createdAt: "2026-07-08T00:00:00.000Z",
+  updatedAt: "2026-07-08T00:00:00.000Z",
   published: true,
   excerpt:
-    "Learn how to move beyond compliance reporting and become a trusted advisor through strategic insights and business guidance.",
-  desc: "Professional business advisory graphic illustrating the shift from compliance-focused services to strategic advisory solutions. Highlights business performance analysis, client relationship growth, profitability insights, strategic planning, and value-added consulting for accounting and financial professionals.",
+    "Learn how to transition from compliance work to advisory services with proven steps. Avoid common mistakes and build higher-value client relationships.",
+  desc: "Professional accounting and advisory services graphic illustrating how firms can transition from traditional compliance work to high-value advisory services. The image features a business advisor consulting with a client on strategic planning, tax strategy, cash flow optimization, and long-term business growth. It emphasizes building recurring revenue, strengthening client relationships, and positioning accountants as trusted strategic advisors through proactive financial guidance.",
   featuredImage: {
     altText:
-      "Business advisor presenting performance dashboards and growth strategies for transitioning from compliance work to advisory services",
+      "Business advisor meeting with a client to discuss transitioning from compliance work to advisory services, strategic planning, tax strategy, cash flow optimization, and business growth.",
+    title: "How to Transition from Compliance Work to Advisory Services",
+    description:
+      "Professional accounting and advisory services graphic illustrating how firms can transition from traditional compliance work to high-value advisory services. The image features a business advisor consulting with a client on strategic planning, tax strategy, cash flow optimization, and long-term business growth. It emphasizes building recurring revenue, strengthening client relationships, and positioning accountants as trusted strategic advisors through proactive financial guidance.",
+    caption:
+      "Learn how to move beyond compliance work by offering strategic advisory services that deliver greater value, build recurring revenue, and help clients achieve sustainable business growth.",
     image: {
-      url: "/images/static-blogs/compliance-to-advisory-services-business-growth.webp",
+      url: "/images/static-blogs/transition-compliance-to-advisory-services.webp",
     },
   },
 };
@@ -34,223 +38,177 @@ type RecentPost = {
   };
 };
 
-const inlineLinkClass = "font-semibold text-[#F26422] underline underline-offset-4";
-
-const stats = [
-  {
-    value: "73%",
-    label: "Clients pay more for proactive tax planning",
-  },
-  {
-    value: "62%",
-    label: "Stressed by unexpected tax bills",
-  },
-  {
-    value: "59%",
-    label: "Want monthly 'what to do next' guidance",
-  },
-  {
-    value: "68%",
-    label: "Prefer 30-min call + action list",
-  },
-];
+const inlineLinkClass =
+  "font-semibold text-[#F26422] underline underline-offset-4";
 
 const keyTakeaways = [
-  "Keep compliance. Add advisory as an upgrade.",
-  "Start with one niche and one offer.",
-  "Sell outcomes. Not hours.",
-  "Use monthly meetings and a simple dashboard.",
-  "Standardize delivery, then scale it.",
-  "Train your advisory skills like a system.",
+  "Start with one advisory offer. Price it monthly.",
+  "Use a short diagnostic.",
+  "Make value predictable.",
+  "Track impact. Show dollars saved or earned.",
+  "Standardize delivery. Use templates and checklists.",
 ];
 
-const keyDifferences = [
+const comparisonData = [
   {
-    area: "Client value",
-    compliance: "Accuracy and timeliness",
-    advisory: "Better decisions and results",
+    category: "Primary Goal",
+    compliance: "Accurate filings and reporting",
+    advisory: "Better decisions and outcomes",
   },
   {
-    area: "Client question",
-    compliance: '"Is this filed?"',
-    advisory: '"What should we do next?"',
+    category: "Client Value",
+    compliance: "Meets requirements",
+    advisory: "Improves cash, tax, and growth",
   },
   {
-    area: "Pricing",
-    compliance: "Per form or per hour",
-    advisory: "Package or retainer",
+    category: "Timing",
+    compliance: "After the fact",
+    advisory: "Before decisions happen",
   },
   {
-    area: "Scope",
-    compliance: "Defined by rules",
-    advisory: "Defined by business goals",
+    category: "Revenue Model",
+    compliance: "One-time, seasonal",
+    advisory: "Recurring, monthly",
   },
   {
-    area: "Delivery",
-    compliance: "Seasonal spikes",
-    advisory: "Monthly rhythm",
+    category: "Client Touchpoints",
+    compliance: "1–3 per year",
+    advisory: "Monthly or quarterly",
   },
   {
-    area: "Success metric",
-    compliance: "Clean return and clean books",
-    advisory: "Cash runway, profit, taxes saved",
-  },
-];
-
-const advisorySolves = [
-  {
-    problem: "Cash is tight",
-    solution: "Map a 13-week cash plan",
-  },
-  {
-    problem: "Taxes are a surprise",
-    solution: "Build quarterly planning",
-  },
-  {
-    problem: "Profit looks fine but bank says otherwise",
-    solution: "Explain cash drivers",
-  },
-  {
-    problem: "Payroll feels heavy",
-    solution: "Model hiring timing",
-  },
-  {
-    problem: "Growth is fast",
-    solution: "Set controls and reporting cadence",
+    category: "Your Differentiator",
+    compliance: "Speed and accuracy",
+    advisory: "Judgment and clarity",
   },
 ];
 
-const firstOffers = [
+const packageData = [
   {
-    offer: "Quarterly tax planning",
-    bestFor: "High-income individuals and owners",
-    deliverables: "Projection, estimates, strategy list",
-    positioning: '"No more tax surprises"',
+    level: "Starter",
+    bestFor: "New business owners",
+    scope: "Quarterly planning, basic dashboard",
+    anchor: "Fewer surprises and better estimates",
   },
   {
-    offer: "Monthly profit and cash review",
-    bestFor: "Service businesses",
-    deliverables: "Dashboard, insights, action plan",
-    positioning: '"Know your numbers every month"',
+    level: "Growth",
+    bestFor: "Scaling owners",
+    scope: "Monthly meetings, cash flow planning",
+    anchor: "Better cash decisions and margins",
   },
   {
-    offer: "Cash flow forecasting",
-    bestFor: "Fast-growing businesses",
-    deliverables: "13-week forecast, scenario model",
-    positioning: '"Protect payroll and growth"',
-  },
-  {
-    offer: "Entity and comp planning",
-    bestFor: "S-corp candidates",
-    deliverables: "Entity review, salary ranges, plan",
-    positioning: '"Pay yourself right"',
-  },
-  {
-    offer: "Pricing and margin review",
-    bestFor: "Agencies and trades",
-    deliverables: "Job costing insights, margin targets",
-    positioning: '"Stop selling at break-even"',
+    level: "Strategic",
+    bestFor: "High earners",
+    scope: "Entity planning, compensation strategy",
+    anchor: "Tax strategy and audit-ready records",
   },
 ];
 
-const pricingTiers = [
-  {
-    tier: "Advisory Lite",
-    fits: "Owners needing clarity",
-    deliverables: "Monthly review, KPI dashboard, action list",
-    pricing: "Monthly retainer",
-  },
-  {
-    tier: "Growth Advisory",
-    fits: "Owners making decisions",
-    deliverables: "Lite plus forecasts, quarterly planning",
-    pricing: "Monthly retainer",
-  },
-  {
-    tier: "Fractional CFO",
-    fits: "Owners scaling teams",
-    deliverables: "Growth plus strategy, lender-ready reporting",
-    pricing: "Retainer + project fees",
-  },
+const advisoryIncludes = [
+  "Tax savings plans before year-end.",
+  "Entity and payroll planning decisions.",
+  "Cash flow planning and runway forecasts.",
+  "Pricing and margin fixes.",
+  "Clean books that support lending.",
+  "Quarterly estimated tax planning.",
+  "KPI tracking with action items.",
 ];
 
-const clientWants = [
-  {
-    question: "What would you pay extra for?",
-    response: "Proactive tax planning",
-    percentage: "73%",
-  },
-  {
-    question: "What causes the most stress?",
-    response: "Unexpected tax bills",
-    percentage: "62%",
-  },
-  {
-    question: "What do you want monthly?",
-    response: 'Simple "what to do next" guidance',
-    percentage: "59%",
-  },
-  {
-    question: "What report do you actually read?",
-    response: "Cash balance and runway",
-    percentage: "54%",
-  },
-  {
-    question: "Preferred format",
-    response: "30-minute call with action list",
-    percentage: "68%",
-  },
+const beginnerNiches = [
+  "Real estate agents with variable income.",
+  "Insurance agents with commissions and 1099s.",
+  "Teachers with side businesses.",
+  "Stay-at-home parents with new startups.",
+  "Small service businesses with messy cash flow.",
+];
+
+const diagnosticItems = [
+  "Year-to-date tax projection.",
+  "Entity and payroll check.",
+  "Cash flow review.",
+  "Top three risks.",
+  "Next 90-day plan.",
+];
+
+const toolsNeeded = [
+  "A calendar system for recurring calls.",
+  "A client agenda template.",
+  "A meeting notes template.",
+  "A dashboard or monthly snapshot.",
+  "A task list with owners and due dates.",
+];
+
+const agendaItems = [
+  "Wins and concerns since last call.",
+  "Review three key numbers.",
+  "Decide two actions for this month.",
+  "Send a recap the same day. Recaps build trust.",
+];
+
+const beginnerMetrics = [
+  "Missed deadlines reduced.",
+  "Tax surprises reduced.",
+  "Books closed on time.",
+];
+
+const intermediateMetrics = [
+  "Cash runway increased.",
+  "Gross margin improved.",
+  "Owner pay stabilized.",
+];
+
+const expertMetrics = [
+  "Effective tax rate reduced.",
+  "Risk exposure reduced.",
+  "Decision cycles shortened.",
+];
+
+const commonMistakes = [
+  "Selling advisory without a meeting cadence.",
+  "Underpricing due to fear.",
+  "Offering custom work for everyone.",
+  "Mixing bookkeeping errors into advisory time.",
+  "Giving advice without documentation.",
+];
+
+const valueMetrics = [
+  "Estimated tax variance.",
+  "Cash balance trend.",
+  "Net income trend.",
+  "Owner draw stability.",
+  "Tax savings actions completed.",
 ];
 
 const faqs = [
   {
-    question: "Do I need to stop doing compliance work to offer advisory?",
-    answer: "No. Keep compliance as your foundation. Add advisory as an upgrade. Use compliance data to drive insights. This lowers risk and makes selling easier.",
+    question: "What Is The Fastest Way To Start Advisory If I Only Do Tax Returns?",
+    answer:
+      "Start with a paid planning diagnostic. Use prior-year data. Add a simple projection. Deliver a 90-day action plan. Then offer quarterly check-ins as a subscription service.",
   },
   {
-    question: "What is the easiest advisory offer to start with?",
-    answer: "Quarterly tax planning is the easiest. It fits tax clients well. It has clear deliverables. It also creates obvious value through fewer surprises and better estimates.",
+    question: "How Do I Price Advisory If Clients Only Want Cheap Compliance Work?",
+    answer:
+      "Anchor pricing to outcomes, not hours. Offer two tiers. Start with a 6-month term. Show value using tax variance, avoided penalties, and clearer cash flow decisions.",
   },
   {
-    question: "How do I price advisory if my clients expect hourly rates?",
-    answer: "Use packages with clear scope. Anchor on outcomes and cadence. Explain that advisory includes planning and access. Offer three tiers so clients can choose without negotiating.",
+    question: "Do I Need Special Credentials To Offer Advisory Services?",
+    answer:
+      "Usually, no. You need to stay within your scope. Document recommendations. Coordinate with attorneys when needed. Use clear engagement terms. Provide guidance tied to financial facts.",
   },
   {
-    question: "What if my client's books are messy?",
-    answer: "Fix the books first, or scope cleanup separately. Advisory needs reliable inputs. You can still start with tax planning if data quality is high enough. Do not advise from bad numbers.",
+    question: "What Should I Offer First: Cash Flow Advisory Or Tax Planning?",
+    answer:
+      "Offer what you can deliver confidently. Tax planning is often easiest for tax pros, as seen in this case study which highlights the interplay between cash flow advisory and tax planning. Cash flow works well for bookkeeping-heavy clients. Pick one. Standardize it before expanding.",
   },
   {
-    question: "How many clients should I start with?",
-    answer: "Start with two to five clients. Keep the first month tight. Improve your templates and meeting flow. Then add clients in small batches to protect service quality.",
+    question: "How Can A Career Changer Compete With Experienced Tax Pros?",
+    answer:
+      "Win with process and consistency. Choose a niche. Use structured meetings. Use clear checklists. Communicate well.",
   },
   {
-    question: "What deliverables do clients value most in advisory?",
-    answer: "Clients value clarity and next steps. They want a short dashboard, a cash view, and an action list. They also value proactive tax estimates and scenario planning.",
+    question: "How Many Advisory Clients Do I Need For Stable Revenue?",
+    answer:
+      "A small base can work. Ten clients on monthly retainers can stabilize cash flow. Focus on retention first. Add clients slowly. Improve delivery before you scale marketing.",
   },
-  {
-    question: "How do I avoid scope creep in advisory retainers?",
-    answer: "Put boundaries in writing. Define meeting cadence, response times, and what counts as a project. Keep requests in a shared list. Review scope quarterly and adjust pricing when needed.",
-  },
-  {
-    question: "Can I offer advisory as a solo practitioner?",
-    answer: "Yes. Solo works well with productized packages. Use a repeatable meeting agenda and templates. Keep tools simple. Consider outsourcing compliance tasks as advisory demand grows.",
-  },
-  {
-    question: "How long does it take to feel confident giving advice?",
-    answer: "Many pros gain confidence within 60 to 90 days of consistent delivery. Confidence comes from repetition, mentorship, and structured meetings. You do not need perfection to be useful.",
-  },
-  {
-    question: "What if I do not feel 'business-savvy' enough yet?",
-    answer: "Start with basic KPI reviews and tax planning. Learn one industry at a time. Use mentorship and training. Your job is progress, not genius. Build skill through real cases.",
-  },
-];
-
-const selfAssessmentSkills = [
-  "I can explain a P&L in plain words",
-  "I can explain a balance sheet in plain words",
-  "I can explain cash flow without jargon",
-  "I can connect numbers to actions",
-  "I can lead a structured client meeting",
 ];
 
 function postDate(date: string) {
@@ -285,28 +243,11 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
       arr.findIndex((post) => post.slug === item.slug) === index,
   );
 
-  // Self Assessment Score State
-  const [scores, setScores] = useState<Record<number, number>>({
-    0: 3,
-    1: 3,
-    2: 3,
-    3: 3,
-    4: 3,
-  });
-
-  const handleScoreChange = (index: number, val: number) => {
-    setScores((prev) => ({
-      ...prev,
-      [index]: val,
-    }));
-  };
-
-  const totalScore = Object.values(scores).reduce((a, b) => a + b, 0);
-
   return (
     <div className="max-w-[1640px] mx-auto px-8 w-full py-10">
       <div className="grid gap-12 mb-10 grid-cols-1 lg:grid-cols-3">
         <article className="lg:col-span-2">
+          {/* Featured Image */}
           <figure className="mt-4">
             <div className="relative overflow-hidden rounded-2xl bg-[#131B2A]">
               <Image
@@ -314,78 +255,91 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
                 height={720}
                 src={transitionComplianceToAdvisoryPost.featuredImage.image.url}
                 alt={transitionComplianceToAdvisoryPost.featuredImage.altText}
-                title={transitionComplianceToAdvisoryPost.title}
+                title={transitionComplianceToAdvisoryPost.featuredImage.title}
+                aria-describedby="advisory-featured-image-description"
                 className="w-full h-auto object-cover object-top"
                 priority
               />
             </div>
             <figcaption className="mt-3 text-sm italic text-gray-600">
-              Learn how to move beyond compliance reporting and become a trusted advisor through strategic insights and business guidance.
+              {transitionComplianceToAdvisoryPost.featuredImage.caption}
             </figcaption>
+            <p id="advisory-featured-image-description" className="sr-only">
+              {transitionComplianceToAdvisoryPost.featuredImage.description}
+            </p>
           </figure>
 
+          {/* Dates */}
           <p className="text-sm italic text-black mt-4">
-            {postDate(transitionComplianceToAdvisoryPost.createdAt)}
+            Published: {postDate(transitionComplianceToAdvisoryPost.createdAt)} | Updated: {postDate(transitionComplianceToAdvisoryPost.updatedAt)}
           </p>
 
+          {/* Title */}
           <h1 className="text-2xl md:text-4xl font-bold text-[#1B2639] my-6">
             {transitionComplianceToAdvisoryPost.title}
           </h1>
 
+          {/* Subtitle / Intro */}
           <p className="mb-6 text-xl md:text-2xl font-semibold text-[#F26422]">
-            Deliver results, not just accomplished chores.
+            Advisory transitions shift your focus toward future planning.
           </p>
 
-          <div className="mt-6 rounded-2xl border border-[#F26422]/20 bg-[#FFF4ED] p-5 md:p-7">
-            <p className="text-gray-700 leading-relaxed">
-              Build strategic thinking, communication, and problem-solving skills to transition from compliance to consulting services. Move beyond preparing reports and filings to assisting clients in making educated business decisions. Find a specialty and become an expert. Understand your client&apos;s goals and become a trusted advisor who delivers results and not just accomplished chores.
+          <div className="space-y-4 text-[17px] leading-8 text-gray-700">
+            <p>
+              Advisory transitions shift your focus toward future planning. Professionals abandon basic form fulfillment. You become a strategic partner. This change justifies higher fees. Closer client relationships build business value. Advisors maximize long-term growth.
             </p>
           </div>
 
+          {/* Key Advisory Outcome Box */}
+          <div className="mt-6 rounded-2xl border border-[#F26422]/20 bg-[#FFF4ED] p-5 md:p-7 shadow">
+            <p className="text-sm font-bold uppercase tracking-wider text-[#F26422]">KEY ADVISORY OUTCOME</p>
+            <p className="mt-2 text-xl font-extrabold text-[#1B2639]">10X Business Value &amp; Predictable Scaling</p>
+            <p className="mt-2 text-gray-700 leading-relaxed">
+              Shifting to recurring monthly advisory subscriptions eliminates seasonal dependency and transforms firms into proactive decision partners.
+            </p>
+          </div>
+
+          {/* Key Takeaways */}
           <section className="mt-8 rounded-2xl border border-gray-200 bg-white p-5 md:p-7 shadow">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              Key Takeaways You Can Apply This Week
+              Key Takeaways You Can Use Today
             </h2>
+            <p className="mt-2 text-gray-600">You move faster when you keep it simple:</p>
             <BulletList items={keyTakeaways} />
           </section>
 
-          {/* Stats section */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.map((item) => (
-              <div
-                key={item.value}
-                className="rounded-2xl bg-[#131B2A] p-6 text-white shadow-lg flex flex-col justify-between"
-              >
-                <p className="text-5xl font-bold text-[#F26422]">
-                  {item.value}
-                </p>
-                <p className="mt-3 text-sm font-semibold leading-snug text-white/90">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Key Differences Table */}
-          <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 md:p-7 shadow">
+          {/* What Changes */}
+          <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              Key Differences: Compliance Work vs. Advisory Services
+              What Changes When You Move From Compliance To Advisory
             </h2>
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              Advisory changes your role. You stop being only a filer. You become a decision partner. You help clients choose actions. You help them avoid surprises. You help them plan. Compliance is deadline-driven. Advisory is calendar-driven. Compliance is one-way delivery. Advisory is two-way collaboration.
+            </p>
+
+            <h3 className="mt-6 text-xl md:text-2xl font-bold text-[#1B2639]">
+              Quick Comparison Of Compliance Vs Advisory (With Practical Differences)
+            </h3>
+            <p className="mt-2 text-gray-600">
+              Compliance is deadline-driven, while advisory is calendar-driven. For more information, see the{" "}
+              <Link href="https://www.journalofaccountancy.com/" className={inlineLinkClass} rel="nofollow noopener noreferrer" target="_blank">Journal of Accountancy</Link>{" "}
+              guidelines on advisory services.
+            </p>
+
+            {/* Comparison Table */}
             <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200">
               <div className="grid grid-cols-3 bg-[#131B2A] text-white font-semibold">
-                <div className="p-4 text-sm md:text-base">Area</div>
+                <div className="p-4 text-sm md:text-base">Category</div>
                 <div className="p-4 text-sm md:text-base">Compliance Work</div>
                 <div className="p-4 text-sm md:text-base">Advisory Services</div>
               </div>
-              {keyDifferences.map((item, index) => (
+              {comparisonData.map((item, index) => (
                 <div
-                  key={item.area}
-                  className={`grid grid-cols-3 ${
-                    index % 2 === 0 ? "bg-[#F4F7FC]" : "bg-white"
-                  }`}
+                  key={item.category}
+                  className={`grid grid-cols-3 ${index % 2 === 0 ? "bg-[#F4F7FC]" : "bg-white"}`}
                 >
                   <div className="border-b border-gray-200 p-4 font-semibold text-xs md:text-sm text-[#1B2639] md:border-r">
-                    {item.area}
+                    {item.category}
                   </div>
                   <div className="border-b border-gray-200 p-4 text-xs md:text-sm text-gray-700 md:border-r">
                     {item.compliance}
@@ -396,593 +350,357 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
                 </div>
               ))}
             </div>
+
+            <p className="mt-5 text-[17px] leading-8 text-gray-700">
+              You change your mindset. You switch to advisory services. You adopt new strategies. These strategies enhance client relationships. They improve financial decision-making processes.
+            </p>
           </section>
 
+          {/* Why Advisory Wins */}
           <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              What counts as advisory services in tax and accounting?
+              Why Advisory Wins For Your Firm And Your Clients
             </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Advisory services are proactive guidance based on your client&apos;s numbers. You recommend actions. You explain tradeoffs. You help clients plan. You help them stay on track.
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              Advisory wins because it reduces chaos. It increases trust. It raises lifetime value. It also improves client retention. Clients do not wake up wanting a tax return. They want less stress. They want more money kept. They want fewer mistakes. Advisory speaks to that. Want fewer last-minute scrambles? Want clients who listen? Want higher margins? Advisory supports all three.
+            </p>
+
+            {/* Shift to Advisory CTA Box */}
+            <div className="mt-8 rounded-2xl bg-gradient-to-r from-[#1B2639] to-[#131B2A] p-6 md:p-8 text-white text-center shadow-lg">
+              <h3 className="text-xl md:text-2xl font-bold">READY TO SHIFT FROM COMPLIANCE TO STRATEGIC ADVISORY?</h3>
+              <p className="mt-3 text-white/80 max-w-2xl mx-auto text-sm md:text-base">
+                Join TSG ProAdvisor today and gain access to proven workflows, diagnostic checklists, and the exact roadmap needed to launch your new monthly subscription model comfortably.
               </p>
-              <p>
-                Common advisory categories include tax planning, CFO-style services, and cash flow coaching. It can also include entity setup, pricing strategy, and KPI tracking. The key is proactive direction.
-              </p>
-              <p className="font-semibold text-[#1B2639]">
-                Ask yourself one question: Are you helping the client decide? If yes, that is advisory.
-              </p>
+              <Link
+                href="/contact"
+                className="mt-6 inline-flex rounded-xl bg-[#F26422] px-8 py-3 font-bold text-white transition hover:bg-white hover:text-[#F26422]"
+              >
+                Join TSG ProAdvisor Today
+              </Link>
             </div>
           </section>
 
+          {/* What Advisory Actually Includes */}
           <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              Why clients pay more for advisory than compliance
+              What Advisory Actually Includes In Tax And Accounting
             </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Clients pay more because advisory reduces risk and increases options. It also saves time. They do not want more reports. They want answers.
-              </p>
-              <p>
-                Advisory also feels scarce. Fewer pros do it well. Many pros only file and reconcile. That makes good advisory stand out fast.
-              </p>
-              <p>
-                If you give clients clarity, they stay longer. They also refer more.
-              </p>
-            </div>
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              Advisory is not vague &ldquo;consulting.&rdquo; It is specific guidance tied to numbers. It is structured. It is documented. It has a cadence. Common advisory outcomes include:
+            </p>
+            <BulletList items={advisoryIncludes} />
           </section>
 
-          {/* Advisory Solves Table */}
-          <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 md:p-7 shadow">
+          {/* How To Choose The Right Advisory Niche */}
+          <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              Advisory Solves What Compliance Cannot
+              How To Choose The Right Advisory Niche For Beginners
             </h2>
-            <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200">
-              <div className="grid grid-cols-1 md:grid-cols-2 bg-[#131B2A] text-white font-semibold">
-                <div className="p-4">Client Problem</div>
-                <div className="p-4">Advisory Solution</div>
-              </div>
-              {advisorySolves.map((item, index) => (
-                <div
-                  key={item.problem}
-                  className={`grid grid-cols-1 md:grid-cols-2 ${
-                    index % 2 === 0 ? "bg-[#F4F7FC]" : "bg-white"
-                  }`}
-                >
-                  <div className="border-b border-gray-200 p-4 text-sm text-gray-700 md:border-r flex items-center gap-2">
-                    <span className="text-red-500 font-bold">⚠</span> {item.problem}
-                  </div>
-                  <div className="border-b border-gray-200 p-4 text-sm font-semibold text-[#1B2639] flex items-center gap-2">
-                    <span className="text-green-600 font-bold">✓</span> {item.solution}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              You select a specific niche. You deliver fast wins. You use your current knowledge. Start where you already have clients. A simple niche rule helps. Choose clients with repeating decisions. Those decisions create advisory demand.
+            </p>
+            <p className="mt-4 text-[17px] font-semibold text-[#1B2639]">Good beginner niches include:</p>
+            <BulletList items={beginnerNiches} />
+            <p className="mt-5 text-[17px] leading-8 text-gray-700">
+              At TSG ProAdvisor, we see this daily. Many people start outside accounting. They still succeed. They choose a clear market. They build a simple offer. They deliver consistently. For instance, many learn{" "}
+              <Link href="/blogs/how-to-start-a-successful-career-as-a-tax-professional-in-2026" className={inlineLinkClass}>
+                how to start a successful career as a tax professional in 2026
+              </Link>{" "}
+              and successfully transition from outside accounting.
+            </p>
           </section>
 
-          {/* Interactive Self Assessment widget */}
-          <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 md:p-7 shadow">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639] text-center">
-              Self-Assessment: Are You Ready to Offer Advisory?
+          {/* How To Create Your First Advisory Offer */}
+          <section className="mt-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
+              How To Create Your First Advisory Offer In One Day
             </h2>
-            <p className="text-center text-gray-500 mt-2 text-sm">
-              Rate yourself 1–5 on each skill below (1 = Weak, 5 = Strong)
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              Your first offer should be narrow. It should solve one problem. It should have a start and an ongoing cadence. Use this simple structure:
             </p>
 
             <div className="mt-6 space-y-6">
-              {selfAssessmentSkills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100"
-                >
-                  <p className="font-semibold text-gray-800 text-sm md:text-base">
-                    {skill}
-                  </p>
-                  <div className="flex gap-2">
-                    {[1, 2, 3, 4, 5].map((val) => (
-                      <button
-                        key={val}
-                        type="button"
-                        onClick={() => handleScoreChange(index, val)}
-                        className={`w-9 h-9 md:w-10 md:h-10 rounded-full border flex items-center justify-center font-bold transition-all text-xs md:text-sm ${
-                          scores[index] === val
-                            ? "bg-[#F26422] text-white border-[#F26422] shadow-md shadow-[#F26422]/20 scale-105"
-                            : "bg-white text-gray-700 border-gray-300 hover:border-[#F26422] hover:text-[#F26422]"
-                        }`}
-                      >
-                        {val}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+              <div>
+                <h3 className="text-lg font-bold text-[#1B2639]">Step 1: Name The Outcome In Plain Words</h3>
+                <p className="mt-2 text-[17px] leading-8 text-gray-700">
+                  Lead with the result. Not the service. Clients buy outcomes.
+                  <br />
+                  <strong>Examples:</strong>
+                  <br />
+                  &bull; &ldquo;Quarterly Tax Savings Plan.&rdquo;
+                  <br />
+                  &bull; &ldquo;Cash Flow Clarity Program.&rdquo;
+                  <br />
+                  &bull; &ldquo;S-Corp Readiness Review.&rdquo;
+                </p>
+              </div>
 
-            {/* Total score container */}
-            <div className="mt-8 rounded-2xl bg-[#131B2A] p-6 text-white text-center shadow-lg">
-              <p className="text-xs md:text-sm font-semibold uppercase tracking-wide text-[#F26422]">
-                Your Self-Assessment Score
-              </p>
-              <p className="mt-2 text-5xl font-bold text-[#F26422]">
-                {totalScore} <span className="text-2xl text-white/60">/ 25</span>
-              </p>
-              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
-                <div
-                  className={`p-4 rounded-xl border transition-all ${
-                    totalScore < 15
-                      ? "bg-[#F26422]/20 border-[#F26422]"
-                      : "bg-white/5 border-white/10 opacity-40"
-                  }`}
-                >
-                  <p className="font-bold text-base md:text-lg text-white">Under 15</p>
-                  <p className="text-xs text-white/80 mt-1">Start with basic advisory</p>
-                </div>
-                <div
-                  className={`p-4 rounded-xl border transition-all ${
-                    totalScore >= 15 && totalScore <= 20
-                      ? "bg-[#F26422]/20 border-[#F26422]"
-                      : "bg-white/5 border-white/10 opacity-40"
-                  }`}
-                >
-                  <p className="font-bold text-base md:text-lg text-white">15–20</p>
-                  <p className="text-xs text-white/80 mt-1">Add forecasting services</p>
-                </div>
-                <div
-                  className={`p-4 rounded-xl border transition-all ${
-                    totalScore > 20
-                      ? "bg-[#F26422]/20 border-[#F26422]"
-                      : "bg-white/5 border-white/10 opacity-40"
-                  }`}
-                >
-                  <p className="font-bold text-base md:text-lg text-white">Over 20</p>
-                  <p className="text-xs text-white/80 mt-1">Build tiered CFO services</p>
-                </div>
+              <div>
+                <h3 className="text-lg font-bold text-[#1B2639]">Step 2: Define The Deliverables And The Meeting Rhythm</h3>
+                <p className="mt-2 text-[17px] leading-8 text-gray-700">
+                  Keep deliverables tight. Make meetings routine. Routine drives retention.
+                  <br />
+                  <strong>Include:</strong>
+                  <br />
+                  &bull; A kickoff diagnostic.
+                  <br />
+                  &bull; A roadmap with actions.
+                  <br />
+                  &bull; A monthly or quarterly call.
+                  <br />
+                  &bull; A dashboard or summary.
+                  <br />
+                  &bull; Email support with boundaries.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-[#1B2639]">Step 3: Price It As A Monthly Subscription</h3>
+                <p className="mt-2 text-[17px] leading-8 text-gray-700">
+                  Monthly pricing creates stability. It also makes value ongoing. Many firms start too low. Many also overcomplicate pricing.
+                  <br />
+                  <strong>Start with one of these:</strong>
+                  <br />
+                  &bull; A single monthly fee.
+                  <br />
+                  &bull; Two tiers with clear limits.
+                  <br />
+                  &bull; A setup fee plus monthly.
+                </p>
               </div>
             </div>
           </section>
 
+          {/* How To Price Advisory */}
           <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              The fastest path from compliance to advisory is adding a paid &quot;planning layer&quot;
+              How To Price Advisory Using Simple Value Anchors
             </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Add a planning layer first. Do not rebuild your whole firm first. Planning is the easiest advisory on-ramp. It fits tax and bookkeeping clients well. Start with one paid add-on. Then expand.
-              </p>
-              <p>
-                Good starter offers include tax planning, quarterly estimated tax support, and monthly KPI reviews.
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-10">
-            <h2 className="text-xl md:text-2xl font-bold text-[#1B2639]">
-              Beginner path: Start advisory with one monthly &quot;numbers and next steps&quot; meeting
-            </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Start with one meeting per month. Keep it to 30 minutes. Use one dashboard. Bring three insights. End with three actions. Your goal is not perfection. Your goal is consistent value.
-              </p>
-              <p>
-                Here is a simple meeting structure you can repeat:
-              </p>
-            </div>
-            <BulletList
-              items={[
-                "Wins and concerns — 5 minutes",
-                "Review three KPIs — 10 minutes",
-                "Review cash and runway — 10 minutes",
-                "Agree on next actions — 5 minutes",
-              ]}
-            />
             <p className="mt-4 text-[17px] leading-8 text-gray-700">
-              This alone can justify a retainer. It also creates upsell paths.
+              Price based on the decision value. Not your hours. Use anchors clients understand. Taxes saved is one anchor. Time saved is another. Risk reduced is another. Here is a clean way to think:
             </p>
-          </section>
 
-          <section className="mt-10">
-            <h2 className="text-xl md:text-2xl font-bold text-[#1B2639]">
-              Intermediate path: Add forecasting, scenarios, and tax-smart decisions
-            </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Forecasting moves you from reporting to planning. You help clients choose between options. You show what happens if sales drop. You model hiring. You model debt payoff. Tie forecasts to tax planning. Show net cash impact. Clients love that. Deliver one forecast update per quarter at first. Keep it simple.
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-10">
-            <h2 className="text-xl md:text-2xl font-bold text-[#1B2639]">
-              Expert path: Build a packaged CFO service with clear deliverables
-            </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                At expert level, you sell a full system. You become the financial operating partner. You may still do compliance. But advisory becomes the core value.
-              </p>
-              <p>
-                A strong CFO package includes cash flow forecasting, KPI system, strategic planning, and ongoing tax optimization. You also lead cross-functional decisions. Think pricing, staffing, and capital.
-              </p>
-            </div>
-          </section>
-
-          {/* First Advisory Offers Table */}
-          <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 md:p-7 shadow">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              First Advisory Offers That Work Well
-            </h2>
+            {/* Package Table */}
             <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200">
               <div className="grid grid-cols-4 bg-[#131B2A] text-white font-semibold">
-                <div className="p-4 text-xs md:text-sm">First Advisory Offer</div>
+                <div className="p-4 text-xs md:text-sm">Advisory Package Level</div>
                 <div className="p-4 text-xs md:text-sm">Best For</div>
-                <div className="p-4 text-xs md:text-sm">What You Deliver</div>
-                <div className="p-4 text-xs md:text-sm">How You Position It</div>
+                <div className="p-4 text-xs md:text-sm">Typical Scope</div>
+                <div className="p-4 text-xs md:text-sm">Value Anchor You Can Use</div>
               </div>
-              {firstOffers.map((item, index) => (
+              {packageData.map((item, index) => (
                 <div
-                  key={item.offer}
-                  className={`grid grid-cols-4 ${
-                    index % 2 === 0 ? "bg-[#F4F7FC]" : "bg-white"
-                  }`}
+                  key={item.level}
+                  className={`grid grid-cols-4 ${index % 2 === 0 ? "bg-[#F4F7FC]" : "bg-white"}`}
                 >
                   <div className="border-b border-gray-200 p-4 font-semibold text-xs md:text-sm text-[#1B2639] md:border-r">
-                    {item.offer}
+                    {item.level}
                   </div>
                   <div className="border-b border-gray-200 p-4 text-xs md:text-sm text-gray-700 md:border-r">
                     {item.bestFor}
                   </div>
                   <div className="border-b border-gray-200 p-4 text-xs md:text-sm text-gray-700 md:border-r">
-                    {item.deliverables}
+                    {item.scope}
                   </div>
                   <div className="border-b border-gray-200 p-4 text-xs md:text-sm font-semibold text-[#F26422]">
-                    {item.positioning}
+                    {item.anchor}
                   </div>
                 </div>
               ))}
             </div>
+
             <p className="mt-5 text-[17px] leading-8 text-gray-700">
-              Pick one. Commit for 90 days. Improve delivery weekly.
+              Ask yourself one question. What is one avoided mistake worth? Many clients will pay to prevent pain.
             </p>
           </section>
 
-          {/* CTA middle box */}
-          <section className="mt-10 rounded-2xl bg-gradient-to-r from-[#1B2639] to-[#131B2A] p-6 md:p-8 text-white text-center shadow-lg">
-            <h3 className="text-xl md:text-2xl font-bold">Ready to Start Offering Advisory Services?</h3>
-            <p className="mt-3 text-white/80 max-w-2xl mx-auto">
-              You don&apos;t need to rebuild your firm. You need one offer and five conversations. Start your advisory journey today.
-            </p>
-            <p className="mt-4 font-semibold text-[#F26422] text-sm md:text-base">
-              Take the Self-Assessment Above &nbsp;→&nbsp; Pick Your First Offer &nbsp;→&nbsp; Launch in 30 Days
-            </p>
-          </section>
-
+          {/* What To Say When Clients Ask */}
           <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              How to price advisory services without guessing
+              What To Say When Clients Ask “What Do You Mean By Advisory?”
             </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Price advisory services based on value and scope, not like compliance. Hourly pricing punishes efficiency and confuses clients. Instead, consider value-based pricing. Use packages with clear deliverables, implement tiers, and add an onboarding fee if necessary.
-              </p>
-            </div>
-          </section>
-
-          {/* Three Tier Pricing Structure Table */}
-          <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 md:p-7 shadow">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              Simple Three-Tier Advisory Pricing Structure
-            </h3>
-            <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200">
-              <div className="grid grid-cols-4 bg-[#131B2A] text-white font-semibold">
-                <div className="p-4 text-xs md:text-sm">Tier</div>
-                <div className="p-4 text-xs md:text-sm">Who It Fits</div>
-                <div className="p-4 text-xs md:text-sm">Core Deliverables</div>
-                <div className="p-4 text-xs md:text-sm">Pricing Model</div>
-              </div>
-              {pricingTiers.map((item, index) => (
-                <div
-                  key={item.tier}
-                  className={`grid grid-cols-4 ${
-                    index % 2 === 0 ? "bg-[#F4F7FC]" : "bg-white"
-                  }`}
-                >
-                  <div className="border-b border-gray-200 p-4 font-semibold text-xs md:text-sm text-[#1B2639] md:border-r">
-                    {item.tier}
-                  </div>
-                  <div className="border-b border-gray-200 p-4 text-xs md:text-sm text-gray-700 md:border-r">
-                    {item.fits}
-                  </div>
-                  <div className="border-b border-gray-200 p-4 text-xs md:text-sm text-gray-700 md:border-r">
-                    {item.deliverables}
-                  </div>
-                  <div className="border-b border-gray-200 p-4 text-xs md:text-sm font-semibold text-[#F26422]">
-                    {item.pricing}
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="mt-5 text-[17px] leading-8 text-gray-700">
-              Keep your tiers easy to compare. Use one-page scope sheets to put boundaries in writing.
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              Say this in one breath. Keep it direct:
             </p>
-          </section>
-
-          <section className="mt-10">
-            <h2 className="text-xl md:text-2xl font-bold text-[#1B2639]">
-              What to say when a client asks, &quot;Why does advisory cost more?&quot;
-            </h2>
             <blockquote className="mt-4 border-l-4 border-[#F26422] bg-[#FFF4ED] p-5 text-lg font-semibold leading-8 text-[#1B2639]">
-              &quot;Compliance records the past. Advisory protects your future.&quot;
+              &ldquo;Advisory means you meet regularly. You review numbers together. You decide next steps. You plan before deadlines. You track results.&rdquo;
             </blockquote>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Then explain what changes. Mention proactive planning, decision support, and meeting cadence. Clients pay for access and clarity. Then ask a question: &quot;Would you rather pay for forms, or avoid expensive surprises?&quot;
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              How to deliver advisory services with a repeatable process
-            </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Consistency sells. Your process should feel like a product. Clients should know what happens each month. To achieve this, leverage a four-step delivery loop:
-              </p>
-            </div>
-            <BulletList
-              items={[
-                "Collect and clean data.",
-                "Build a simple dashboard that provides valuable insights.",
-                "Prepare three insights and three actions.",
-                "Meet, decide, and document next steps.",
-              ]}
-            />
             <p className="mt-4 text-[17px] leading-8 text-gray-700">
-              Then repeat monthly.
+              Then ask a question: Do you want proactive planning? Or only filing?
             </p>
           </section>
 
+          {/* How To Convert Compliance Clients */}
           <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              What tools you need for advisory services (and what you do not)
+              How To Convert Compliance Clients Into Advisory Clients
             </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                You do not need fancy tools to start. You need clean books and a meeting rhythm. Most firms use an accounting system, a reporting tool, and a meeting notes system. You can keep it lean. Avoid tool overload early. Tools do not create value. Your guidance creates value.
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              How to transition your existing compliance clients into advisory
-            </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Start with your best clients. Do not start with your hardest. Find one risk. Then offer a paid solution.
-              </p>
-              <blockquote className="mt-4 border-l-4 border-[#F26422] bg-[#FFF4ED] p-5 text-lg font-semibold leading-8 text-[#1B2639]">
-                &quot;Your revenue is up. Your cash is down. We should track cash weekly. I can set that up and review it with you monthly.&quot;
-              </blockquote>
-            </div>
-          </section>
-
-          <section className="mt-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              How to run an &quot;advisory audit&quot; using data you already have
-            </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                An advisory audit is a fast review. You look for gaps and opportunities. You do not fix everything yet. You identify what matters. Look at margins, tax exposure, and cash patterns. Look at owner pay. Look at debt and payroll. Then summarize in plain language. End with a simple plan: &quot;Here are the three moves.&quot;
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              How to sell advisory without feeling salesy
-            </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Sell advisory by diagnosing, not pitching. Ask better questions. Then link answers to outcomes. Use direct questions like these:
-              </p>
-            </div>
-            <BulletList
-              items={[
-                "What keeps you up at night financially?",
-                "Do you know your monthly break-even point?",
-                "How far does cash last if sales drop?",
-                "Do you set aside money for taxes weekly?",
-                "Are you making hiring decisions from a plan?",
-              ]}
-            />
             <p className="mt-4 text-[17px] leading-8 text-gray-700">
-              When they say &quot;no,&quot; you offer a plan. That is not pushy. That is leadership.
+              Start with your best clients. Choose ones who respond. Choose ones who earn enough to care. Choose ones with decision points. Then use a two-step conversion.
             </p>
+
+            <div className="mt-6 space-y-6">
+              <div>
+                <h3 className="text-lg font-bold text-[#1B2639]">Step 1: Run A Paid Diagnostic</h3>
+                <p className="mt-2 text-[17px] leading-8 text-gray-700">
+                  A diagnostic is advisory&rsquo;s entry point. It is also your filter. Your diagnostic can include:
+                </p>
+                <BulletList items={diagnosticItems} />
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-[#1B2639]">Step 2: Offer A 6 Or 12 Month Advisory Plan</h3>
+                <p className="mt-2 text-[17px] leading-8 text-gray-700">
+                  Do not sell &ldquo;forever.&rdquo; Sell a term. Terms reduce hesitation. Terms also help you measure success. Offer two options. A basic plan and a premium plan. Keep the difference obvious.
+                </p>
+              </div>
+            </div>
           </section>
 
+          {/* What Tools And Systems You Need */}
           <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              A practical script you can use on your next client call
+              What Tools And Systems You Need To Deliver Advisory Consistently
             </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                You can say this in under 20 seconds:
-              </p>
-              <blockquote className="mt-4 border-l-4 border-[#F26422] bg-[#FFF4ED] p-5 text-lg font-semibold leading-8 text-[#1B2639]">
-                &quot;Based on your numbers, you need a plan, not just reports. We can meet monthly, track key metrics like your cash balance and runway, and plan taxes quarterly. That prevents surprises. Want to see what that looks like?&quot;
-              </blockquote>
-              <p className="mt-4">
-                Then stop talking. Let them answer.
-              </p>
-            </div>
-          </section>
-
-          {/* Survey Results Table */}
-          <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 md:p-7 shadow">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              What Clients Actually Want From Their Tax Pro
-            </h2>
-            <p className="text-gray-500 text-sm mt-1">Survey of 37 small business owners · April 2026 · US & Canada</p>
-            <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200">
-              <div className="grid grid-cols-3 bg-[#131B2A] text-white font-semibold">
-                <div className="p-4 text-xs md:text-sm">Question</div>
-                <div className="p-4 text-xs md:text-sm">Top Response</div>
-                <div className="p-4 text-xs md:text-sm">% of Respondents</div>
-              </div>
-              {clientWants.map((item, index) => (
-                <div
-                  key={item.question}
-                  className={`grid grid-cols-3 ${
-                    index % 2 === 0 ? "bg-[#F4F7FC]" : "bg-white"
-                  }`}
-                >
-                  <div className="border-b border-gray-200 p-4 font-semibold text-xs md:text-sm text-[#1B2639] md:border-r">
-                    {item.question}
-                  </div>
-                  <div className="border-b border-gray-200 p-4 text-xs md:text-sm text-gray-700 md:border-r">
-                    {item.response}
-                  </div>
-                  <div className="border-b border-gray-200 p-4 text-xs md:text-sm font-semibold text-[#F26422]">
-                    {item.percentage}
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="mt-4 text-xs text-gray-500 italic">
-              Source: TSG ProAdvisor internal mini-survey of 37 small business owners, collected April 2026 via Google Forms.
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              You need consistency more than tools. Still, a simple stack helps. Use tools that reduce manual work. Look at how firms are{" "}
+              <Link href="/blogs/streamlining-audit-processes-with-tax-software" className={inlineLinkClass}>
+                streamlining audit processes with tax software
+              </Link>{" "}
+              and automation to keep client delivery consistent and stress-free. Most advisory delivery needs:
             </p>
-          </section>
-
-          <section className="mt-10">
-            <p className="text-[17px] leading-8 text-gray-700">
-              The message is simple. Clients want fewer PDFs. They want decisions. For more insights into financial management and planning, consider tuning into podcasts like{" "}
-              <a
-                href="https://www.physiciancents.com/"
-                className={inlineLinkClass}
-                rel="nofollow noopener noreferrer"
-                target="_blank"
-              >
-                Physician Cents
-              </a>
-              , which provide valuable advice for various professionals including those in the medical field regarding financial strategies.
-            </p>
-          </section>
-
-          <section className="mt-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              What skills you must build to succeed in advisory
-            </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                You need three skill sets. Technical knowledge alone is not enough. Advisory is communication plus judgment.
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-10">
-            <h3 className="text-xl md:text-2xl font-bold text-[#1B2639]">
-              Communication skills matter more than perfect spreadsheets
-            </h3>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                You must explain numbers simply. You must stay calm. You must guide decisions. Clients do not want lectures. Practice short explanations. Use examples. Avoid jargon.
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-10">
-            <h3 className="text-xl md:text-2xl font-bold text-[#1B2639]">
-              Business acumen turns reporting into advice
-            </h3>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Learn how businesses make money. Learn unit economics. Learn pricing drivers. Learn payroll leverage. You can learn this by reviewing real client cases. You can also learn through mentorship.
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-10">
-            <h3 className="text-xl md:text-2xl font-bold text-[#1B2639]">
-              Meeting leadership keeps advisory profitable
-            </h3>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                A messy meeting kills margins. You need an agenda. You need timeboxes. You need clear next steps. End every meeting with owners and deadlines.
-              </p>
-            </div>
-          </section>
-
-          <section className="mt-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              How to protect scope and avoid becoming &quot;on-call&quot; for everything
-            </h2>
-            <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
-              <p>
-                Advisory retainers can fail if boundaries are weak. Your scope must be clear. Put response times in writing. Put meeting frequency in writing. Define what counts as a project. If you do this, clients respect your time. They also trust your process more.
-              </p>
-            </div>
-          </section>
-
-          {/* Rollout Plan section */}
-          <section className="mt-10 rounded-2xl border border-gray-200 bg-white p-5 md:p-7 shadow">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
-              Your 30-Day Advisory Launch Rollout Plan
-            </h2>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-4 gap-4">
-              <div className="p-5 rounded-2xl bg-gray-50 border border-gray-200">
-                <h4 className="font-bold text-[#F26422] text-lg">Week 1</h4>
-                <ul className="mt-3 space-y-2 text-sm text-gray-700">
-                  <li>• Pick one offer</li>
-                  <li>• Write scope</li>
-                  <li>• Create pricing tiers</li>
-                </ul>
-              </div>
-              <div className="p-5 rounded-2xl bg-gray-50 border border-gray-200">
-                <h4 className="font-bold text-[#F26422] text-lg">Week 2</h4>
-                <ul className="mt-3 space-y-2 text-sm text-gray-700">
-                  <li>• Build dashboard template</li>
-                  <li>• Build meeting agenda</li>
-                  <li>• Finalize deliverable format</li>
-                </ul>
-              </div>
-              <div className="p-5 rounded-2xl bg-gray-50 border border-gray-200">
-                <h4 className="font-bold text-[#F26422] text-lg">Week 3</h4>
-                <ul className="mt-3 space-y-2 text-sm text-gray-700">
-                  <li>• Invite 5 ideal clients</li>
-                  <li>• Run advisory audits</li>
-                  <li>• Present initial findings</li>
-                </ul>
-              </div>
-              <div className="p-5 rounded-2xl bg-gray-50 border border-gray-200">
-                <h4 className="font-bold text-[#F26422] text-lg">Week 4</h4>
-                <ul className="mt-3 space-y-2 text-sm text-gray-700">
-                  <li>• Close 2 retainers</li>
-                  <li>• Deliver month one</li>
-                  <li>• Improve process</li>
-                </ul>
-              </div>
-            </div>
+            <BulletList items={toolsNeeded} />
             <p className="mt-5 text-[17px] leading-8 text-gray-700">
-              Keep it small. Make it repeatable. Then scale.
+              Do you have these yet? If not, build them before selling hard.
             </p>
           </section>
 
-          {/* Bottom CTA section */}
+          {/* How To Run Advisory Meetings */}
+          <section className="mt-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
+              How To Run Advisory Meetings Without Rambling
+            </h2>
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              Start with a fixed agenda. Make meetings short, like the one-on-one meetings with employees that help in focusing on key issues. Keep action items clear. Always end with next steps. A clean 30-minute agenda works well:
+            </p>
+            <BulletList items={agendaItems} />
+          </section>
+
+          {/* Beginner, Intermediate, And Expert Advisory Paths */}
+          <section className="mt-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
+              Beginner, Intermediate, And Expert Advisory Paths (So You Know What To Build Next)
+            </h2>
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              You should match your advisory level to your current skill. You can grow step by step. You do not need to jump to complex planning.
+            </p>
+
+            <div className="mt-6 space-y-6">
+              <div>
+                <h3 className="text-lg font-bold text-[#1B2639]">Beginner Level: Build Confidence With Simple Planning</h3>
+                <p className="mt-2 text-[17px] leading-8 text-gray-700">
+                  You focus on clarity and routine. You do basic tax projections. You set up estimated payments. You fix bookkeeping flow. You can learn more about{" "}
+                  <Link href="/blogs/how-regular-training-can-improve-your-accounting-accuracy" className={inlineLinkClass}>
+                    how regular training can improve your accounting accuracy
+                  </Link>{" "}
+                  to ensure that your team delivers accurate financials for clients.
+                  <br />
+                  <strong>You measure:</strong>
+                </p>
+                <BulletList items={beginnerMetrics} />
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-[#1B2639]">Intermediate Level: Drive Decisions And Profit Improvements</h3>
+                <p className="mt-2 text-[17px] leading-8 text-gray-700">
+                  You expand into cash flow. You track KPIs. You help with pricing. You help with hiring timing.
+                  <br />
+                  <strong>You measure:</strong>
+                </p>
+                <BulletList items={intermediateMetrics} />
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold text-[#1B2639]">Expert Level: Lead Strategic Tax And Business Planning</h3>
+                <p className="mt-2 text-[17px] leading-8 text-gray-700">
+                  You lead entity strategy. You guide compensation planning. You coordinate with legal and finance. This is where{" "}
+                  <Link href="/blogs/the-role-of-mentorship-in-leadership-development" className={inlineLinkClass}>
+                    the role of mentorship in leadership development
+                  </Link>{" "}
+                  becomes vital as you learn to guide client businesses. You support exits and acquisitions.
+                  <br />
+                  <strong>You measure:</strong>
+                </p>
+                <BulletList items={expertMetrics} />
+              </div>
+            </div>
+          </section>
+
+          {/* How To Avoid The Most Common Advisory Mistakes */}
+          <section className="mt-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
+              How To Avoid The Most Common Advisory Mistakes
+            </h2>
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              You can avoid most problems with boundaries and structure. Many firms fail here. The most common issues are predictable:
+            </p>
+            <BulletList items={commonMistakes} />
+            <p className="mt-5 text-[17px] leading-8 text-gray-700">
+              Fixing these makes advisory enjoyable.
+            </p>
+          </section>
+
+          {/* How To Track And Prove Advisory Value */}
+          <section className="mt-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
+              How To Track And Prove Advisory Value With Simple Metrics
+            </h2>
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              You must show impact. Impact sells renewals. Impact also reduces price pressure. Track value in a simple monthly scorecard. Keep it client-specific. Use a few metrics only:
+            </p>
+            <BulletList items={valueMetrics} />
+            <p className="mt-5 text-[17px] leading-8 text-gray-700">
+              Then quantify one thing. &ldquo;This plan likely saved $X.&rdquo; Clients remember that.
+            </p>
+          </section>
+
+          {/* How To Position Yourself */}
+          <section className="mt-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
+              How To Position Yourself If You Are New To Tax Or Accounting
+            </h2>
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              You can still move into advisory. You must be honest. You must be structured. You must be supervised when needed. Focus on one promise. You bring clarity. You bring process. You bring consistency. If you are switching careers, ask yourself this. Do you already guide people? Teachers do. Salespeople do. Agents do. Advisory is guidance with numbers. That is why platforms like TSG ProAdvisor exist. Our mission is to empower you. You can build and scale your firm. You can do it anytime. You can do it anywhere.
+            </p>
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              That is why platforms like TSG ProAdvisor exist. Our mission is to show you{" "}
+              <Link href="/blogs/how-technology-is-revolutionizing-tax-and-accounting-education" className={inlineLinkClass}>
+                how technology is revolutionizing tax and accounting education
+              </Link>{" "}
+              and help you build and scale your firm.
+            </p>
+          </section>
+
+          {/* Final Thought */}
+          <section className="mt-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
+              Final Thought
+            </h2>
+            <p className="mt-4 text-[17px] leading-8 text-gray-700">
+              You transition best when you keep your plan simple. Start with one offer. Sell a diagnostic. Put clients on a rhythm. Track impact. Standardize delivery. Advisory is not extra work. It is better work. It is work that compounds.
+            </p>
+          </section>
+
+          {/* START YOUR JOURNEY WITH TSG PROADVISOR (CTA Box) */}
           <section className="mt-12 rounded-2xl bg-[#131B2A] p-6 md:p-8 text-white">
             <p className="text-sm font-semibold uppercase tracking-wide text-[#F26422]">
-              Ready to add advisory the right way?
+              Start Your Journey
             </p>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold">
-              Build Your Advisory Practice with TSG ProAdvisor
+              START YOUR JOURNEY WITH TSG PROADVISOR
             </h2>
             <p className="mt-4 max-w-3xl text-white/80 leading-8">
-              If you want to move from compliance to advisory faster, we can help. At TSG ProAdvisor, we built a world-class membership platform for tax and accounting pros who want more income and more freedom. We give you training, tools, and mentorship, so you can package advisory services and deliver them with confidence.
-            </p>
-            <p className="mt-2 max-w-3xl text-white/80 leading-8">
-              We do not just teach theory. We help you turn your skills into a real business model. We help you price offers, run better client meetings, and build a repeatable system.
-            </p>
-            <p className="mt-2 max-w-3xl text-white/80 leading-8">
-              If you are ready to stop trading hours for forms, and start getting paid for guidance, join us at TSG ProAdvisor and let&apos;s build your advisory practice the smart way.
+              If you want to stop living by deadlines, we get it. We built TSG ProAdvisor to help you shift into higher-value work with a real roadmap. We empower you to build and scale a tax and accounting business, no matter your background. If you are ready to embrace the future, anytime and anywhere, we are ready to help you take the next step.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
@@ -991,18 +709,10 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
               >
                 Join TSG ProAdvisor Today
               </Link>
-              <a
-                href="https://www.tsgproadvisor.com"
-                className="inline-flex items-center text-[#F26422] font-semibold hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit tsgproadvisor.com
-              </a>
             </div>
           </section>
 
-          {/* FAQs component */}
+          {/* FAQs */}
           <section className="mt-10">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B2639]">
               Frequently Asked Questions (FAQs)
@@ -1022,6 +732,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
             </div>
           </section>
 
+          {/* Disclaimer */}
           <section className="mt-10 border-t border-gray-200 pt-6">
             <p className="text-xs text-gray-500 italic">
               Disclaimer: This blog is for informational purposes only. If you want details, please contact TSG Pro Advisor.
@@ -1036,6 +747,7 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
               Recent Blogs
             </h2>
 
+            {/* Active post highlight */}
             <Link
               href={`/blogs/${transitionComplianceToAdvisoryPost.slug}`}
               className="flex items-start gap-3 ps-3 py-3 shadow bg-white my-3 border-l-4 border-[#F26422]"
@@ -1045,13 +757,14 @@ export default function HowToTransitionFromComplianceWorkToAdvisoryServices({
                 height={120}
                 src={transitionComplianceToAdvisoryPost.featuredImage.image.url}
                 alt={transitionComplianceToAdvisoryPost.featuredImage.altText}
-                className="w-[100px] h-[72px] rounded object-cover animate-pulse"
+                className="w-[100px] h-[72px] rounded object-cover"
               />
               <div className="font-bold text-black line-clamp-2 text-sm">
                 {transitionComplianceToAdvisoryPost.title}
               </div>
             </Link>
 
+            {/* Other posts */}
             {sidebarPosts.map((item) => (
               <Link
                 key={item.slug}

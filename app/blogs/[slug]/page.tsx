@@ -125,16 +125,16 @@ export async function generateMetadata({
     const canonical = `https://www.tsgproadvisor.com/blogs/${transitionComplianceToAdvisoryPost.slug}`;
 
     return {
-      title: "Transition From Compliance Work to Advisory in 2026",
+      title: "Best Steps: Compliance Work to Advisory Services in 2026",
       description:
-        "Learn how to transition from compliance work to advisory services with proven strategies to grow clients, profits, and long-term value",
+        "Learn how to transition from compliance work to advisory services with proven steps. Avoid common mistakes and build higher-value client relationships.",
       alternates: {
         canonical,
       },
       openGraph: {
-        title: "Transition From Compliance Work to Advisory in 2026",
+        title: "Best Steps: Compliance Work to Advisory Services in 2026",
         description:
-          "Learn how to transition from compliance work to advisory services with proven strategies to grow clients, profits, and long-term value",
+          "Learn how to transition from compliance work to advisory services with proven steps. Avoid common mistakes and build higher-value client relationships.",
         images: [
           {
             url: transitionComplianceToAdvisoryPost.featuredImage.image.url,
@@ -149,9 +149,9 @@ export async function generateMetadata({
       },
       twitter: {
         card: "summary_large_image",
-        title: "Transition From Compliance Work to Advisory in 2026",
+        title: "Best Steps: Compliance Work to Advisory Services in 2026",
         description:
-          "Learn how to transition from compliance work to advisory services with proven strategies to grow clients, profits, and long-term value",
+          "Learn how to transition from compliance work to advisory services with proven steps. Avoid common mistakes and build higher-value client relationships.",
         images: [transitionComplianceToAdvisoryPost.featuredImage.image.url],
       },
     };

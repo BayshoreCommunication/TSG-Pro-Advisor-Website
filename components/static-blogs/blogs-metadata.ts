@@ -65,16 +65,23 @@ export const transitionComplianceToAdvisoryPost = {
   title: "How to Transition from Compliance Work to Advisory Services",
   slug: "how-to-transition-from-compliance-work-to-advisory-services",
   category: "Business Advisory",
-  createdAt: "2026-06-15T00:00:00.000Z",
+  createdAt: "2026-07-08T00:00:00.000Z",
+  updatedAt: "2026-07-08T00:00:00.000Z",
   published: true,
   excerpt:
-    "Learn how to move beyond compliance reporting and become a trusted advisor through strategic insights and business guidance.",
-  desc: "Professional business advisory graphic illustrating the shift from compliance-focused services to strategic advisory solutions. Highlights business performance analysis, client relationship growth, profitability insights, strategic planning, and value-added consulting for accounting and financial professionals.",
+    "Learn how to transition from compliance work to advisory services with proven steps. Avoid common mistakes and build higher-value client relationships.",
+  desc: "Professional accounting and advisory services graphic illustrating how firms can transition from traditional compliance work to high-value advisory services. The image features a business advisor consulting with a client on strategic planning, tax strategy, cash flow optimization, and long-term business growth. It emphasizes building recurring revenue, strengthening client relationships, and positioning accountants as trusted strategic advisors through proactive financial guidance.",
   featuredImage: {
     altText:
-      "Business advisor presenting performance dashboards and growth strategies for transitioning from compliance work to advisory services",
+      "Business advisor meeting with a client to discuss transitioning from compliance work to advisory services, strategic planning, tax strategy, cash flow optimization, and business growth.",
+    title: "How to Transition from Compliance Work to Advisory Services",
+    description:
+      "Professional accounting and advisory services graphic illustrating how firms can transition from traditional compliance work to high-value advisory services. The image features a business advisor consulting with a client on strategic planning, tax strategy, cash flow optimization, and long-term business growth. It emphasizes building recurring revenue, strengthening client relationships, and positioning accountants as trusted strategic advisors through proactive financial guidance.",
+    caption:
+      "Learn how to move beyond compliance work by offering strategic advisory services that deliver greater value, build recurring revenue, and help clients achieve sustainable business growth.",
     image: {
-      url: "/images/static-blogs/compliance-to-advisory-services-business-growth.webp",
+      url: "/images/static-blogs/transition-compliance-to-advisory-services.webp",
     },
   },
 };
+
