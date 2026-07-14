@@ -8,6 +8,7 @@ import {
   reduceBurnoutPost,
   yearRoundClientEngagementPost,
   transitionComplianceToAdvisoryPost,
+  efficientInternalProcessesPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 export default function LatestInsights({ blogPost }: { blogPost: any }) {
@@ -17,12 +18,14 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
       yearRoundClientEngagementPost,
       nicheTaxPracticePost,
       transitionComplianceToAdvisoryPost,
+      efficientInternalProcessesPost,
       ...(blogPost?.data || []).filter(
         (p: any) =>
           p.slug !== reduceBurnoutPost.slug &&
           p.slug !== nicheTaxPracticePost.slug &&
           p.slug !== yearRoundClientEngagementPost.slug &&
-          p.slug !== transitionComplianceToAdvisoryPost.slug,
+          p.slug !== transitionComplianceToAdvisoryPost.slug &&
+          p.slug !== efficientInternalProcessesPost.slug,
       ),
     ]
       ?.filter((p: any) => p.published)
