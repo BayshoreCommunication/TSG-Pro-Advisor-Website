@@ -93,7 +93,7 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
           ))}
         </div>
 
-        <div className="mt-8 text-center">
+        {/* <div className="mt-8 text-center">
           <Link
             href="/blogs"
             className="
@@ -111,7 +111,7 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
               "
             />
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -128,11 +128,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-sm opacity-80">
-          <p>Copyright © 2025 TSG Pro Advisor. All rights reserved</p>
-          <p className="mt-2 md:mt-0">
-            Design & Development Bayshore Communication
-          </p>
+        <div className="border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row items-center justify-center text-sm opacity-80">
+          <p>Copyright © 2026 TSG Pro Advisor. All rights reserved</p>
+       
         </div>
       </div>
     </footer>

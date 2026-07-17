@@ -21,9 +21,8 @@ const Navbar = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/services", label: "Services" },
-    { href: "/contact", label: "Join Us" },
+    { href: "https://join.tsgproadvisor.com", label: "Join Us", external: true },
     { href: "/blogs", label: "Blogs" },
-    // { href: "/contact", label: "Contact Us" },
     { href: "/events", label: "Events" },
   ];
 
@@ -62,6 +61,8 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
                 className={`hover:text-primary transition ${
                   pathname === item.href ? "text-primary" : ""
                 }`}
@@ -79,6 +80,8 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
+                target={item.external ? "_blank" : undefined}
+                rel={item.external ? "noopener noreferrer" : undefined}
                 onClick={() => setMobileOpen(false)}
                 className={`block text-lg ${
                   pathname === item.href ? "text-yellow-700" : "text-gray-700"

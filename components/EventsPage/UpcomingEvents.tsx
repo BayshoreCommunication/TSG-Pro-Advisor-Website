@@ -65,7 +65,7 @@ const UpcomingEvents = () => {
               {/* Title */}
               <div className="absolute bottom-6 left-6">
                 <h3 className="text-2xl font-semibold text-white">
-                  2025 Tax Pro Summit
+                  2026 Tax Pro Summit
                 </h3>
               </div>
             </div>
@@ -73,11 +73,11 @@ const UpcomingEvents = () => {
             {/* Right Content */}
             <div className="p-8 bg-[linear-gradient(110.71deg,#451A06_0%,#CF5720_49.46%)] text-white col-span-2">
               <h2 className="text-3xl font-semibold mb-4 pb-2 border-b border-white">
-                2025 Tax Pro Summit
+                2026 Tax Pro Summit
               </h2>
 
               <p className="mb-6 text-base leading-relaxed">
-                Join TSG ProAdvisor for the 2025 Tax Pro Summit. The premier
+                Join TSG ProAdvisor for the 2026 Tax Pro Summit. The premier
                 event for tax and accounting professionals ready to build and
                 scale their practice.
               </p>
@@ -87,9 +87,14 @@ const UpcomingEvents = () => {
                 you can apply immediately to grow your business.
               </p>
 
-              <button className="px-6 py-3 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition">
+              <Link
+                href="https://taxprosummit.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-white text-primary font-bold rounded-lg hover:bg-gray-100 transition"
+              >
                 Join Now
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -110,6 +115,14 @@ const UpcomingEvents = () => {
                 Connect with professionals, build new skills, and stay ahead
                 with events created to support your success.
               </p>
+              <Link
+                href="https://join.tsgproadvisor.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-semibold underline underline-offset-2 hover:text-white transition"
+              >
+                Explore membership at Join.TSGProAdvisor.com
+              </Link>
             </div>
           </div>
 
@@ -161,7 +174,9 @@ const UpcomingEvents = () => {
                 </p>
 
                 <Link
-                  href="/contact"
+                  href="https://join.tsgproadvisor.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative px-8 py-4 bg-primary text-white hover:text-primary font-semibold text-base rounded-xl inline-flex items-center overflow-hidden group transition-colors duration-300 mt-4"
                 >
                   <span className="relative z-10">Join Now</span>
@@ -199,7 +214,9 @@ const UpcomingEvents = () => {
                 </p>
 
                 <Link
-                  href="/contact"
+                  href="https://www.tsgproadvisor.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative px-8 py-4 bg-primary text-white hover:text-primary font-semibold text-base rounded-xl inline-flex items-center overflow-hidden group transition-colors duration-300 mt-4"
                 >
                   <span className="relative z-10">Join Now</span>
@@ -237,7 +254,9 @@ const UpcomingEvents = () => {
                 </p>
 
                 <Link
-                  href="/contact"
+                  href="https://taxprosummit.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative px-8 py-4 bg-primary text-white hover:text-primary font-semibold text-base rounded-xl inline-flex items-center overflow-hidden group transition-colors duration-300 mt-4"
                 >
                   <span className="relative z-10">Join Now</span>
@@ -274,7 +293,9 @@ const UpcomingEvents = () => {
                 </p>
 
                 <Link
-                  href="/contact"
+                  href="https://join.tsgproadvisor.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative px-8 py-4 bg-primary text-white hover:text-primary font-semibold text-base rounded-xl inline-flex items-center overflow-hidden group transition-colors duration-300 mt-4"
                 >
                   <span className="relative z-10">Join Now</span>

@@ -60,7 +60,9 @@ const WhyChoose = () => {
                   needed for long-term success.
                 </p>
                 <Link
-                  href="#"
+                  href="https://join.tsgproadvisor.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="
     relative px-10 py-4 bg-primary text-white font-bold text-lg rounded-xl
     inline-flex items-center overflow-hidden group
@@ -118,7 +120,9 @@ const WhyChoose = () => {
                   helping you succeed.
                 </p>
                 <Link
-                  href="#"
+                  href="https://join.tsgproadvisor.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="
     relative px-10 py-4 bg-primary text-white font-bold text-lg rounded-xl
     inline-flex items-center overflow-hidden group
@@ -165,7 +169,9 @@ const WhyChoose = () => {
                 </p>
               </div>
               <Link
-                href="#"
+                href="https://join.tsgproadvisor.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
     relative px-10 py-4 bg-primary text-white font-bold text-lg rounded-xl
     inline-flex items-center overflow-hidden group
