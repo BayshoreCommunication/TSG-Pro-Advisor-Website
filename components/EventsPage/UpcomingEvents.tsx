@@ -169,8 +169,9 @@ const UpcomingEvents = () => {
                 </div>
 
                 <p className="mt-4 text-base text-gray-700">
-                  You can leverage the expertise of our Business Mentors to
-                  start or grow your business.
+                  A focused bootcamp on corporate tax filing, deductions, and
+                  compliance strategies — built to help you confidently serve
+                  business clients.
                 </p>
 
                 <Link
@@ -209,8 +210,9 @@ const UpcomingEvents = () => {
                 </div>
 
                 <p className="mt-4 text-base text-gray-700">
-                  You can leverage the expertise of our Business Mentors to
-                  start or grow your business.
+                  Your last chance this season to complete certified training
+                  and start preparing taxes professionally with mentor
+                  support.
                 </p>
 
                 <Link
@@ -249,51 +251,13 @@ const UpcomingEvents = () => {
                 </div>
 
                 <p className="mt-4 text-base text-gray-700">
-                  You can leverage the expertise of our Business Mentors to
-                  start or grow your business.
+                  Get hands-on with professional-grade tax software through
+                  guided, step-by-step training built for new and growing
+                  practices.
                 </p>
 
                 <Link
                   href="https://taxprosummit.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative px-8 py-4 bg-primary text-white hover:text-primary font-semibold text-base rounded-xl inline-flex items-center overflow-hidden group transition-colors duration-300 mt-4"
-                >
-                  <span className="relative z-10">Join Now</span>
-                  <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                </Link>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="relative rounded-xl overflow-hidden group shadow-lg">
-                  <div className="absolute top-4 left-4 bg-[#F26422] text-white px-4 py-2 rounded-md text-center z-20">
-                    <p className="text-xs font-semibold">NOV</p>
-                    <p className="text-2xl font-bold leading-none">22</p>
-                  </div>
-
-                  <Image
-                    src="/images/servicesPage/ProfessionalTaxSoftware.jpg"
-                    alt="Event"
-                    width={1000}
-                    height={1000}
-                    className="object-cover w-full h-64 group-hover:scale-110 duration-500"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/90" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h4 className="text-white text-xl font-semibold group-hover:text-primary duration-300">
-                      Conviértase en un profesional de impuestos.
-                    </h4>
-                  </div>
-                </div>
-
-                <p className="mt-4 text-base text-gray-700">
-                  You can leverage the expertise of our Business Mentors to
-                  start or grow your business.
-                </p>
-
-                <Link
-                  href="https://join.tsgproadvisor.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative px-8 py-4 bg-primary text-white hover:text-primary font-semibold text-base rounded-xl inline-flex items-center overflow-hidden group transition-colors duration-300 mt-4"

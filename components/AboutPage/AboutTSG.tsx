@@ -2,9 +2,12 @@ import Image from "next/image";
 import React from "react";
 import Reveal from "../motion/Reveal";
 import Link from "next/link";
+import { FaQuoteLeft, FaUserTie } from "react-icons/fa";
+import StatsStrip from "../shared/StatsStrip";
 
 const AboutTSG = () => {
   return (
+    <>
     <div className="bg-[#131313] text-white">
       <div className=" max-w-[1640px] mx-auto px-8 w-full py-10 lg:py-16">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
@@ -42,7 +45,7 @@ const AboutTSG = () => {
                 business. Our platform is meticulously designed to cater to
                 individuals from all walks of life; be it real estate agents,
                 salespeople, teachers, insurance agents, stay-at-home parents,
-                or seasoned tax pros. We help everyone  the has the potential to
+                or seasoned tax pros. We help everyone who has the potential to
                 excel in this dynamic industry and achieve success! Embrace the
                 Future, Anytime & Anywhere
               </p>
@@ -57,9 +60,8 @@ const AboutTSG = () => {
                 everything from taxes, accounting, and bookkeeping, to
                 leadership, marketing, and business scaling. We’re constantly
                 updating and expanding our curriculum to ensure you stay ahead
-                of the curve in this ever-evolving landscape. We are the #1 Tax
-                Professional Training & Business Platform in the World:
-                Experience the Difference!
+                of the curve in this ever-evolving landscape. The results
+                speak for themselves: Experience the Difference!
               </p>
             </Reveal>
             <Reveal y={80} opacityFrom={0} duration={2}>
@@ -103,8 +105,30 @@ const AboutTSG = () => {
             </Reveal>
           </div>
         </div>
+
+        {/* CEO Message */}
+        <Reveal y={100} opacityFrom={0} duration={2.8}>
+          <div className="mt-12 lg:mt-16 rounded-2xl bg-white/5 border border-white/10 p-8 lg:p-10 flex flex-col md:flex-row items-start gap-6 md:gap-10">
+            <div className="flex-shrink-0 w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
+              <FaUserTie className="text-primary text-3xl" />
+            </div>
+            <div>
+              <FaQuoteLeft className="text-primary text-2xl mb-3" />
+              {/* Placeholder — replace with the CEO's actual message before publishing */}
+              <p className="text-lg leading-relaxed text-white/90 italic">
+                [Add CEO message here — a short statement on TSG ProAdvisor&apos;s
+                mission, vision, and commitment to helping tax and accounting
+                professionals build and grow successful businesses.]
+              </p>
+              <p className="mt-4 font-semibold">[CEO Name]</p>
+              <p className="text-sm text-white/60">CEO, TSG ProAdvisor</p>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </div>
+    <StatsStrip dark />
+    </>
   );
 };
 
