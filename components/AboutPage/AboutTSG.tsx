@@ -16,11 +16,12 @@ const AboutTSG = () => {
               About TSG <br /> ProAdvisor
             </h2>
             <Image
-              src="/images/aboutPage/AboutTSG.png"
-              alt=""
-              width={560}
-              height={600}
-            ></Image>
+              src="/images/aboutPage/ceo-speaking.jpg"
+              alt="TSG ProAdvisor CEO speaking to tax professionals at a live event"
+              width={1600}
+              height={1067}
+              className="w-full max-w-[560px] h-[420px] lg:h-[600px] object-cover rounded-2xl"
+            />
           </div>
           <div className="flex flex-col gap-2 max-w-4xl">
             <Reveal y={80} opacityFrom={0} duration={1}>
@@ -114,14 +115,13 @@ const AboutTSG = () => {
             </div>
             <div>
               <FaQuoteLeft className="text-primary text-2xl mb-3" />
-              {/* Placeholder — replace with the CEO's actual message before publishing */}
               <p className="text-lg leading-relaxed text-white/90 italic">
-                [Add CEO message here — a short statement on TSG ProAdvisor&apos;s
-                mission, vision, and commitment to helping tax and accounting
-                professionals build and grow successful businesses.]
+                &ldquo;We believe every tax professional deserves the education,
+                tools, and community to build with confidence, lead with
+                purpose, and create lasting success.&rdquo;
               </p>
-              <p className="mt-4 font-semibold">[CEO Name]</p>
-              <p className="text-sm text-white/60">CEO, TSG ProAdvisor</p>
+              <p className="mt-4 font-semibold">A message from our CEO</p>
+              <p className="text-sm text-white/60">TSG ProAdvisor</p>
             </div>
           </div>
         </Reveal>

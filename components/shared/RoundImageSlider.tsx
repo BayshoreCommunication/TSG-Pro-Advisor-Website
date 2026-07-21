@@ -1,59 +1,45 @@
 import Image from "next/image";
-import React from "react";
+
+const growthImages = [
+  {
+    src: "/images/aboutPage/growth-education-v2.jpg",
+    alt: "Tax professionals learning during a live TSG ProAdvisor education session",
+    label: "Education",
+  },
+  {
+    src: "/images/aboutPage/growth-software.jpg",
+    alt: "Modern professional tax software displayed on a desktop monitor and laptop",
+    label: "Professional Tax Software",
+  },
+  {
+    src: "/images/aboutPage/growth-mentorship-v2.jpg",
+    alt: "Tax professionals connecting at a TSG ProAdvisor community event",
+    label: "Mentorship & Community",
+  },
+];
 
 const RoundImageSlider = () => {
   return (
-    <div className="relative w-full mt-20">
-      {/* Background Shape */}
-      <Image
-        src="/images/homepage/service/service-shape.png"
-        alt="Shape Background"
-        width={1920}
-        height={600}
-        className="w-full h-auto pointer-events-none"
-      />
+    <div className="relative w-full mt-8 md:mt-12 pb-12 md:pb-16">
+      <div className="absolute inset-x-0 top-1/2 h-36 -translate-y-1/2 bg-gradient-to-r from-[#131313] via-primary to-[#131313] opacity-95" />
 
-      {/* Circles Wrapper */}
-
-      <div className="grid grid-cols-2 gap-0 md:gap-20 absolute top-0 left-10 lg:left-32 right-10 lg:right-32 bottom-0">
-        {/* Circle 1 */}
-        {/* <div className=" md:-mt-24 -mt-8 transform transition-transform duration-500 hover:scale-110">
-          <Image
-            src="/images/homepage/service/round-1.png"
-            alt="Round Icon 1"
-            width={220}
-            height={220}
-            className="w-[120px]  lg:w-[220px] h-auto mx-auto"
-          />
-        </div> */}
-
-        {/* Circle 2 */}
-        <div className=" md:-mt-32 -mt-16   ">
-          <div className="overflow-hidden rounded-full border-4 border-primary w-[120px]  lg:w-[280px] h-auto mx-auto group">
-
-            <Image
-            src="/images/homepage/service/round-2.png"
-            alt="Round Icon 2"
-            width={280}
-            height={280}
-            className="w-full transform transition-all duration-300 ease-in-out group-hover:scale-110"
-          />
-          </div>
-        </div>
-
-        {/* Circle 3 */}
-        <div className=" md:-mt-32 -mt-16   ">
-          <div className="overflow-hidden rounded-full border-4 border-primary w-[120px]  lg:w-[280px] h-auto mx-auto group">
-
-            <Image
-            src="/images/homepage/service/round-3.png"
-            alt="Round Icon 2"
-            width={280}
-            height={280}
-            className="w-full transform transition-all duration-300 ease-in-out group-hover:scale-110"
-          />
-          </div>
-        </div>
+      <div className="relative max-w-[1280px] mx-auto px-8 grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6 lg:gap-14">
+        {growthImages.map((image) => (
+          <figure key={image.src} className="text-center">
+            <div className="overflow-hidden rounded-full border-4 border-primary bg-[#131313] aspect-square max-w-[300px] mx-auto shadow-xl group">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={900}
+                height={900}
+                className="w-full h-full object-cover transform transition-transform duration-500 ease-out group-hover:scale-105"
+              />
+            </div>
+            <figcaption className="mt-4 text-lg font-semibold text-black">
+              {image.label}
+            </figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   );

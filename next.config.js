@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Keep the live preview cache separate from production builds.
+  distDir: process.env.NODE_ENV === 'development' ? '.next-dev' : '.next',
   images: {
     unoptimized: true, // Move this outside the remotePatterns array
     remotePatterns: [
