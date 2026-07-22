@@ -53,14 +53,14 @@ export default function MissionSection() {
             </div>
           </div>
           <div>
-            <div className="">
+            <div className="max-w-6xl mx-auto overflow-hidden rounded-xl">
               <Reveal y={80} opacityFrom={0} duration={1.6}>
                 <Image
                   src="/images/homepage/mission/mission-education.jpg"
                   alt="A tax professional leading a TSG ProAdvisor educational session"
                   width={1600}
                   height={1067}
-                  className="w-full h-[420px] md:h-[560px] rounded-xl object-cover transform transition-transform duration-500 hover:scale-110"
+                  className="w-full h-auto rounded-xl object-contain"
                 />
               </Reveal>
             </div>

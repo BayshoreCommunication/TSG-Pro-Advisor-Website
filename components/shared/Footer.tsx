@@ -6,6 +6,7 @@ import {
   FaEnvelope,
   FaFacebookF,
   FaInstagram,
+  FaMapMarkerAlt,
   FaPhone,
   FaYoutube,
 } from "react-icons/fa";
@@ -96,6 +97,15 @@ export default function Footer() {
                 >
                   info@tsgproadvisor.com
                 </Link>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <FaMapMarkerAlt className="text-primary mt-0.5 shrink-0" />
+                <address className="not-italic leading-relaxed">
+                  100 S Ashley Dr, Suite 600
+                  <br />
+                  Tampa, FL 33602
+                </address>
               </li>
             </ul>
 
