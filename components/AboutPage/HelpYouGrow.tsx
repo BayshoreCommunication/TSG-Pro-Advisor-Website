@@ -6,7 +6,7 @@ const growthServices = [
     title: "Education That Builds Confidence",
     description:
       "Learn the skills you need to handle tax and accounting work with more accuracy and confidence. Our training helps you strengthen your knowledge and improve the way you serve your clients.",
-    image: "/images/aboutPage/growth-education-v2.jpg",
+    image: "/images/aboutPage/growth-education-v3.jpg",
     imageAlt:
       "Tax professionals learning during a live TSG ProAdvisor education session",
     imageLabel: "Tax Education",

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const growthImages = [
   {
-    src: "/images/aboutPage/growth-education-v2.jpg",
+    src: "/images/aboutPage/growth-education-v3.jpg",
     alt: "Tax professionals learning during a live TSG ProAdvisor education session",
     label: "Tax Education",
   },
