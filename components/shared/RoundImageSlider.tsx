@@ -4,12 +4,12 @@ const growthImages = [
   {
     src: "/images/aboutPage/growth-education-v2.jpg",
     alt: "Tax professionals learning during a live TSG ProAdvisor education session",
-    label: "Education",
+    label: "Tax Education",
   },
   {
     src: "/images/aboutPage/growth-software.jpg",
     alt: "Modern professional tax software displayed on a desktop monitor and laptop",
-    label: "Professional Tax Software",
+    label: "Tax Software",
   },
   {
     src: "/images/aboutPage/growth-mentorship-v2.jpg",
@@ -35,7 +35,7 @@ const RoundImageSlider = () => {
                 className="w-full h-full object-cover transform transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
-            <figcaption className="mt-4 text-lg font-semibold text-black">
+            <figcaption className="relative z-10 -mt-7 mx-auto w-fit max-w-full rounded-full border border-primary bg-[#131313] px-4 py-2 text-sm sm:text-base lg:text-lg font-semibold text-white shadow-lg">
               {image.label}
             </figcaption>
           </figure>

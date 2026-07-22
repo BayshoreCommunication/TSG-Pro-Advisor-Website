@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Reveal from "../motion/Reveal";
 import Link from "next/link";
-import { FaQuoteLeft, FaUserTie } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa";
 import StatsStrip from "../shared/StatsStrip";
 
 const AboutTSG = () => {
@@ -110,8 +110,14 @@ const AboutTSG = () => {
         {/* CEO Message */}
         <Reveal y={100} opacityFrom={0} duration={2.8}>
           <div className="mt-12 lg:mt-16 rounded-2xl bg-white/5 border border-white/10 p-8 lg:p-10 flex flex-col md:flex-row items-start gap-6 md:gap-10">
-            <div className="flex-shrink-0 w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center">
-              <FaUserTie className="text-primary text-3xl" />
+            <div className="flex-shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-primary shadow-lg">
+              <Image
+                src="/images/aboutPage/ceo-portrait-v2.jpg"
+                alt="TSG ProAdvisor CEO speaking at a live event"
+                width={600}
+                height={600}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <FaQuoteLeft className="text-primary text-2xl mb-3" />

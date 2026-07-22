@@ -1,13 +1,11 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const pathname = usePathname();
 
@@ -35,16 +33,8 @@ const Navbar = () => {
             : "relative bg-black"
         }`}
       >
-        <div className="max-w-[1640px] mx-auto px-8 py-4 flex items-center justify-center gap-10 relative">
-          {/* Mobile Button */}
-          <button
-            className="md:hidden absolute left-8 top-1/2 -translate-y-1/2 text-white"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            {mobileOpen ? <X size={26} /> : <Menu size={26} />}
-          </button>
-
-          {/* LOGO — CENTERED */}
+        <div className="max-w-[1640px] mx-auto px-4 sm:px-8 py-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 lg:gap-10 relative">
+          {/* LOGO */}
           <Link href="/" className="flex justify-center">
             <Image
               src="/images/logo.png"
@@ -55,8 +45,8 @@ const Navbar = () => {
             />
           </Link>
 
-          {/* MENU — CENTERED NEXT TO LOGO */}
-          <nav className="hidden md:flex gap-10 items-center text-white font-bold text-lg">
+          {/* MENU */}
+          <nav className="flex flex-wrap justify-center gap-x-5 gap-y-2 sm:gap-x-7 lg:gap-x-10 items-center text-white font-bold text-sm sm:text-base lg:text-lg">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -73,25 +63,6 @@ const Navbar = () => {
           </nav>
         </div>
 
-        {/* MOBILE MENU */}
-        {mobileOpen && (
-          <div className="md:hidden w-full bg-white px-8 py-4 space-y-4 shadow border-t">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noopener noreferrer" : undefined}
-                onClick={() => setMobileOpen(false)}
-                className={`block text-lg ${
-                  pathname === item.href ? "text-yellow-700" : "text-gray-700"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        )}
       </header>
 
       {isSticky && <div className="h-[90px]" />}
