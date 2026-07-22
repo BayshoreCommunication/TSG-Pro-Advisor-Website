@@ -198,8 +198,8 @@ const WhyChoose = () => {
           </div>
           <div className=" w-full h-full overflow-hidden group">
             <Image
-              src="/images/servicesPage/WhyChoose-3.png" // replace with your image path
-              alt="Tax & Accounting Education"
+              src="/images/servicesPage/community-support-v2.jpg"
+              alt="TSG ProAdvisor CEO leading a community education session"
               width={1000}
               height={1000}
               className="object-cover transform transition-all duration-500 ease-in-out group-hover:scale-110"
