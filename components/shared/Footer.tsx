@@ -6,6 +6,7 @@ import {
   FaEnvelope,
   FaFacebookF,
   FaInstagram,
+  FaMapMarkerAlt,
   FaPhone,
   FaYoutube,
 } from "react-icons/fa";
@@ -97,6 +98,15 @@ export default function Footer() {
                   info@tsgproadvisor.com
                 </Link>
               </li>
+
+              <li className="flex items-start gap-3">
+                <FaMapMarkerAlt className="text-primary mt-0.5 shrink-0" />
+                <address className="not-italic leading-relaxed">
+                  100 S Ashley Dr, Suite 600
+                  <br />
+                  Tampa, FL 33602
+                </address>
+              </li>
             </ul>
 
             <div className="flex gap-5 text-xl mt-5">
@@ -128,11 +138,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-sm opacity-80">
-          <p>Copyright © 2025 TSG Pro Advisor. All rights reserved</p>
-          <p className="mt-2 md:mt-0">
-            Design & Development Bayshore Communication
-          </p>
+        <div className="border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row items-center justify-center text-sm opacity-80">
+          <p>Copyright © 2026 TSG Pro Advisor. All rights reserved</p>
+       
         </div>
       </div>
     </footer>

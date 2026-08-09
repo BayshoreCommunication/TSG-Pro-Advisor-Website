@@ -60,7 +60,9 @@ const WhyChoose = () => {
                   needed for long-term success.
                 </p>
                 <Link
-                  href="#"
+                  href="https://join.tsgproadvisor.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="
     relative px-10 py-4 bg-primary text-white font-bold text-lg rounded-xl
     inline-flex items-center overflow-hidden group
@@ -118,7 +120,9 @@ const WhyChoose = () => {
                   helping you succeed.
                 </p>
                 <Link
-                  href="#"
+                  href="https://join.tsgproadvisor.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="
     relative px-10 py-4 bg-primary text-white font-bold text-lg rounded-xl
     inline-flex items-center overflow-hidden group
@@ -165,7 +169,9 @@ const WhyChoose = () => {
                 </p>
               </div>
               <Link
-                href="#"
+                href="https://join.tsgproadvisor.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
     relative px-10 py-4 bg-primary text-white font-bold text-lg rounded-xl
     inline-flex items-center overflow-hidden group
@@ -192,8 +198,8 @@ const WhyChoose = () => {
           </div>
           <div className=" w-full h-full overflow-hidden group">
             <Image
-              src="/images/servicesPage/WhyChoose-3.png" // replace with your image path
-              alt="Tax & Accounting Education"
+              src="/images/servicesPage/community-support-v2.jpg"
+              alt="TSG ProAdvisor CEO leading a community education session"
               width={1000}
               height={1000}
               className="object-cover transform transition-all duration-500 ease-in-out group-hover:scale-110"

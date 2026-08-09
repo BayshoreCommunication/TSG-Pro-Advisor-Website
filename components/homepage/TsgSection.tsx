@@ -83,50 +83,14 @@ export default function TsgSection() {
     //     </div>
     //   </div>
     // </section>
-    <section className="relative w-full flex items-center justify-center min-h-[480px] lg:min-h-[480]">
-      {/* Background Image */}
-      <Image
-        src="/images/homepage/tsg/bg.png"
-        alt="Hero Background"
-        fill
-        className="hidden lg:block absolute inset-0 w-full h-full object-cover object-top"
-        priority
-      />
-      <Image
-        src="/images/homepage/tsg/bg-2.png"
-        alt="Hero Background"
-        fill
-        className="absolute block lg:hidden inset-0 w-full h-full object-cover object-top"
-        priority
-      />
-
-      {/* Content Container */}
-      <div className="  px-8 w-full py-10 ">
-        <div className="flex flex-col items-center text-center lg:mt-[550px] mt-[250px]">
+    <section className="relative w-full flex items-center justify-center px-8 py-16">
+      <div className="w-full">
+        <div className="flex flex-col items-center text-center">
           {/* Headline */}
           <div className="relative w-full">
-            <div className="absolute inset-0 z-40  w-full -top-28">
-              <Reveal y={200} opacityFrom={0} duration={3}>
-                <Image
-                  src="/images/homepage/tsg/angle-image.png"
-                  alt="TSG background"
-                  width={1920}
-                  height={400}
-                  className="hidden lg:block"
-                />
-              </Reveal>
-
-              <Image
-                src="/images/homepage/tsg/angle-image-2.png"
-                alt="TSG background"
-                width={1920}
-                height={400}
-                className="block lg:hidden"
-              />
-            </div>
-            <div className="max-w-3xl mx-auto bg-[#F16128] rounded-[26px] p-10   text-white shadow-xl relative  md:mt-[80px] mt-0">
+            <div className="max-w-3xl mx-auto bg-[#F16128] rounded-[26px] p-10 text-white shadow-xl relative">
               <Reveal y={100} opacityFrom={0} duration={3}>
-                <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 md:mt-[100px] mt-0">
+                <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10">
                   TSG ProAdvisor is leading the way.
                 </h2>
               </Reveal>

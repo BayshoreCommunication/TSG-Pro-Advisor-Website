@@ -1,8 +1,7 @@
 import OurServices from "@/components/ServicePage/OurServices";
 import WhyChoose from "@/components/ServicePage/WhyChoose";
-import MissionSection from "@/components/homepage/MissionSection";
-import Testimonials from "@/components/homepage/Testimonials";
 import BreadcrumbSection from "@/components/shared/BreadcrumbSection";
+import StatsStrip from "@/components/shared/StatsStrip";
 import React from "react";
 import type { Metadata } from "next";
 
@@ -23,8 +22,7 @@ const page = () => {
       />
       <OurServices />
       <WhyChoose />
-      <Testimonials />
-      <MissionSection />
+      <StatsStrip />
     </div>
   );
 };
