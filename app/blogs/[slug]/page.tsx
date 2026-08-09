@@ -8,12 +8,14 @@ import HowToReduceBurnoutDuringPeakTaxSeason from "@/components/static-blogs/blo
 import YearRoundClientEngagementStrategiesForTaxProfessionals from "@/components/static-blogs/blogs/year-round-client-engagement-strategies-for-tax-professionals";
 import HowToTransitionFromComplianceWorkToAdvisoryServices from "@/components/static-blogs/blogs/how-to-transition-from-compliance-work-to-advisory-services";
 import EfficientInternalProcessesForMultiClientManagement from "@/components/static-blogs/blogs/efficient-internal-processes-multi-client-management";
+import TheImportanceOfDocumentationInDefendingTaxFilings from "@/components/static-blogs/blogs/the-importance-of-documentation-in-defending-tax-filings";
 import {
   nicheTaxPracticePost,
   reduceBurnoutPost,
   yearRoundClientEngagementPost,
   transitionComplianceToAdvisoryPost,
   efficientInternalProcessesPost,
+  documentationInDefendingTaxFilingsPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 // ---------- Styling ----------
@@ -193,6 +195,42 @@ export async function generateMetadata({
     };
   }
 
+  if (params.slug === documentationInDefendingTaxFilingsPost.slug) {
+    const canonical = `https://www.tsgproadvisor.com/blogs/${documentationInDefendingTaxFilingsPost.slug}`;
+
+    return {
+      title: "Essential Tax Filings Tips to Avoid Errors 2026",
+      description:
+        "Learn why proper documentation matters for tax filings. Discover practical recordkeeping tips to support accurate returns and simplify audits.",
+      alternates: {
+        canonical,
+      },
+      openGraph: {
+        title: documentationInDefendingTaxFilingsPost.title,
+        description: documentationInDefendingTaxFilingsPost.excerpt,
+        images: [
+          {
+            url: documentationInDefendingTaxFilingsPost.featuredImage.image.url,
+            alt: documentationInDefendingTaxFilingsPost.featuredImage.altText,
+            width: 1200,
+            height: 720,
+          },
+        ],
+        url: canonical,
+        type: "article",
+        siteName: "TSG ProAdvisor",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: documentationInDefendingTaxFilingsPost.title,
+        description: documentationInDefendingTaxFilingsPost.excerpt,
+        images: [
+          documentationInDefendingTaxFilingsPost.featuredImage.image.url,
+        ],
+      },
+    };
+  }
+
   const blogPostData = await GetAllPostData();
 
   const blog = blogPostData?.data?.find(
@@ -236,6 +274,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     nicheTaxPracticePost,
     transitionComplianceToAdvisoryPost,
     efficientInternalProcessesPost,
+    documentationInDefendingTaxFilingsPost,
   ];
   const posts = [...staticPosts, ...(blogPostData?.data || [])];
 
@@ -304,6 +343,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
           bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
         />
         <EfficientInternalProcessesForMultiClientManagement
+          recentPosts={posts}
+        />
+      </>
+    );
+  }
+
+  if (params.slug === documentationInDefendingTaxFilingsPost.slug) {
+    return (
+      <>
+        <BreadcrumbSection
+          title="Tips, Training, and Updates for 
+      Tax & Accounting Professionals"
+          bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+        />
+        <TheImportanceOfDocumentationInDefendingTaxFilings
           recentPosts={posts}
         />
       </>

@@ -6,6 +6,7 @@ import {
   yearRoundClientEngagementPost,
   transitionComplianceToAdvisoryPost,
   efficientInternalProcessesPost,
+  documentationInDefendingTaxFilingsPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -64,6 +65,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     nicheTaxPracticePost,
     transitionComplianceToAdvisoryPost,
     efficientInternalProcessesPost,
+    documentationInDefendingTaxFilingsPost,
   ];
 
   const staticBlogRoutes = staticPosts.map((post) => ({
