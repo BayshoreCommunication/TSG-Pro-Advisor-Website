@@ -129,6 +129,140 @@ function BulletList({ items }: { items: ReactNode[] }) {
   );
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.tsgproadvisor.com",
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://www.tsgproadvisor.com/blogs",
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Importance of Documentation in Defending Tax Filings",
+          "item":
+            "https://www.tsgproadvisor.com/blogs/the-importance-of-documentation-in-defending-tax-filings",
+        },
+      ],
+    },
+    {
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id":
+          "https://www.tsgproadvisor.com/blogs/the-importance-of-documentation-in-defending-tax-filings",
+      },
+      "headline": "The Importance of Documentation in Defending Tax Filings",
+      "name": "Essential Tax Filings Tips to Avoid Errors 2026",
+      "description":
+        "Learn why proper documentation matters for tax filings. Discover practical recordkeeping tips to support accurate returns and simplify audits.",
+      "url":
+        "https://www.tsgproadvisor.com/blogs/the-importance-of-documentation-in-defending-tax-filings",
+      "image":
+        "https://www.tsgproadvisor.com/images/static-blogs/client-onboarding-systems-reduce-errors-save-time.webp",
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://www.tsgproadvisor.com/blogs",
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Tax Filing Documentation",
+        "description":
+          "An overview of how organized financial records, receipts, invoices, bank statements, and supporting documentation help taxpayers substantiate tax filings, deductions, credits, and other reported items.",
+      },
+      "keywords": [
+        "tax filing documentation",
+        "documentation for tax filings",
+        "tax documentation",
+        "tax audit documentation",
+        "defending tax filings",
+        "tax record keeping",
+        "tax audit preparation",
+        "supporting documents for taxes",
+        "tax deductions documentation",
+        "tax records retention",
+        "IRS audit documentation",
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "TSG Pro Advisor",
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TSG Pro Advisor",
+        "url": "https://www.tsgproadvisor.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.tsgproadvisor.com/images/logo.png",
+        },
+      },
+      "datePublished": "2026-08-09",
+      "dateModified": "2026-08-09",
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How should I Best Keep Receipts In Case Of An Audit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Use scans or clear photos. Save searchable PDFs. Name files with date, vendor, amount, and purpose. Back up to cloud plus local storage. Keep folders by year and category.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can Bank Statements Replace Missing Receipts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Sometimes. But not always. Statements prove payment. They rarely prove business purpose. Use vendor reprints, invoices, and written notes to fill gaps. Combine sources to strengthen support.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "How Detailed Should My Mileage Log Be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "It should be contemporaneous and specific. Track date, start and end miles, destination, and business purpose. Monthly exports help. Avoid estimates. Exact logs defend vehicle deductions best.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "How Long Should I Keep Records For Assets And Depreciation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Keep asset records for the life of the asset plus seven years. You need purchase proof, improvements, and depreciation schedules. These affect gain, loss, and recapture when you sell.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "What If My Documentation Is Digital Only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Digital is fine if it is readable and retrievable. Keep originals when possible. Ensure images show key receipt fields. Maintain backups. Use consistent naming and folders to find files fast.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export default function TheImportanceOfDocumentationInDefendingTaxFilings({
   recentPosts = [],
 }: {
@@ -142,6 +276,10 @@ export default function TheImportanceOfDocumentationInDefendingTaxFilings({
 
   return (
     <div className="max-w-[1640px] mx-auto px-8 w-full py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="grid gap-12 mb-10 grid-cols-1 lg:grid-cols-3">
         <article className="lg:col-span-2">
           {/* Featured Image */}
