@@ -438,9 +438,9 @@ export default function TheImportanceOfDocumentationInDefendingTaxFilings({
               <p className="text-sm font-semibold uppercase tracking-wider text-[#F26422]">
                 MID-DOCUMENT STRATEGY CALL
               </p>
-              <h3 className="mt-2 text-xl md:text-3xl font-bold">
+              <h2 className="mt-2 text-xl md:text-3xl font-bold">
                 Want fewer tax surprises?
-              </h3>
+              </h2>
               <p className="mt-3 text-white/80 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
                 Let TSG Pro Advisor set up a monthly workflow that sticks and protects your revenue.
               </p>
