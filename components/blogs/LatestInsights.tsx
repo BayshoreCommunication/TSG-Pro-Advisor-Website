@@ -10,6 +10,7 @@ import {
   transitionComplianceToAdvisoryPost,
   efficientInternalProcessesPost,
   documentationInDefendingTaxFilingsPost,
+  clientOnboardingSystemsPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 export default function LatestInsights({ blogPost }: { blogPost: any }) {
@@ -21,6 +22,7 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
       transitionComplianceToAdvisoryPost,
       efficientInternalProcessesPost,
       documentationInDefendingTaxFilingsPost,
+      clientOnboardingSystemsPost,
       ...(blogPost?.data || []).filter(
         (p: any) =>
           p.slug !== reduceBurnoutPost.slug &&
@@ -28,7 +30,8 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
           p.slug !== yearRoundClientEngagementPost.slug &&
           p.slug !== transitionComplianceToAdvisoryPost.slug &&
           p.slug !== efficientInternalProcessesPost.slug &&
-          p.slug !== documentationInDefendingTaxFilingsPost.slug,
+          p.slug !== documentationInDefendingTaxFilingsPost.slug &&
+          p.slug !== clientOnboardingSystemsPost.slug,
       ),
     ]
       ?.filter((p: any) => p.published)

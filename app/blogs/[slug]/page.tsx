@@ -9,6 +9,7 @@ import YearRoundClientEngagementStrategiesForTaxProfessionals from "@/components
 import HowToTransitionFromComplianceWorkToAdvisoryServices from "@/components/static-blogs/blogs/how-to-transition-from-compliance-work-to-advisory-services";
 import EfficientInternalProcessesForMultiClientManagement from "@/components/static-blogs/blogs/efficient-internal-processes-multi-client-management";
 import TheImportanceOfDocumentationInDefendingTaxFilings from "@/components/static-blogs/blogs/the-importance-of-documentation-in-defending-tax-filings";
+import ClientOnboardingSystemsThatReduceErrorsAndSaveTime from "@/components/static-blogs/blogs/client-onboarding-systems-reduce-errors-save-time";
 import {
   nicheTaxPracticePost,
   reduceBurnoutPost,
@@ -16,6 +17,7 @@ import {
   transitionComplianceToAdvisoryPost,
   efficientInternalProcessesPost,
   documentationInDefendingTaxFilingsPost,
+  clientOnboardingSystemsPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 // ---------- Styling ----------
@@ -231,6 +233,42 @@ export async function generateMetadata({
     };
   }
 
+  if (params.slug === clientOnboardingSystemsPost.slug) {
+    const canonical = `https://www.tsgproadvisor.com/blogs/${clientOnboardingSystemsPost.slug}`;
+
+    return {
+      title: "Powerful Client Onboarding Systems That Save Time 2026",
+      description:
+        "Discover client onboarding systems that reduce errors, streamline workflows, improve accuracy, and save valuable time for your business in 2026.",
+      alternates: {
+        canonical,
+      },
+      openGraph: {
+        title: clientOnboardingSystemsPost.title,
+        description: clientOnboardingSystemsPost.excerpt,
+        images: [
+          {
+            url: clientOnboardingSystemsPost.featuredImage.image.url,
+            alt: clientOnboardingSystemsPost.featuredImage.altText,
+            width: 1200,
+            height: 720,
+          },
+        ],
+        url: canonical,
+        type: "article",
+        siteName: "TSG ProAdvisor",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: clientOnboardingSystemsPost.title,
+        description: clientOnboardingSystemsPost.excerpt,
+        images: [
+          clientOnboardingSystemsPost.featuredImage.image.url,
+        ],
+      },
+    };
+  }
+
   const blogPostData = await GetAllPostData();
 
   const blog = blogPostData?.data?.find(
@@ -275,6 +313,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     transitionComplianceToAdvisoryPost,
     efficientInternalProcessesPost,
     documentationInDefendingTaxFilingsPost,
+    clientOnboardingSystemsPost,
   ];
   const posts = [...staticPosts, ...(blogPostData?.data || [])];
 
@@ -363,6 +402,22 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </>
     );
   }
+
+  if (params.slug === clientOnboardingSystemsPost.slug) {
+    return (
+      <>
+        <BreadcrumbSection
+          title="Tips, Training, and Updates for 
+      Tax & Accounting Professionals"
+          bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+        />
+        <ClientOnboardingSystemsThatReduceErrorsAndSaveTime
+          recentPosts={posts}
+        />
+      </>
+    );
+  }
+
 
   // FIXED: Use .find(), not .filter()
   const blog = blogPostData?.data?.find(
