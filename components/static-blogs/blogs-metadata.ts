@@ -155,7 +155,7 @@ export const clientOnboardingSystemsPost = {
     caption:
       "Streamline your business operations with structured client onboarding systems and digital workflow tracking.",
     image: {
-      url: "/images/static-blogs/client-onboarding-systems-workflow-efficiency-guide.jpg",
+      url: "/images/static-blogs/client-onboarding-systems-workflow-efficiency-guide.webp",
     },
   },
 };
