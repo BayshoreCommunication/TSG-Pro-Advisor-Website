@@ -152,7 +152,7 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.tsgproadvisor.com",
+          "item": "https://www.tsgproadvisor.com/",
         },
         {
           "@type": "ListItem",
@@ -183,27 +183,29 @@ const jsonLd = {
       "url":
         "https://www.tsgproadvisor.com/blogs/client-onboarding-systems-reduce-errors-save-time",
       "image":
-        "https://www.tsgproadvisor.com/images/static-blogs/client-onboarding-systems-workflow-efficiency-guide.jpg",
+        "https://www.tsgproadvisor.com/images/static-blogs/client-onboarding-systems-workflow-efficiency-guide.webp",
       "isPartOf": {
         "@type": "Blog",
         "@id": "https://www.tsgproadvisor.com/blogs",
       },
       "about": {
         "@type": "Thing",
-        "name": "Client Onboarding Workflows",
+        "name": "Client Onboarding Systems",
         "description":
-          "Standardized digital client onboarding workflows, checklists, automation, and operational systems designed to reduce errors and save setup time.",
+          "An overview of client onboarding systems, standardized workflows, automation, task management, client data collection, process controls, and performance metrics designed to reduce onboarding errors and improve efficiency.",
       },
       "keywords": [
         "client onboarding systems",
+        "client onboarding system",
+        "client onboarding process",
         "client onboarding workflow",
-        "reduce onboarding errors",
-        "save onboarding time",
-        "business process automation",
-        "client intake checklist",
-        "onboarding pipeline",
-        "accounting client onboarding",
-        "client onboarding efficiency",
+        "client onboarding automation",
+        "how to reduce onboarding errors",
+        "client onboarding checklist",
+        "automated client onboarding",
+        "client onboarding software",
+        "onboarding process automation",
+        "client onboarding best practices",
       ],
       "author": {
         "@type": "Organization",
@@ -212,7 +214,7 @@ const jsonLd = {
       "publisher": {
         "@type": "Organization",
         "name": "TSG Pro Advisor",
-        "url": "https://www.tsgproadvisor.com",
+        "url": "https://www.tsgproadvisor.com/",
         "logo": {
           "@type": "ImageObject",
           "url": "https://www.tsgproadvisor.com/images/logo.png",
