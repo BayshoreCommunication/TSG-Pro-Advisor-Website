@@ -444,31 +444,31 @@ export default function ClientOnboardingSystemsThatReduceErrorsAndSaveTime({
 
             <div className="mt-6 rounded-2xl bg-[#131B2A] p-6 text-white shadow-lg space-y-4">
               <div className="rounded-xl bg-white/5 p-4 border border-white/10">
-                <h4 className="font-bold text-[#F26422] text-lg">Stage 1: Intake Captured And Verified</h4>
+                <h3 className="font-bold text-[#F26422] text-lg">Stage 1: Intake Captured And Verified</h3>
                 <p className="text-sm text-white/80 mt-1">
                   Answer first: Do not schedule kickoff yet. Verify intake first. Required items might include scope, goals, budget range, and stakeholders. You also need decision maker details. Use validation rules. Make key fields required.
                 </p>
               </div>
               <div className="rounded-xl bg-white/5 p-4 border border-white/10">
-                <h4 className="font-bold text-[#F26422] text-lg">Stage 2: Contract Signed And Payment Confirmed</h4>
+                <h3 className="font-bold text-[#F26422] text-lg">Stage 2: Contract Signed And Payment Confirmed</h3>
                 <p className="text-sm text-white/80 mt-1">
                   Answer first: Work should not start without this. Add automated prompts. Add a “no access until paid” rule. Your team avoids risk.
                 </p>
               </div>
               <div className="rounded-xl bg-white/5 p-4 border border-white/10">
-                <h4 className="font-bold text-[#F26422] text-lg">Stage 3: Access And Assets Received</h4>
+                <h3 className="font-bold text-[#F26422] text-lg">Stage 3: Access And Assets Received</h3>
                 <p className="text-sm text-white/80 mt-1">
                   Answer first: You cannot execute without access. Collect logins, brand files, and data exports. Store them in one folder. Confirm access works.
                 </p>
               </div>
               <div className="rounded-xl bg-white/5 p-4 border border-white/10">
-                <h4 className="font-bold text-[#F26422] text-lg">Stage 4: Kickoff Completed With Next Steps</h4>
+                <h3 className="font-bold text-[#F26422] text-lg">Stage 4: Kickoff Completed With Next Steps</h3>
                 <p className="text-sm text-white/80 mt-1">
                   Answer first: Kickoff should end with decisions. Confirm project timelines. Assign specific roles. Members verify approval steps. Send quick recaps.
                 </p>
               </div>
               <div className="rounded-xl bg-white/5 p-4 border border-white/10">
-                <h4 className="font-bold text-[#F26422] text-lg">Stage 5: Delivery Plan Approved</h4>
+                <h3 className="font-bold text-[#F26422] text-lg">Stage 5: Delivery Plan Approved</h3>
                 <p className="text-sm text-white/80 mt-1">
                   Answer first: Lock the plan before production. Get written approval. Confirm change request rules.
                 </p>
@@ -647,9 +647,9 @@ export default function ClientOnboardingSystemsThatReduceErrorsAndSaveTime({
 
             {/* Comparison Table */}
             <div className="mt-8">
-              <h3 className="text-xl md:text-2xl font-bold text-[#1B2639] mb-4">
+              <h2 className="text-xl md:text-2xl font-bold text-[#1B2639] mb-4">
                 Comparison Table: Before vs After A Standard System
-              </h3>
+              </h2>
               <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-[#131B2A] text-white">
