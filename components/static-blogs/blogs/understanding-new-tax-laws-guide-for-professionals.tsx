@@ -495,7 +495,7 @@ export default function UnderstandingNewTaxLawsGuideForProfessionals({
               <BulletList
                 items={[
                   "Confirm business tax deadlines.",
-                  <span>
+                  <span key="verify-vendors">
                     Validate W-9s, 1099 data, and{" "}
                     <Link
                       href="https://www.irs.gov/forms-pubs/about-form-w-9"
