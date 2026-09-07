@@ -160,5 +160,30 @@ export const clientOnboardingSystemsPost = {
   },
 };
 
+export const understandingNewTaxLawsPost = {
+  id: "understanding-new-tax-laws-guide-for-professionals",
+  title: "Understanding New Tax Laws: Guide for Professionals",
+  slug: "understanding-new-tax-laws-guide-for-professionals",
+  category: "Tax Laws & Compliance",
+  createdAt: "2026-09-07T00:00:00.000Z",
+  updatedAt: "2026-09-07T00:00:00.000Z",
+  published: true,
+  excerpt:
+    "Navigate updated tax regulations, compliance requirements, and strategic business planning with an expert tax guide for professionals.",
+  desc: "Navigate updated tax regulations, compliance requirements, and strategic business planning with an expert tax guide for professionals.",
+  featuredImage: {
+    altText:
+      "Laptop screen displaying IRS tax regulation updates alongside tax law books, planning reports, and a calculator on an office desk.",
+    title: "Understanding New Tax Laws: Guide for Professionals",
+    description:
+      "Navigate updated tax regulations, compliance requirements, and strategic business planning with an expert tax guide for professionals.",
+    caption:
+      "Stay compliant and plan strategically with this comprehensive professional guide to navigating the latest tax law updates.",
+    image: {
+      url: "/images/static-blogs/understanding-new-tax-laws-guide-for-professionals.webp",
+    },
+  },
+};
+
 
 

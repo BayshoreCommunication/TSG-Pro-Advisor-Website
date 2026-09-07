@@ -13,6 +13,7 @@ import {
   efficientInternalProcessesPost,
   documentationInDefendingTaxFilingsPost,
   clientOnboardingSystemsPost,
+  understandingNewTaxLawsPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 import "swiper/css";
@@ -92,6 +93,11 @@ export default function BlogSliderSection() {
             id: clientOnboardingSystemsPost.id,
             image: clientOnboardingSystemsPost.featuredImage.image.url,
           },
+          {
+            ...understandingNewTaxLawsPost,
+            id: understandingNewTaxLawsPost.id,
+            image: understandingNewTaxLawsPost.featuredImage.image.url,
+          },
         ];
 
         const combined = [
@@ -104,7 +110,8 @@ export default function BlogSliderSection() {
               blog.slug !== transitionComplianceToAdvisoryPost.slug &&
               blog.slug !== efficientInternalProcessesPost.slug &&
               blog.slug !== documentationInDefendingTaxFilingsPost.slug &&
-              blog.slug !== clientOnboardingSystemsPost.slug
+              blog.slug !== clientOnboardingSystemsPost.slug &&
+              blog.slug !== understandingNewTaxLawsPost.slug
           ),
         ];
         combined.sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
@@ -145,6 +152,11 @@ export default function BlogSliderSection() {
             ...clientOnboardingSystemsPost,
             id: clientOnboardingSystemsPost.id,
             image: clientOnboardingSystemsPost.featuredImage.image.url,
+          },
+          {
+            ...understandingNewTaxLawsPost,
+            id: understandingNewTaxLawsPost.id,
+            image: understandingNewTaxLawsPost.featuredImage.image.url,
           },
         ];
         fallback.sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());

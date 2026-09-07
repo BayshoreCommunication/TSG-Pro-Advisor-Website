@@ -8,6 +8,7 @@ import {
   efficientInternalProcessesPost,
   documentationInDefendingTaxFilingsPost,
   clientOnboardingSystemsPost,
+  understandingNewTaxLawsPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -68,6 +69,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     efficientInternalProcessesPost,
     documentationInDefendingTaxFilingsPost,
     clientOnboardingSystemsPost,
+    understandingNewTaxLawsPost,
   ];
 
   const staticBlogRoutes = staticPosts.map((post) => ({

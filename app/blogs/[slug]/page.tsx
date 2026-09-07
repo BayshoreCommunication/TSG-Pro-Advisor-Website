@@ -10,6 +10,7 @@ import HowToTransitionFromComplianceWorkToAdvisoryServices from "@/components/st
 import EfficientInternalProcessesForMultiClientManagement from "@/components/static-blogs/blogs/efficient-internal-processes-multi-client-management";
 import TheImportanceOfDocumentationInDefendingTaxFilings from "@/components/static-blogs/blogs/the-importance-of-documentation-in-defending-tax-filings";
 import ClientOnboardingSystemsThatReduceErrorsAndSaveTime from "@/components/static-blogs/blogs/client-onboarding-systems-reduce-errors-save-time";
+import UnderstandingNewTaxLawsGuideForProfessionals from "@/components/static-blogs/blogs/understanding-new-tax-laws-guide-for-professionals";
 import {
   nicheTaxPracticePost,
   reduceBurnoutPost,
@@ -18,6 +19,7 @@ import {
   efficientInternalProcessesPost,
   documentationInDefendingTaxFilingsPost,
   clientOnboardingSystemsPost,
+  understandingNewTaxLawsPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 // ---------- Styling ----------
@@ -269,6 +271,42 @@ export async function generateMetadata({
     };
   }
 
+  if (params.slug === understandingNewTaxLawsPost.slug) {
+    const canonical = `https://www.tsgproadvisor.com/blogs/${understandingNewTaxLawsPost.slug}`;
+
+    return {
+      title: "Essential New Tax Laws: Smart Guide 2026",
+      description:
+        "Understand the New Tax Laws in 2026 with this professional guide. Learn key updates, compliance tips, and practical insights for informed decisions.",
+      alternates: {
+        canonical,
+      },
+      openGraph: {
+        title: understandingNewTaxLawsPost.title,
+        description: understandingNewTaxLawsPost.excerpt,
+        images: [
+          {
+            url: understandingNewTaxLawsPost.featuredImage.image.url,
+            alt: understandingNewTaxLawsPost.featuredImage.altText,
+            width: 1200,
+            height: 720,
+          },
+        ],
+        url: canonical,
+        type: "article",
+        siteName: "TSG ProAdvisor",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: understandingNewTaxLawsPost.title,
+        description: understandingNewTaxLawsPost.excerpt,
+        images: [
+          understandingNewTaxLawsPost.featuredImage.image.url,
+        ],
+      },
+    };
+  }
+
   const blogPostData = await GetAllPostData();
 
   const blog = blogPostData?.data?.find(
@@ -314,6 +352,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     efficientInternalProcessesPost,
     documentationInDefendingTaxFilingsPost,
     clientOnboardingSystemsPost,
+    understandingNewTaxLawsPost,
   ];
   const posts = [...staticPosts, ...(blogPostData?.data || [])];
 
@@ -412,6 +451,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
           bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
         />
         <ClientOnboardingSystemsThatReduceErrorsAndSaveTime
+          recentPosts={posts}
+        />
+      </>
+    );
+  }
+
+  if (params.slug === understandingNewTaxLawsPost.slug) {
+    return (
+      <>
+        <BreadcrumbSection
+          title="Tips, Training, and Updates for 
+      Tax & Accounting Professionals"
+          bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+        />
+        <UnderstandingNewTaxLawsGuideForProfessionals
           recentPosts={posts}
         />
       </>
