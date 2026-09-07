@@ -574,7 +574,7 @@ export default function UnderstandingNewTaxLawsGuideForProfessionals({
             </h2>
             <div className="mt-4 space-y-4 text-[17px] leading-8 text-gray-700">
               <p>
-                To achieve maximum value, optimization should focus on timing, structure, and defensibility. It's also crucial to prepare for disputes, as strong files tend to win audits.
+                To achieve maximum value, optimization should focus on timing, structure, and defensibility. It&apos;s also crucial to prepare for disputes, as strong files tend to win audits.
               </p>
               <p>
                 Experts not only run scenarios but also plan transactions strategically. They leverage law changes to mitigate risk.
@@ -670,7 +670,7 @@ export default function UnderstandingNewTaxLawsGuideForProfessionals({
                 can be significantly affected by these rule changes.
               </p>
               <p>
-                It's essential to re-check eligibility for deductions and credits each year. Never assume repeat qualification based on previous years' criteria or documentation. This is particularly important when you consider the{" "}
+                It&apos;s essential to re-check eligibility for deductions and credits each year. Never assume repeat qualification based on previous years&apos; criteria or documentation. This is particularly important when you consider the{" "}
                 <Link
                   href="https://www.irs.gov/credits-deductions"
                   target="_blank"
