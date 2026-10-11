@@ -185,5 +185,27 @@ export const understandingNewTaxLawsPost = {
   },
 };
 
-
-
+export const aiPoweredTaxWorkflowsPost = {
+  id: "how-ai-powered-tools-are-changing-tax-preparation-workflows",
+  title: "How AI-Powered Tools Are Changing Tax Preparation Workflows",
+  slug: "how-ai-powered-tools-are-changing-tax-preparation-workflows",
+  category: "Tax Technology & Workflows",
+  createdAt: "2026-10-07T00:00:00.000Z",
+  updatedAt: "2026-10-07T00:00:00.000Z",
+  published: true,
+  excerpt:
+    "Discover how AI-powered tools are transforming tax preparation workflows in 2026 through automation, faster research, document processing, and review.",
+  desc: "Learn how AI-powered tools are changing tax preparation workflows with TSG ProAdvisor. Discover how document processing, data extraction, tax calculations, automated workflows, and compliance checks improve accuracy and turnaround times.",
+  featuredImage: {
+    altText:
+      "Laptop displaying an AI dashboard for tax preparation workflows next to tax law books, a calculator, and a TSG ProAdvisor mug.",
+    title: "How AI-Powered Tools Are Changing Tax Preparation Workflows",
+    description:
+      "Learn how AI-powered tools are changing tax preparation workflows with TSG ProAdvisor. Discover how document processing, data extraction, tax calculations, automated workflows, and compliance checks improve accuracy and turnaround times.",
+    caption:
+      "Explore how artificial intelligence streamlines tax preparation with automated workflows, error reduction, and faster turnaround times.",
+    image: {
+      url: "/images/static-blogs/how-ai-powered-tools-are-changing-tax-preparation-workflows.webp",
+    },
+  },
+};

@@ -11,6 +11,7 @@ import EfficientInternalProcessesForMultiClientManagement from "@/components/sta
 import TheImportanceOfDocumentationInDefendingTaxFilings from "@/components/static-blogs/blogs/the-importance-of-documentation-in-defending-tax-filings";
 import ClientOnboardingSystemsThatReduceErrorsAndSaveTime from "@/components/static-blogs/blogs/client-onboarding-systems-reduce-errors-save-time";
 import UnderstandingNewTaxLawsGuideForProfessionals from "@/components/static-blogs/blogs/understanding-new-tax-laws-guide-for-professionals";
+import HowAiPoweredToolsAreChangingTaxPreparationWorkflows from "@/components/static-blogs/blogs/how-ai-powered-tools-are-changing-tax-preparation-workflows";
 import {
   nicheTaxPracticePost,
   reduceBurnoutPost,
@@ -20,6 +21,7 @@ import {
   documentationInDefendingTaxFilingsPost,
   clientOnboardingSystemsPost,
   understandingNewTaxLawsPost,
+  aiPoweredTaxWorkflowsPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 // ---------- Styling ----------
@@ -307,6 +309,42 @@ export async function generateMetadata({
     };
   }
 
+  if (params.slug === aiPoweredTaxWorkflowsPost.slug) {
+    const canonical = `https://www.tsgproadvisor.com/blogs/${aiPoweredTaxWorkflowsPost.slug}`;
+
+    return {
+      title: "Powerful AI-Powered Tools for Tax in 2026",
+      description:
+        "Discover how AI-powered tools are transforming tax preparation workflows in 2026 through automation, faster research, document processing, and review",
+      alternates: {
+        canonical,
+      },
+      openGraph: {
+        title: "Powerful AI-Powered Tools for Tax in 2026",
+        description:
+          "Discover how AI-powered tools are transforming tax preparation workflows in 2026 through automation, faster research, document processing, and review",
+        images: [
+          {
+            url: aiPoweredTaxWorkflowsPost.featuredImage.image.url,
+            alt: aiPoweredTaxWorkflowsPost.featuredImage.altText,
+            width: 1200,
+            height: 720,
+          },
+        ],
+        url: canonical,
+        type: "article",
+        siteName: "TSG ProAdvisor",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Powerful AI-Powered Tools for Tax in 2026",
+        description:
+          "Discover how AI-powered tools are transforming tax preparation workflows in 2026 through automation, faster research, document processing, and review",
+        images: [aiPoweredTaxWorkflowsPost.featuredImage.image.url],
+      },
+    };
+  }
+
   const blogPostData = await GetAllPostData();
 
   const blog = blogPostData?.data?.find(
@@ -353,6 +391,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     documentationInDefendingTaxFilingsPost,
     clientOnboardingSystemsPost,
     understandingNewTaxLawsPost,
+    aiPoweredTaxWorkflowsPost,
   ];
   const posts = [...staticPosts, ...(blogPostData?.data || [])];
 
@@ -466,6 +505,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
           bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
         />
         <UnderstandingNewTaxLawsGuideForProfessionals
+          recentPosts={posts}
+        />
+      </>
+    );
+  }
+
+  if (params.slug === aiPoweredTaxWorkflowsPost.slug) {
+    return (
+      <>
+        <BreadcrumbSection
+          title="Tips, Training, and Updates for 
+      Tax & Accounting Professionals"
+          bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+        />
+        <HowAiPoweredToolsAreChangingTaxPreparationWorkflows
           recentPosts={posts}
         />
       </>
