@@ -138,6 +138,8 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "BreadcrumbList",
+      "@id":
+        "https://www.tsgproadvisor.com/blogs/understanding-new-tax-laws-guide-for-professionals#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -154,7 +156,7 @@ const jsonLd = {
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Understanding New Tax Laws: Guide for Professionals",
+          "name": "Understanding New Tax Laws: A Guide for Professionals",
           "item":
             "https://www.tsgproadvisor.com/blogs/understanding-new-tax-laws-guide-for-professionals",
         },
@@ -162,46 +164,55 @@ const jsonLd = {
     },
     {
       "@type": "BlogPosting",
+      "@id":
+        "https://www.tsgproadvisor.com/blogs/understanding-new-tax-laws-guide-for-professionals#blogposting",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id":
           "https://www.tsgproadvisor.com/blogs/understanding-new-tax-laws-guide-for-professionals",
       },
-      "headline": "Understanding New Tax Laws: Guide for Professionals",
+      "headline": "Understanding New Tax Laws: A Guide for Professionals",
       "name": "Essential New Tax Laws: Smart Guide 2026",
       "description":
         "Understand the New Tax Laws in 2026 with this professional guide. Learn key updates, compliance tips, and practical insights for informed decisions.",
       "url":
         "https://www.tsgproadvisor.com/blogs/understanding-new-tax-laws-guide-for-professionals",
-      "image":
-        "https://www.tsgproadvisor.com/images/static-blogs/understanding-new-tax-laws-guide-for-professionals.webp",
+      "image": {
+        "@type": "ImageObject",
+        "url":
+          "https://www.tsgproadvisor.com/images/static-blogs/understanding-new-tax-laws-guide-for-professionals.webp",
+      },
       "isPartOf": {
         "@type": "Blog",
-        "@id": "https://www.tsgproadvisor.com/blogs",
+        "name": "TSG ProAdvisor Blogs",
+        "url": "https://www.tsgproadvisor.com/blogs",
       },
       "about": {
         "@type": "Thing",
-        "name": "New Tax Laws & Compliance",
-        "description":
-          "An expert tax guide for professionals covering updated tax regulations, compliance requirements, tax planning, withholding, and strategic decision frameworks.",
+        "name": "New Tax Laws",
       },
       "keywords": [
-        "understanding new tax laws",
+        "new tax laws",
         "new tax laws 2026",
-        "tax guide for professionals",
-        "tax compliance updates",
-        "IRS tax regulations",
-        "business tax planning",
-        "tax deduction rules",
-        "payroll tax withholding",
+        "tax law updates",
+        "tax laws for professionals",
+        "tax compliance",
+        "tax planning",
+        "tax regulations",
+        "tax deductions",
+        "tax credits",
+        "payroll tax changes",
+        "tax professionals",
+        "tax strategy",
       ],
       "author": {
         "@type": "Organization",
-        "name": "TSG Pro Advisor",
+        "name": "TSG ProAdvisor",
+        "url": "https://www.tsgproadvisor.com/",
       },
       "publisher": {
         "@type": "Organization",
-        "name": "TSG Pro Advisor",
+        "name": "TSG ProAdvisor",
         "url": "https://www.tsgproadvisor.com/",
         "logo": {
           "@type": "ImageObject",
@@ -213,14 +224,64 @@ const jsonLd = {
     },
     {
       "@type": "FAQPage",
-      "mainEntity": faqs.map((faq) => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer,
+      "@id":
+        "https://www.tsgproadvisor.com/blogs/understanding-new-tax-laws-guide-for-professionals#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What Should You Do First After A New Tax Law Passes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "You should confirm effective dates and scope first. Then map changes to payroll, estimates, and reporting. Finally, you record key decisions. You assign task owners. You prevent tax errors.",
+          },
         },
-      })),
+        {
+          "@type": "Question",
+          "name": "How Do You Know If A Credit Still Applies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "You should re-check definitions, thresholds, and phaseouts. Compare current facts to new rules. Then build a short support file with invoices, calculations, and a clear eligibility statement.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Do You Need To Update Payroll Immediately?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Yes, if withholding tables or wage limits changed. You should update settings, run a parallel test, and review bonuses. Payroll errors cause problems. Mistakes upset workers.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "What Tax Considerations Should Healthcare Providers Be Aware Of?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Doctors face strict tax rules. Regulations alter daily clinic operations. Current tax knowledge ensures full compliance. Wise tax choices boost financial returns.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "What Is The Best Way To Explain Changes To Leadership?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Lead with the impact in dollars and timing. Then explain the driver in plain words. End with decisions needed and dates. Leaders want clarity, not long legal summaries.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "How Often Should You Review Tax Updates During The Year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "You should review weekly during active legislative periods. Monthly works otherwise. You log system updates. One submit patches in a structured process. This owner summarizes main problems. They escalate urgent issues.",
+          },
+        },
+      ],
     },
   ],
 };
