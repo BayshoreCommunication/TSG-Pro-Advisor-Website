@@ -34,7 +34,7 @@ const VideoSection = () => {
           </Reveal>
         </div>
         {/* Youtube Video framework  */}
-        <div className="relative w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.1)]">
+        {/* <div className="relative w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(0,0,0,0.1)]">
           <iframe
             className="w-full h-[300px] md:h-[550px] lg:h-[600px]"
             src="https://www.youtube.com/embed/ACgho5bV-9A?si=rlBK_iQ8soO0C8m7"
@@ -43,7 +43,7 @@ const VideoSection = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-        </div>
+        </div> */}
       </div>
     </section>
   );
