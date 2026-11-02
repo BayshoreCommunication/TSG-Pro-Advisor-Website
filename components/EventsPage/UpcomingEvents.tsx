@@ -41,7 +41,7 @@ const eventCards = [
     imageAlt: "Beyond Tax Preparation lunch and learn in Panama City",
     description:
       "Join this free Lunch & Learn on Thursday, November 19, 2026, from 11:00 AM to 1:00 PM in Panama City. Discover strategies for attracting better clients, improving pricing, using AI and automation, increasing retention, and scaling your tax business.",
-    href: "https://www.eventbrite.com/e/beyond-tax-preparation-building-a-profitable-tax-business-lunch-learn-tickets-2004039804001?aff=TSGOFFICIAL",
+    href: "https://eventlunchandlearn.lovable.app",
     buttonLabel: "Register Free",
   },
   {
@@ -93,10 +93,10 @@ const UpcomingEvents = () => {
             {/* Left image */}
             <div className="relative col-span-3">
               <Image
-                src="/images/eventPage/tax-pro-summit-2027.png"
+                src="/images/eventPage/tax-pro-summit-2027-banner.jpg"
                 alt="Tax Pro Summit 2027 in Orlando, Florida"
                 width={1920}
-                height={1080}
+                height={1280}
                 className="w-full h-full object-cover"
               />
 
