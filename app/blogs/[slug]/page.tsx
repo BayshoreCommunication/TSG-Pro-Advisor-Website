@@ -12,6 +12,7 @@ import TheImportanceOfDocumentationInDefendingTaxFilings from "@/components/stat
 import ClientOnboardingSystemsThatReduceErrorsAndSaveTime from "@/components/static-blogs/blogs/client-onboarding-systems-reduce-errors-save-time";
 import UnderstandingNewTaxLawsGuideForProfessionals from "@/components/static-blogs/blogs/understanding-new-tax-laws-guide-for-professionals";
 import HowAiPoweredToolsAreChangingTaxPreparationWorkflows from "@/components/static-blogs/blogs/how-ai-powered-tools-are-changing-tax-preparation-workflows";
+import ScalingYourTaxFirmWithoutSacrificingQualityControl from "@/components/static-blogs/blogs/scaling-your-tax-firm-without-sacrificing-quality-control";
 import {
   nicheTaxPracticePost,
   reduceBurnoutPost,
@@ -22,6 +23,7 @@ import {
   clientOnboardingSystemsPost,
   understandingNewTaxLawsPost,
   aiPoweredTaxWorkflowsPost,
+  scalingTaxFirmPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 // ---------- Styling ----------
@@ -345,6 +347,42 @@ export async function generateMetadata({
     };
   }
 
+  if (params.slug === scalingTaxFirmPost.slug) {
+    const canonical = `https://www.tsgproadvisor.com/blogs/${scalingTaxFirmPost.slug}`;
+
+    return {
+      title: "Scaling Your Tax Firm Without Losing Quality",
+      description:
+        "Learn how scaling your tax firm can increase capacity while protecting accuracy, compliance, client service, and quality control.",
+      alternates: {
+        canonical,
+      },
+      openGraph: {
+        title: "Scaling Your Tax Firm Without Losing Quality",
+        description:
+          "Learn how scaling your tax firm can increase capacity while protecting accuracy, compliance, client service, and quality control.",
+        images: [
+          {
+            url: scalingTaxFirmPost.featuredImage.image.url,
+            alt: scalingTaxFirmPost.featuredImage.altText,
+            width: 1200,
+            height: 720,
+          },
+        ],
+        url: canonical,
+        type: "article",
+        siteName: "TSG ProAdvisor",
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Scaling Your Tax Firm Without Losing Quality",
+        description:
+          "Learn how scaling your tax firm can increase capacity while protecting accuracy, compliance, client service, and quality control.",
+        images: [scalingTaxFirmPost.featuredImage.image.url],
+      },
+    };
+  }
+
   const blogPostData = await GetAllPostData();
 
   const blog = blogPostData?.data?.find(
@@ -392,6 +430,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     clientOnboardingSystemsPost,
     understandingNewTaxLawsPost,
     aiPoweredTaxWorkflowsPost,
+    scalingTaxFirmPost,
   ];
   const posts = [...staticPosts, ...(blogPostData?.data || [])];
 
@@ -520,6 +559,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
           bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
         />
         <HowAiPoweredToolsAreChangingTaxPreparationWorkflows
+          recentPosts={posts}
+        />
+      </>
+    );
+  }
+
+  if (params.slug === scalingTaxFirmPost.slug) {
+    return (
+      <>
+        <BreadcrumbSection
+          title="Tips, Training, and Updates for 
+      Tax & Accounting Professionals"
+          bgImage="/images/breadcrumb/breadcrumb-blogs.jpg"
+        />
+        <ScalingYourTaxFirmWithoutSacrificingQualityControl
           recentPosts={posts}
         />
       </>

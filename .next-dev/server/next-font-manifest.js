@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{},\"appUsingSizeAdjust\":false,\"pagesUsingSizeAdjust\":false}"
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/run/media/shamim-ahsan/New Volume/Special/Projects/2025/TSG-Pro-Advisor-Website/app/layout\":[\"static/media/f4d3bba230527962-s.p.woff2\",\"static/media/cfbdb7c376ac45db-s.p.woff2\",\"static/media/8760c4774489e4ba-s.p.woff2\",\"static/media/7ea02b3c0777bcf6-s.p.woff2\",\"static/media/7441e6446566c1bf-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

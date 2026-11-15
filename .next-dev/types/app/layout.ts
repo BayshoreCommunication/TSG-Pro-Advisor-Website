@@ -1,4 +1,4 @@
-// File: D:\Special\Projects\2025\TSG-Pro-Advisor-Website\app\layout.tsx
+// File: /run/media/shamim-ahsan/New Volume/Special/Projects/2025/TSG-Pro-Advisor-Website/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

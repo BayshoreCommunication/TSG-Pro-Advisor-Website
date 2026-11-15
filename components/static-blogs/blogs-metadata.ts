@@ -209,3 +209,28 @@ export const aiPoweredTaxWorkflowsPost = {
     },
   },
 };
+
+export const scalingTaxFirmPost = {
+  id: "scaling-your-tax-firm-without-sacrificing-quality-control",
+  title: "Scaling Your Tax Firm Without Sacrificing Quality Control",
+  slug: "scaling-your-tax-firm-without-sacrificing-quality-control",
+  category: "Practice Growth & Quality Control",
+  createdAt: "2026-11-15T00:00:00.000Z",
+  updatedAt: "2026-11-15T00:00:00.000Z",
+  published: true,
+  excerpt:
+    "Learn how scaling your tax firm can increase capacity while protecting accuracy, compliance, client service, and quality control.",
+  desc: "Learn how to scale your tax firm efficiently while maintaining accuracy, ensuring compliance, and delivering consistent quality control across all client services.",
+  featuredImage: {
+    altText:
+      "Laptop displaying growth charts and quality control checklist beside tax strategy books and calculator on desk.",
+    title: "Scaling Your Tax Firm Without Sacrificing Quality Control",
+    description:
+      "Learn how to scale your tax firm efficiently while maintaining accuracy, ensuring compliance, and delivering consistent quality control across all client services.",
+    caption:
+      "Discover proven strategies to grow your tax practice without compromising accuracy or compliance.",
+    image: {
+      url: "/images/static-blogs/scaling-your-tax-firm-without-quality-control.webp",
+    },
+  },
+};

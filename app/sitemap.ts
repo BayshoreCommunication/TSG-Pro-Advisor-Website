@@ -10,6 +10,7 @@ import {
   clientOnboardingSystemsPost,
   understandingNewTaxLawsPost,
   aiPoweredTaxWorkflowsPost,
+  scalingTaxFirmPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -72,6 +73,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     clientOnboardingSystemsPost,
     understandingNewTaxLawsPost,
     aiPoweredTaxWorkflowsPost,
+    scalingTaxFirmPost,
   ];
 
   const staticBlogRoutes = staticPosts.map((post) => ({

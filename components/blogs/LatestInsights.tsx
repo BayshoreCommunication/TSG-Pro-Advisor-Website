@@ -13,6 +13,7 @@ import {
   clientOnboardingSystemsPost,
   understandingNewTaxLawsPost,
   aiPoweredTaxWorkflowsPost,
+  scalingTaxFirmPost,
 } from "@/components/static-blogs/blogs-metadata";
 
 export default function LatestInsights({ blogPost }: { blogPost: any }) {
@@ -27,6 +28,7 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
       clientOnboardingSystemsPost,
       understandingNewTaxLawsPost,
       aiPoweredTaxWorkflowsPost,
+      scalingTaxFirmPost,
       ...(blogPost?.data || []).filter(
         (p: any) =>
           p.slug !== reduceBurnoutPost.slug &&
@@ -37,7 +39,8 @@ export default function LatestInsights({ blogPost }: { blogPost: any }) {
           p.slug !== documentationInDefendingTaxFilingsPost.slug &&
           p.slug !== clientOnboardingSystemsPost.slug &&
           p.slug !== understandingNewTaxLawsPost.slug &&
-          p.slug !== aiPoweredTaxWorkflowsPost.slug,
+          p.slug !== aiPoweredTaxWorkflowsPost.slug &&
+          p.slug !== scalingTaxFirmPost.slug,
       ),
     ]
       ?.filter((p: any) => p.published)
